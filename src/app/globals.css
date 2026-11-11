@@ -41,6 +41,10 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-jetbrains-mono);
+  --spacing: 4px;
+  --radius-card: 18px;
+  --radius-button: 12px;
+  --radius-chip: 8px;
 }
 * { box-sizing: border-box; }
 html { min-height: 100%; scroll-behavior: smooth; }
@@ -93,7 +97,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .blueprint-hero-inner { position:relative; z-index:1; width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:78px 0 60px; }
 .hero-tag { display:flex; align-items:center; gap:10px; color:var(--accent); font-size:11px; letter-spacing:.035em; }
 .signal-square { width:8px; height:8px; background:var(--accent); }
-.hero-sample-tag { margin-left:4px; padding:4px 7px; border:1px solid rgba(255,107,44,.5); border-radius:5px; color:#FFB18E; font-size:9px; }
+.hero-sample-tag { margin-left:4px; padding:4px 7px; border:1px solid rgba(255,107,44,.5); border-radius:5px; color:var(--accent); font-size:9px; }
 .blueprint-hero h1 { display:grid; gap:2px; max-width:1000px; margin:34px 0 36px; color:#F7F9FC; font-size:clamp(44px,6.2vw,76px); line-height:1.05; letter-spacing:-.045em; }
 .blueprint-hero h1 span { display:block; }
 .dimension-wrap { width:min(760px,100%); margin:0 0 27px; }
@@ -109,7 +113,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .blueprint-button:hover svg { transform:translateX(3px); }
 .blueprint-button.primary { color:var(--ink); background:var(--accent); border-color:var(--accent); }
 .blueprint-button.primary:hover { background:#FF824B; }
-.blueprint-button.outline { color:#F7F9FC; border-color:#5B6F8A; background:transparent; }
+.blueprint-button.outline { color:#F7F9FC; border-color:var(--line-dark); background:transparent; }
 .blueprint-button.outline:hover { border-color:#B8C5D6; background:rgba(255,255,255,.05); }
 .blueprint-button.dark-outline { color:#F7F9FC; border-color:#5B6F8A; background:transparent; }
 .hero-honesty { display:flex; align-items:center; gap:9px; margin:25px 0 0; color:#B8C5D6; font-size:12px; font-weight:600; }
