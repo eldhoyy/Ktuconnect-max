@@ -67,7 +67,7 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
         <nav className="desktop-nav" aria-label="Main navigation">{links.map(({ href, label }) => <Link href={href} key={href}>{label}</Link>)}</nav>
         <div className="topbar-actions">
           <ThemeToggle />
-          <button className="search-trigger" onClick={() => setOpen(true)} aria-label="Search Cohertx"><Search size={17}/><span>Search</span><kbd>⌘ K</kbd></button>
+          <button className="search-trigger" onClick={() => setOpen(true)} aria-label="Search Cohertx"><Search size={17}/><span>Search</span><kbd>Ctrl / ⌘ K</kbd></button>
         </div>
       </header>
       {children}
