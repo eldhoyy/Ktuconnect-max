@@ -4,7 +4,7 @@ import "./globals.css";
 import { AppShell } from "@/components/app-shell";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["600", "800"], variable: "--font-manrope", display: "swap" });
-const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["500"], variable: "--font-mono", display: "swap" });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["500"], variable: "--font-jetbrains-mono", display: "swap" });
 
 export const metadata: Metadata = {
   title: { default: "Datum — KTU study desk", template: "%s · Datum" },
