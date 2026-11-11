@@ -6,6 +6,9 @@ export const dynamic = "force-dynamic";
 
 export default function HomePage() {
   const now = new Date();
+  const dateParts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
+  const part = (type: string) => dateParts.find((item) => item.type === type)?.value ?? "";
+  const todayDate = `${part("year")}-${part("month")}-${part("day")}`;
   const todayLabel = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "short" }).format(now).toUpperCase();
 
   const exam = timetable.exams
@@ -23,5 +26,6 @@ export default function HomePage() {
     return <main className="content-width no-exam-state"><h1>No upcoming verified exam date is available.</h1><p>Check the timetable source page for the documents currently included.</p></main>;
   }
 
-  return <BlueprintHome exam={sampleExam} todayLabel={todayLabel} subjects={subjects}/>;
+  const days = Math.max(0, Math.round((Date.parse(`${sampleExam.date}T00:00:00Z`) - Date.parse(`${todayDate}T00:00:00Z`)) / 86_400_000));
+  return <BlueprintHome exam={sampleExam} todayLabel={todayLabel} days={days} subjects={subjects}/>;
 }
