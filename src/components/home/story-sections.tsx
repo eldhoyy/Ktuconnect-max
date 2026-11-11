@@ -18,7 +18,7 @@ function CountUp({ value, label }: { value: number; label: string }) {
   const { reduceMotion } = useMotionPreference();
 
   useEffect(() => {
-    if (inView) count.set(reduceMotion ? value : value);
+    if (inView) count.set(value);
   }, [count, inView, reduceMotion, value]);
   useMotionValueEvent(spring, "change", (latest) => setDisplay(Math.round(latest)));
 
