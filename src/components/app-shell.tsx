@@ -2,15 +2,16 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { BookOpen, CalendarDays, Command, Home, Search, X } from "lucide-react";
+import { Command, Search, X } from "lucide-react";
+import { HomeIcon, LearnIcon, PlanIcon } from "@/components/icons/section-icons";
 import topics from "@/data/important-topics.json";
 import timetable from "@/data/november-2026-timetables.json";
 import { ThemeInitializer, ThemeToggle } from "@/components/ui";
 
 const links = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/notes", label: "Learn", icon: BookOpen },
-  { href: "/study-plan", label: "Plan", icon: CalendarDays },
+  { href: "/", label: "Home", icon: HomeIcon },
+  { href: "/notes", label: "Learn", icon: LearnIcon },
+  { href: "/study-plan", label: "Plan", icon: PlanIcon },
 ];
 
 export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -71,7 +72,7 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
         </div>
       </header>
       {children}
-      <nav className="mobile-tabs" aria-label="Mobile navigation">{links.map(({ href, label, icon: Icon }) => <Link href={href} key={href}><Icon size={19}/><span>{label}</span></Link>)}</nav>
+      <nav className="mobile-tabs" aria-label="Mobile navigation">{links.map(({ href, label, icon: Icon }) => <Link href={href} key={href}><Icon width={19} height={19}/><span>{label}</span></Link>)}</nav>
       {open && <div className="command-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}>
         <section className="command-dialog" role="dialog" aria-modal="true" aria-label="Search Cohertx">
           <div className="command-input"><Search size={18}/><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search subjects, notes, papers and pages…" /><button onClick={() => setOpen(false)} aria-label="Close search"><X size={18}/></button></div>
