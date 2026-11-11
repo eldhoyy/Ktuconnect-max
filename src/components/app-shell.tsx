@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { Command, Menu, Search, X } from "lucide-react";
@@ -12,6 +12,16 @@ import { ThemeInitializer, ThemeToggle } from "@/components/ui";
 import { MotionPreferenceProvider, useMotionPreference } from "@/components/motion-preferences";
 import { PageTransition } from "@/components/page-transition";
 import { SiteFooter } from "@/components/site-footer";
+
+function keepFocusInside(event: ReactKeyboardEvent<HTMLElement>) {
+  if (event.key !== "Tab") return;
+  const elements = event.currentTarget.querySelectorAll<HTMLElement>("a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex='-1'])");
+  if (elements.length === 0) return;
+  const first = elements[0];
+  const last = elements[elements.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+}
 
 const links = [
   { href: "/", label: "Home", icon: HomeIcon },
@@ -120,7 +130,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
       <AnimatePresence>
         {menuOpen && (
           <motion.div className="mobile-menu-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduceMotion ? 0 : 0.2 }}>
-            <motion.section className="mobile-menu-sheet" role="dialog" aria-modal="true" aria-label="Site navigation" initial={reduceMotion ? false : { y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ duration: reduceMotion ? 0 : 0.32, ease: [0.22, 1, 0.36, 1] }}>
+            <motion.section className="mobile-menu-sheet" role="dialog" aria-modal="true" aria-label="Site navigation" onKeyDown={keepFocusInside} initial={reduceMotion ? false : { y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ duration: reduceMotion ? 0 : 0.32, ease: [0.22, 1, 0.36, 1] }}>
               <div className="mobile-menu-heading"><span className="section-overline">NAVIGATE COHERTX</span><button type="button" onClick={() => setMenuOpen(false)} aria-label="Close navigation menu"><X size={22}/></button></div>
               <nav>{links.map(({ href, label }, index) => <Link href={href} key={href}><span>0{index + 1}</span>{label}<b>↗</b></Link>)}</nav>
               <Link href="/sources" className="mobile-menu-source">Sources & verification <span>↗</span></Link>
@@ -133,7 +143,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
       <AnimatePresence>
         {open && (
           <motion.div className="command-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduceMotion ? 0 : 0.16 }}>
-            <motion.section className="command-dialog" role="dialog" aria-modal="true" aria-label="Search Cohertx" initial={reduceMotion ? false : { opacity: 0, y: -8, scale: 0.99 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: reduceMotion ? 0 : 0.18 }}>
+            <motion.section className="command-dialog" role="dialog" aria-modal="true" aria-label="Search Cohertx" onKeyDown={keepFocusInside} initial={reduceMotion ? false : { opacity: 0, y: -8, scale: 0.99 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: reduceMotion ? 0 : 0.18 }}>
               <div className="command-input"><Search size={18}/><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search subjects and pages…" /><button onClick={() => setOpen(false)} aria-label="Close search"><X size={18}/></button></div>
               <div className="command-results">
                 {filteredItems.map((item) => <Link href={item.href} key={`${item.kind}-${item.href}-${item.label}`} onClick={() => { setOpen(false); setQuery(""); }}><span><small>{item.kind}</small><strong>{item.label}</strong><small>{item.detail}</small></span><span>↗</span></Link>)}
