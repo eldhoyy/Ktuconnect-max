@@ -125,11 +125,12 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .today-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .today-overline { color:#4A5A70; font-size:10px; letter-spacing:.04em; }
 .today-head h2 { margin:5px 0 0; font-size:24px; letter-spacing:-.035em; }
+.today-head h2 .mono { font:500 16px var(--font-jetbrains-mono),monospace; letter-spacing:0; }
 .streak-chip { display:inline-flex; align-items:center; gap:8px; padding:7px 9px; border-radius:8px; color:#0A1628; background:#EEF1F5; font-size:10px; white-space:nowrap; }
 .sample-dot { color:#4A5A70; font-size:9px; }
 .week-strip { display:grid; grid-template-columns:repeat(7,1fr); gap:9px; width:min(390px,100%); margin:19px 0 15px; }
 .week-day { display:grid; justify-items:center; gap:5px; color:#4A5A70; font-size:9px; }
-.week-day i { display:block; width:100%; height:6px; border-radius:4px; background:#E3E8EF; transform-origin:bottom; }
+.week-day i { display:block; width:100%; height:6px; border-radius:4px; background:#E3E8EF; transform-origin:left center; }
 .week-day i.is-filled { background:#FF6B2C; }
 .task-list { display:grid; }
 .task-row { display:grid; grid-template-columns:22px minmax(0,1fr) auto; align-items:center; gap:12px; min-height:57px; padding:7px 0; border:0; border-top:1px solid #E3E8EF; text-align:left; color:#0A1628; background:transparent; }
