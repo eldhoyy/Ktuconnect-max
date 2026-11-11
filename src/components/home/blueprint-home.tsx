@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, BookOpen, CalendarDays, ListChecks } from "lucide-react";
 import { useMotionPreference } from "@/components/motion-preferences";
 
@@ -20,7 +20,9 @@ function formatShortDate(value: string) {
   return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "Asia/Kolkata" }).format(new Date(`${value}T00:00:00+05:30`)).toUpperCase();
 }
 function getDaysUntil(value: string) {
-  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
+  const part = (type: string) => parts.find((item) => item.type === type)?.value ?? "";
+  const today = `${part("year")}-${part("month")}-${part("day")}`;
   const start = new Date(`${today}T00:00:00+05:30`).getTime();
   const end = new Date(`${value}T00:00:00+05:30`).getTime();
   return Math.max(0, Math.ceil((end - start) / 86_400_000));
@@ -39,7 +41,7 @@ function DimensionLine({ exam, todayLabel, days }: { exam: Exam; todayLabel: str
       <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-jetbrains-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.48 }}>{days} DAYS</motion.text>
       <motion.circle cx="18" cy="37" r="4" fill="#FF6B2C" animate={reduceMotion ? undefined : { opacity: [.55, 1, .55] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}/>
     </svg>
-    <div className="dimension-caption"><span>EXAM DATE · {exam.start} IST</span><span>APPROVED TIMETABLE</span></div>
+    <div className="dimension-caption"><span>EXAM DATE · {exam.start} IST</span><a href={exam.sourceUrl} target="_blank" rel="noreferrer">VIEW APPROVED TIMETABLE ↗</a></div>
   </div>;
 }
 
@@ -84,9 +86,12 @@ function SubjectRow({ subject, index }: { subject: Subject; index: number }) {
 
 export function BlueprintHome({ exam, todayLabel, subjects }: { exam: Exam; todayLabel: string; subjects: Subject[] }) {
   const days = getDaysUntil(exam.date);
+  const { reduceMotion } = useMotionPreference();
+  const { scrollY } = useScroll();
+  const gridY = useTransform(scrollY, [0, 1200], [0, 12]);
   return <main className="blueprint-home">
     <section className="blueprint-hero">
-      <div className="blueprint-grid" aria-hidden="true"/>
+      <motion.div className="blueprint-grid" aria-hidden="true" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reduceMotion ? 0 : .8 }} style={reduceMotion ? undefined : { y: gridY }}/>
       <div className="blueprint-hero-inner">
         <div className="hero-tag"><span className="signal-square"/> S3 · NOVEMBER 2026 EXAMS <span className="hero-sample-tag">SAMPLE VIEW</span></div>
         <motion.h1 initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .06, delayChildren: .08 } } }}>
