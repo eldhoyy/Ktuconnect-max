@@ -20,7 +20,7 @@ export default function SourcesPage() {
       <section className="source-section">
         <span className="section-overline">01 / EXAM TIMETABLES</span>
         <h2>November 2026 source documents</h2>
-        <p>These are the timetable PDFs referenced by the imported dataset. The home-page countdown uses a clearly labelled S5 Mechanical sample selected from these records.</p>
+        <p>These are the timetable PDFs referenced by the imported dataset. The home-page countdown uses the nearest upcoming S3 entry in the approved timetable dataset and is labelled as a sample because no personal profile is connected yet.</p>
         <div className="source-list">{timetable.documents.map((document) => <article key={document.title}><div><span>S{document.semester} / {document.scheme} SCHEME</span><h3>{document.title}</h3><small>{document.documentNumber}</small></div><a href={document.url} target="_blank" rel="noreferrer" aria-label={`Open ${document.title}`}>Open PDF <ArrowUpRight size={14}/></a></article>)}</div>
         <p className="source-meta">Dataset source date: {timetable.sourceDate} · Publisher attribution in the imported record: {timetable.publisher}.</p>
       </section>
