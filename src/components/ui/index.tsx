@@ -64,7 +64,7 @@ export function EmptyState({ title, description, action }: { title: string; desc
 }
 export function ThemeInitializer() {
   useEffect(() => {
-    const saved = localStorage.getItem("cohertx-theme");
+    const saved = localStorage.getItem("datum-theme") ?? localStorage.getItem("cohertx-theme");
     if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
   }, []);
   return null;
@@ -73,7 +73,7 @@ export function ThemeToggle() {
   function toggle() {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
-    localStorage.setItem("cohertx-theme", next);
+    localStorage.setItem("datum-theme", next);
   }
   return <Button variant="quiet" onClick={toggle} aria-label="Toggle colour theme"><Moon size={16}/></Button>;
 }
