@@ -24,6 +24,7 @@
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
+  --paper: #0A1628;
   --page: #0A1628;
   --surface: #0F1B2E;
   --text: #EEF1F5;
