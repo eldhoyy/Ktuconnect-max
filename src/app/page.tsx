@@ -6,7 +6,6 @@ export const dynamic = "force-dynamic";
 
 export default function HomePage() {
   const now = new Date();
-  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
   const todayLabel = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "short" }).format(now).toUpperCase();
 
   const exam = timetable.exams
