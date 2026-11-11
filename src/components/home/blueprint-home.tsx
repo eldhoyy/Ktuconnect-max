@@ -62,7 +62,7 @@ function TodayCard() {
         <span className="task-copy"><strong>{task.title}</strong><small>{task.detail}</small></span><span className="task-minutes">{task.minutes} MIN</span>
       </motion.button>;
     })}</div>
-    <div className="today-foot"><span>{ready ? completed.length : 0}/3 TASKS DONE <span className="sample-note">· SAMPLE PLAN</span></span><Link href="/study-plan">Start focus <ArrowRight size={15}/></Link></div>
+    <div className="today-foot"><span>{ready ? completed.length : 0}/3 TASKS DONE <span className="sample-note">· SAMPLE PLAN</span></span><Link href="/study-plan">Start focus <ArrowRight size={15} strokeWidth={1.8}/></Link></div>
   </motion.aside>;
 }
 
@@ -71,7 +71,7 @@ function SubjectRow({ subject, index }: { subject: Subject; index: number }) {
     <span className="subject-index">0{index + 1}</span>
     <span className="subject-main"><strong>{subject.title}</strong><small>{subject.code}</small></span>
     <span className="subject-progress"><span className="subject-progress-track"><i/></span><small>Progress starts with your first session</small></span>
-    <span className="subject-date"><small>NEXT PAPER</small><strong>{formatShortDate(subject.date)}</strong></span><ArrowRight className="subject-arrow" size={18}/>
+    <span className="subject-date"><small>NEXT PAPER</small><strong>{formatShortDate(subject.date)}</strong></span><ArrowRight className="subject-arrow" size={18} strokeWidth={1.8}/>
   </Link>;
 }
 
@@ -89,7 +89,7 @@ export function BlueprintHome({ exam, todayLabel, days, subjects }: { exam: Exam
           <motion.span variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}>Let&apos;s use every one.</motion.span>
         </motion.h1>
         <DimensionLine exam={exam} todayLabel={todayLabel.toUpperCase()} days={days}/>
-        <div className="hero-actions"><Link href="/onboarding" className="blueprint-button primary">Plan my exams <ArrowRight size={17}/></Link><Link href="/notes" className="blueprint-button outline">Notes <BookOpen size={17}/></Link></div>
+        <div className="hero-actions"><Link href="/onboarding" className="blueprint-button primary">Plan my exams <ArrowRight size={17} strokeWidth={1.8}/></Link><Link href="/notes" className="blueprint-button outline">Notes <BookOpen size={17} strokeWidth={1.8}/></Link></div>
         <p className="hero-honesty"><span/>Only verified KTU dates. No guessed timetables.</p>
       </div>
     </section>
@@ -101,11 +101,11 @@ export function BlueprintHome({ exam, todayLabel, days, subjects }: { exam: Exam
     <section className="value-section content-width">
       <div className="section-heading"><div><span className="section-kicker">ONE WORKING SPACE</span><h2>Less searching. More doing.</h2></div></div>
       <div className="value-grid">
-        <article className="value-item"><span className="value-icon"><BookOpen size={21}/></span><h3>Learn</h3><p>Notes, papers and syllabus organised around each subject.</p><Link href="/notes">Browse notes <ArrowRight size={14}/></Link></article>
-        <article className="value-item"><span className="value-icon"><CalendarDays size={21}/></span><h3>Plan</h3><p>Use verified exam dates to decide what to work on next.</p><Link href="/study-plan">Build a plan <ArrowRight size={14}/></Link></article>
-        <article className="value-item"><span className="value-icon"><ListChecks size={21}/></span><h3>Track</h3><p>Record real study sessions and see your progress take shape.</p><Link href="/progress">View progress <ArrowRight size={14}/></Link></article>
+        <article className="value-item"><span className="value-icon"><BookOpen size={21} strokeWidth={1.8}/></span><h3>Learn</h3><p>Notes, papers and syllabus organised around each subject.</p><Link href="/notes">Browse notes <ArrowRight size={14} strokeWidth={1.8}/></Link></article>
+        <article className="value-item"><span className="value-icon"><CalendarDays size={21} strokeWidth={1.8}/></span><h3>Plan</h3><p>Use verified exam dates to decide what to work on next.</p><Link href="/study-plan">Build a plan <ArrowRight size={14} strokeWidth={1.8}/></Link></article>
+        <article className="value-item"><span className="value-icon"><ListChecks size={21} strokeWidth={1.8}/></span><h3>Track</h3><p>Record real study sessions and see your progress take shape.</p><Link href="/progress">View progress <ArrowRight size={14} strokeWidth={1.8}/></Link></article>
       </div>
     </section>
-    <section className="closing-section"><div className="closing-inner"><span className="section-kicker">START WITH THE NEXT STEP</span><h2>Plan the work.<br/>Then work the plan.</h2><div className="hero-actions"><Link href="/onboarding" className="blueprint-button primary">Plan my exams <ArrowRight size={17}/></Link><Link href="/notes" className="blueprint-button dark-outline">Browse notes <BookOpen size={17}/></Link></div></div><div className="closing-grid" aria-hidden="true"/></section>
+    <section className="closing-section"><div className="closing-inner"><span className="section-kicker">START WITH THE NEXT STEP</span><h2>Plan the work.<br/>Then work the plan.</h2><div className="hero-actions"><Link href="/onboarding" className="blueprint-button primary">Plan my exams <ArrowRight size={17} strokeWidth={1.8}/></Link><Link href="/notes" className="blueprint-button dark-outline">Browse notes <BookOpen size={17} strokeWidth={1.8}/></Link></div></div><div className="closing-grid" aria-hidden="true"/></section>
   </main>;
 }
