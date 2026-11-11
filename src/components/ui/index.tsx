@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, type ButtonHTMLAttributes, type HTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes } from "react";
-import { Check, ChevronDown, Moon, Sun, X } from "lucide-react";
+import { Check, ChevronDown, Moon, X } from "lucide-react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "secondary" | "quiet" | "danger" };
 export function Button({ variant = "primary", className = "", ...props }: ButtonProps) {
