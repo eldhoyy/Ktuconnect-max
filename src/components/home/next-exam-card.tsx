@@ -16,7 +16,7 @@ function getRemaining(target: number, now: number) {
 }
 
 export function NextExamCard({ exam }: { exam: Exam | null }) {
-  const [now, setNow] = useState(0);
+  const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
     setNow(Date.now());
@@ -29,7 +29,7 @@ export function NextExamCard({ exam }: { exam: Exam | null }) {
   }
 
   const target = new Date(`${exam.date}T${exam.start}:00+05:30`).getTime();
-  const countdown = getRemaining(target, now);
+  const countdown = now === null ? null : getRemaining(target, now);
   const dateLabel = new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Kolkata" }).format(new Date(`${exam.date}T00:00:00+05:30`));
 
   return (
@@ -38,13 +38,13 @@ export function NextExamCard({ exam }: { exam: Exam | null }) {
       <p className="exam-subject-code">{exam.code}</p>
       <h2>{exam.title}</h2>
       <div className="exam-date-line"><Clock3 size={14} /><span>{dateLabel} · {exam.start} IST</span><span className="verified-label">Source-linked</span></div>
-      <div className="countdown" aria-live="off" aria-label={countdown.passed ? "Exam start time has passed" : `${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes until exam`}>
+      <div className="countdown" aria-live="off" aria-label={countdown === null ? "Loading countdown" : countdown.passed ? "Exam start time has passed" : `${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes until exam`}>
         {[
-          ["DAYS", countdown.days],
-          ["HRS", countdown.hours],
-          ["MIN", countdown.minutes],
-          ["SEC", countdown.seconds],
-        ].map(([label, value]) => <div className="countdown-unit" key={label}><strong>{String(value).padStart(2, "0")}</strong><span>{label}</span></div>)}
+          ["DAYS", countdown?.days],
+          ["HRS", countdown?.hours],
+          ["MIN", countdown?.minutes],
+          ["SEC", countdown?.seconds],
+        ].map(([label, value]) => <div className="countdown-unit" key={label}><strong>{value === undefined ? "--" : String(value).padStart(2, "0")}</strong><span>{label}</span></div>)}
       </div>
       <Link href={exam.sourceUrl} target="_blank" rel="noreferrer" className="exam-source-link">View timetable source <ArrowUpRight size={14} /></Link>
     </aside>
