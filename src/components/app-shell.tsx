@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { Command, Menu, Search, X, House, BookOpen, CalendarDays, ChartNoAxesColumnIncreasing, Sun, Moon } from "lucide-react";
+import { Command, Menu, Search, X, House, BookOpen, CalendarDays, ChartNoAxesCombined, Sun, Moon } from "lucide-react";
 import topics from "@/data/important-topics.json";
 import timetable from "@/data/november-2026-timetables.json";
 import { ThemeInitializer } from "@/components/ui";
