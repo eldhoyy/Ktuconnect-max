@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BookOpen, CalendarDays, ChartNoAxesCombined } from "lucide-react";
-import { LearnIcon, PlanIcon, ProgressIcon } from "@/components/icons/section-icons";
+import { LearnIcon, PlanIcon } from "@/components/icons/section-icons";
 
 const destinations = [
   { href: "/notes", label: "Notes library", detail: "Find material by subject and semester", icon: LearnIcon },
