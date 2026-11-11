@@ -1,4 +1,4 @@
-# Cohertx
+# Datum
 
 A KTU student workspace that brings academic resources and exam planning into one experience.
 
