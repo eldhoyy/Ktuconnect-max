@@ -9,7 +9,7 @@ export default function HomePage() {
   const todayLabel = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", day: "2-digit", month: "short" }).format(now).toUpperCase();
 
   const exam = timetable.exams
-    .filter((item) => new Date(`${item.date}T${item.start}:00+05:30`).getTime() > now.getTime())
+    .filter((item) => item.semester === 3 && new Date(`${item.date}T${item.start}:00+05:30`).getTime() > now.getTime())
     .sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start))[0];
   const source = timetable.documents.find((document) => document.semester === exam?.semester && document.scheme === exam?.scheme);
   const sampleExam = exam && source ? { ...exam, sourceUrl: source.url } : null;
