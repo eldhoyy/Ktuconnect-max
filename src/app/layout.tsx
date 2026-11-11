@@ -1,27 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Fraunces } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/app-shell";
 
-const bodyFont = DM_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const displayFont = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "800"], variable: "--font-manrope", display: "swap" });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["500"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Cohertx — KTU, in good order", template: "%s · Cohertx" },
-  description: "A considered learning and exam-planning workspace for KTU students.",
-  applicationName: "Cohertx",
+  title: { default: "Datum — KTU study desk", template: "%s · Datum" },
+  description: "A focused KTU study desk for verified exam dates, learning resources and a practical study plan.",
+  applicationName: "Datum",
   manifest: "/manifest.webmanifest",
   icons: { icon: "/favicon.svg" },
-  openGraph: { title: "Cohertx", description: "Learn with clarity. Plan with confidence.", type: "website", images: ["/og-image.svg"] },
-  twitter: { card: "summary_large_image", title: "Cohertx", description: "Learn with clarity. Plan with confidence.", images: ["/og-image.svg"] },
+  openGraph: { title: "Datum", description: "A focused KTU study desk.", type: "website", images: ["/og-image.svg"] },
+  twitter: { card: "summary_large_image", title: "Datum", description: "A focused KTU study desk.", images: ["/og-image.svg"] },
 };
 
-export const viewport: Viewport = { themeColor: "#f2efe6", colorScheme: "light dark" };
+export const viewport: Viewport = { themeColor: "#0A1628", colorScheme: "light dark" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bodyFont.variable} ${displayFont.variable}`}>
+      <body className={`${manrope.variable} ${jetBrainsMono.variable}`}>
         <AppShell>{children}</AppShell>
       </body>
     </html>
