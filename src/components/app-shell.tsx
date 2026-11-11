@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { BookOpen, CalendarDays, Command, Home, Search, X, FileText, GraduationCap } from "lucide-react";
+import { BookOpen, CalendarDays, Command, Home, Search, X } from "lucide-react";
 import topics from "@/data/important-topics.json";
 import timetable from "@/data/november-2026-timetables.json";
 import { ThemeToggle } from "@/components/ui";
