@@ -69,16 +69,20 @@ export function ThemeInitializer() {
   }, []);
   return null;
 }
+export function ThemeInitializer() {
+  useEffect(() => {
+    const saved = localStorage.getItem("cohertx-theme");
+    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  }, []);
+  return null;
+}
 export function ThemeToggle() {
-  const [dark, setDark] = useState(false);
-  useEffect(() => { setDark(document.documentElement.dataset.theme === "dark"); }, []);
   function toggle() {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.dataset.theme = next ? "dark" : "light";
-    localStorage.setItem("cohertx-theme", next ? "dark" : "light");
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("cohertx-theme", next);
   }
-  return <Button variant="quiet" onClick={toggle} aria-label="Toggle colour theme" aria-pressed={dark}>{dark ? <Sun size={16}/> : <Moon size={16}/>}</Button>;
+  return <Button variant="quiet" onClick={toggle} aria-label="Toggle colour theme"><Moon size={16}/></Button>;
 }
 export function CommandPalette({ open, onClose, children }: { open: boolean; onClose: () => void; children: ReactNode }) {
   return <Dialog open={open} onClose={onClose} title="Quick search">{children}</Dialog>;
