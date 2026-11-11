@@ -31,7 +31,7 @@ const mobileLinks = [
   { href: "/", label: "Home", Icon: House },
   { href: "/notes", label: "Learn", Icon: BookOpen },
   { href: "/study-plan", label: "Plan", Icon: CalendarDays },
-  { href: "/progress", label: "Progress", Icon: ChartNoAxesColumnIncreasing },
+  { href: "/progress", label: "Progress", Icon: ChartNoAxesCombined },
 ];
 
 function BrandMark() {
