@@ -130,7 +130,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
       <SiteFooter />
       <nav className="mobile-tabs" aria-label="Mobile navigation">
         {mobileLinks.map(({ href, label, Icon }) => {
-          const active = pathname === href || (href !== "/" && pathname.startsWith(href));
+          const active = isSectionActive(href, pathname);
           return <Link href={href} key={href} aria-current={active ? "page" : undefined} className={active ? "is-active" : ""}><Icon size={19} strokeWidth={1.8}/><span>{label}</span></Link>;
         })}
         <button type="button" className="mobile-more" onClick={() => setMenuOpen(true)} aria-label="Open more navigation"><Menu size={19}/></button>
