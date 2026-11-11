@@ -34,6 +34,12 @@ const mobileLinks = [
   { href: "/progress", label: "Progress", Icon: ChartNoAxesCombined },
 ];
 
+function isSectionActive(href: string, pathname: string) {
+  if (href === "/notes") return ["/notes", "/pyq", "/syllabus", "/updates"].includes(pathname) || pathname.startsWith("/subjects/") || pathname.startsWith("/semesters/");
+  if (href === "/study-plan") return ["/study-plan", "/onboarding", "/timetable"].includes(pathname);
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 function BrandMark() {
   return <svg viewBox="0 0 36 36" role="img" aria-label="Datum mark" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="square">
     <path d="M5 18h26M5 13v10M31 13v10M11 9l7-4 7 4M18 5v26" />
@@ -110,7 +116,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           {desktopLinks.map(({ href, label }) => {
-            const active = pathname === href || (href !== "/" && pathname.startsWith(href));
+            const active = isSectionActive(href, pathname);
             return <Link href={href} key={href} className={active ? "is-active" : ""}>{label}{active && <motion.span className="nav-active-pill" layoutId="datum-nav-pill" transition={{ duration: reduceMotion ? 0 : .2 }} />}</Link>;
           })}
         </nav>
