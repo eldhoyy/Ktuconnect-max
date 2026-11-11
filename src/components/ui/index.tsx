@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState, type ButtonHTMLAttributes, type HTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes } from "react";
-import { Check, ChevronDown, X } from "lucide-react";
+import { Check, ChevronDown, Moon, Sun, X } from "lucide-react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "secondary" | "quiet" | "danger" };
 export function Button({ variant = "primary", className = "", ...props }: ButtonProps) {
@@ -62,11 +62,23 @@ export function Timeline({ items }: { items: { title: string; detail?: string; s
 export function EmptyState({ title, description, action }: { title: string; description: string; action?: ReactNode }) {
   return <div className="ui-empty"><span className="ui-empty-mark">—</span><h3>{title}</h3><p>{description}</p>{action}</div>;
 }
+export function ThemeInitializer() {
+  useEffect(() => {
+    const saved = localStorage.getItem("cohertx-theme");
+    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  }, []);
+  return null;
+}
 export function ThemeToggle() {
   const [dark, setDark] = useState(false);
   useEffect(() => { setDark(document.documentElement.dataset.theme === "dark"); }, []);
-  function toggle() { const next = !dark; setDark(next); document.documentElement.dataset.theme = next ? "dark" : "light"; localStorage.setItem("cohertx-theme", next ? "dark" : "light"); }
-  return <Button variant="quiet" onClick={toggle} aria-pressed={dark}>{dark ? "Dark" : "Light"} mode</Button>;
+  function toggle() {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.dataset.theme = next ? "dark" : "light";
+    localStorage.setItem("cohertx-theme", next ? "dark" : "light");
+  }
+  return <Button variant="quiet" onClick={toggle} aria-label="Toggle colour theme" aria-pressed={dark}>{dark ? <Sun size={16}/> : <Moon size={16}/>}</Button>;
 }
 export function CommandPalette({ open, onClose, children }: { open: boolean; onClose: () => void; children: ReactNode }) {
   return <Dialog open={open} onClose={onClose} title="Quick search">{children}</Dialog>;
