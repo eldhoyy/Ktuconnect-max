@@ -87,8 +87,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 /* Hero and dimension drawing */
 .blueprint-hero { position:relative; overflow:hidden; min-height:610px; color:#EEF1F5; background:#0A1628; }
 .blueprint-grid,.closing-grid { position:absolute; inset:-12px; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px); background-size:26px 26px; }
-.blueprint-grid { animation:grid-drift 36s linear infinite; }
-@keyframes grid-drift { from { transform:translate3d(0,0,0); } to { transform:translate3d(26px,26px,0); } }
+
 .blueprint-hero-inner { position:relative; z-index:1; width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:78px 0 60px; }
 .hero-tag { display:flex; align-items:center; gap:10px; color:var(--accent); font-size:11px; letter-spacing:.035em; }
 .signal-square { width:8px; height:8px; background:var(--accent); }
@@ -100,6 +99,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .dimension-labels span:last-child { text-align:right; }
 .dimension-svg { display:block; width:100%; height:auto; overflow:visible; margin:2px 0; }
 .dimension-caption { color:#9FB0C5; font-size:9px; }
+.dimension-caption a { color:#B8C5D6; text-decoration:underline; text-decoration-color:#FF6B2C; text-underline-offset:3px; }
 .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
 .blueprint-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:50px; padding:0 20px; border:1px solid transparent; border-radius:12px; font-size:14px; font-weight:800; transition:transform .18s ease,background-color .18s ease,border-color .18s ease; }
 .blueprint-button:active { transform:scale(.98); }
@@ -164,9 +164,9 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 
 /* Value and closing */
 .value-section { padding-top:76px; padding-bottom:92px; }
-.value-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.value-item { min-height:205px; padding:24px 28px 24px 0; }
-.value-item + .value-item { padding-left:28px; border-left:1px solid var(--line); }
+.value-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.value-item { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:18px; background:var(--surface); transition:transform .2s ease,box-shadow .2s ease; }
+.value-item + .value-item { padding-left:24px; }
 .value-icon { display:grid; place-items:center; width:42px; height:42px; margin-bottom:22px; border:1px solid var(--line); border-radius:12px; color:var(--text); background:var(--surface); }
 .value-item h3 { margin:0 0 7px; font-size:21px; }
 .value-item p { max-width:270px; margin:0 0 15px; color:var(--muted); font-size:13px; line-height:1.6; }
@@ -250,7 +250,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 /* Shared responsive states */
 @media (hover:hover) and (pointer:fine) {
   .value-item,.subject-row,.today-card { transition:transform .2s ease,box-shadow .2s ease; }
-  .value-item:hover { transform:translateY(-2px); }
+  .value-item:hover { transform:translateY(-2px); box-shadow:var(--shadow-card); }
 }
 @media(max-width:760px) {
   .topbar { height:64px; padding:0 16px; }
@@ -301,7 +301,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
   .subject-arrow { grid-column:4; grid-row:1; }
   .value-section { padding-top:57px; padding-bottom:60px; }
   .value-grid { grid-template-columns:1fr; }
-  .value-item,.value-item+.value-item { min-height:0; display:grid; grid-template-columns:46px 1fr; column-gap:14px; padding:19px 0; border-left:0; }
+  .value-item,.value-item+.value-item { min-height:0; display:grid; grid-template-columns:46px 1fr; column-gap:14px; padding:19px; border-left:1px solid var(--line); }
   .value-item+.value-item { border-top:1px solid var(--line); }
   .value-icon { grid-row:1/4; margin:0; }
   .value-item h3 { margin:0 0 5px; font-size:19px; }
