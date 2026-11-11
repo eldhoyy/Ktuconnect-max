@@ -33,7 +33,7 @@ export default function SourcesPage() {
       <section className="source-section">
         <span className="section-overline">03 / VERIFICATION POLICY</span>
         <ul className="policy-list">
-          <li>Only records that have passed the platform's approval process may be shown as approved resources.</li>
+          <li>Only records that have passed the platform&apos;s approval process may be shown as approved resources.</li>
           <li>Student-entered examination dates are labelled unverified and are never presented as official timetable data.</li>
           <li>We do not generate fake AI answers, exam predictions, testimonials, student counts or progress statistics.</li>
           <li>Past-paper repetition can help prioritise revision, but it cannot guarantee what will appear in a future exam.</li>
