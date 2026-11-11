@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   applicationName: "Cohertx",
   manifest: "/manifest.webmanifest",
   icons: { icon: "/favicon.svg" },
-  openGraph: { title: "Cohertx", description: "Learn with clarity. Plan with confidence.", type: "website" },
+  openGraph: { title: "Cohertx", description: "Learn with clarity. Plan with confidence.", type: "website", images: ["/og-image.svg"] },
+  twitter: { card: "summary_large_image", title: "Cohertx", description: "Learn with clarity. Plan with confidence.", images: ["/og-image.svg"] },
 };
 
 export const viewport: Viewport = { themeColor: "#f2efe6", colorScheme: "light dark" };
