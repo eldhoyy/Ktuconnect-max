@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useMotionValueEvent, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, CalendarDays, FileText, Layers3 } from "lucide-react";
+import { ArrowUpRight, BookOpen, CalendarDays, Layers3 } from "lucide-react";
 import { useMotionPreference } from "@/components/motion-preferences";
 
 type Topic = { name: string; priority: string; evidence: string };
