@@ -17,9 +17,6 @@ const StorySections = dynamic(
 );
 
 export default function HomePage() {
-  const dateParts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
-  const datePart = (type: string) => dateParts.find((part) => part.type === type)?.value ?? "";
-  const today = `${datePart("year")}-${datePart("month")}-${datePart("day")}`;
   const samplePapers = getApprovedPapers({ branch: "Mechanical", semester: "5", scheme: "2024" });
   const currentTime = Date.now();
   const nextExam = samplePapers
