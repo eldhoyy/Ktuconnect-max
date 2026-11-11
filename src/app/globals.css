@@ -60,7 +60,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .content-width { width: min(1120px,calc(100% - 40px)); margin-inline: auto; }
 
 /* Navigation */
-.topbar { position: sticky; top: 0; z-index: 50; height: 72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 clamp(18px,5vw,72px); border-bottom:1px solid transparent; background:var(--page); transition:height .2s ease,background-color .2s ease,border-color .2s ease,backdrop-filter .2s ease; }
+.topbar { position: sticky; top: 0; z-index: 50; height: 72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 clamp(18px,5vw,72px); border-bottom:1px solid transparent; background:var(--page); transition:transform .2s ease,opacity .2s ease; }
 .topbar.is-compact { height:62px; border-color:var(--line); background:color-mix(in srgb,var(--page) 88%,transparent); backdrop-filter:blur(16px); }
 .brand { display:flex; align-items:center; gap:10px; color:var(--text); font:800 23px/1 var(--font-manrope),sans-serif; letter-spacing:-.055em; }
 .brand-mark { width:34px; height:34px; display:grid; place-items:center; color:var(--accent); }
@@ -107,7 +107,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .dimension-caption { color:#9FB0C5; font-size:9px; }
 .dimension-caption a { color:#B8C5D6; text-decoration:underline; text-decoration-color:#FF6B2C; text-underline-offset:3px; }
 .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
-.blueprint-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:50px; padding:0 20px; border:1px solid transparent; border-radius:12px; font-size:14px; font-weight:800; transition:transform .18s ease,background-color .18s ease,border-color .18s ease; }
+.blueprint-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:50px; padding:0 20px; border:1px solid transparent; border-radius:12px; font-size:14px; font-weight:800; transition:transform .18s ease; }
 .blueprint-button:active { transform:scale(.98); }
 .blueprint-button svg { transition:transform .18s ease; }
 .blueprint-button:hover svg { transform:translateX(3px); }
@@ -153,7 +153,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .section-heading h2 { margin:0; font-size:clamp(27px,3vw,38px); }
 .sample-outline { padding:8px 10px; border:1px solid var(--line); border-radius:8px; color:var(--muted); font-size:9px; white-space:nowrap; }
 .subjects-list { border-top:1px solid var(--line); }
-.subject-row { display:grid; grid-template-columns:42px minmax(220px,1.4fr) minmax(190px,1fr) 105px 20px; align-items:center; gap:18px; min-height:96px; padding:16px 10px; border-bottom:1px solid var(--line); transition:background-color .18s ease; }
+.subject-row { display:grid; grid-template-columns:42px minmax(220px,1.4fr) minmax(190px,1fr) 105px 20px; align-items:center; gap:18px; min-height:96px; padding:16px 10px; border-bottom:1px solid var(--line); transition:none; }
 .subject-row:hover { background:color-mix(in srgb,var(--surface) 72%,transparent); }
 .subject-index { color:var(--muted); font-size:11px; }
 .subject-main { display:grid; gap:5px; }
@@ -172,7 +172,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 /* Value and closing */
 .value-section { padding-top:76px; padding-bottom:92px; }
 .value-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-.value-item { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:18px; background:var(--surface); transition:transform .2s ease,box-shadow .2s ease; }
+.value-item { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:18px; background:var(--surface); transition:transform .2s ease; }
 .value-item + .value-item { padding-left:24px; }
 .value-icon { display:grid; place-items:center; width:42px; height:42px; margin-bottom:22px; border:1px solid var(--line); border-radius:12px; color:var(--text); background:var(--surface); }
 .value-item h3 { margin:0 0 7px; font-size:21px; }
