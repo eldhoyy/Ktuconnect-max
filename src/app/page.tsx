@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+import dynamicImport from "next/dynamic";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, BookOpen, ShieldCheck } from "lucide-react";
 import { HeroIllustration } from "@/components/home/hero-illustration";
@@ -11,7 +11,7 @@ import topics from "@/data/important-topics.json";
 
 export const dynamic = "force-dynamic";
 
-const StorySections = dynamic(
+const StorySections = dynamicImport(
   () => import("@/components/home/story-sections").then((module) => module.StorySections),
   { loading: () => <div className="story-loading" aria-label="Loading the Learn, Plan and Track overview" /> },
 );
