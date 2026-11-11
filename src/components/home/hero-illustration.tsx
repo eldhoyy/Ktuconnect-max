@@ -37,7 +37,7 @@ export function HeroIllustration() {
         <div className="plan-progress"><span /></div>
         <small className="plan-caption">A clearer path from material to momentum.</small>
       </motion.div>
-      <span className="art-coordinate coordinate-top">11° 41' N / 76° 00' E</span>
+      <span className="art-coordinate coordinate-top">11° 41&apos; N / 76° 00&apos; E</span>
       <span className="art-coordinate coordinate-bottom">STUDY SYSTEM / FIG. 01</span>
     </div>
   );
