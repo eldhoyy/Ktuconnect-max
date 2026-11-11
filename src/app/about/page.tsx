@@ -3,16 +3,16 @@ import { ArrowUpRight, BookOpen, CalendarDays, ChartNoAxesCombined } from "lucid
 
 export const metadata = {
   title: "About",
-  description: "Why Cohertx brings KTU learning resources and exam planning together.",
+  description: "Why Datum brings KTU learning resources and exam planning together.",
 };
 
 export default function AboutPage() {
   return (
     <main className="editorial-page">
       <header className="editorial-heading">
-        <span className="section-overline">ABOUT / COHERTX</span>
+        <span className="section-overline">ABOUT / DATUM</span>
         <h1>A clearer way<br/><em>through the semester.</em></h1>
-        <p>Cohertx is being built around one simple idea: learning material, exam planning and study progress should support each other—not live in separate corners.</p>
+        <p>Datum is being built around one simple idea: learning material, exam planning and study progress should support each other—not live in separate corners.</p>
       </header>
       <section className="about-principles">
         <article><BookOpen size={22}/><span>01 / LEARN</span><h2>Keep the material close.</h2><p>Notes, previous question papers, syllabus modules and academic updates belong beside the subject they support.</p></article>
