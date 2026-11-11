@@ -15,7 +15,9 @@ const StorySections = dynamic(
 );
 
 export default function HomePage() {
-  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const dateParts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
+  const datePart = (type: string) => dateParts.find((part) => part.type === type)?.value ?? "";
+  const today = `${datePart("year")}-${datePart("month")}-${datePart("day")}`;
   const samplePapers = getApprovedPapers({ branch: "Mechanical", semester: "5", scheme: "2024" });
   const nextExam = samplePapers
     .filter((exam) => exam.date >= today)
