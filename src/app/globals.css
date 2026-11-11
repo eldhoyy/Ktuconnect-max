@@ -86,6 +86,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
 .motion-toggle .toggle-state.is-on { color:var(--accent); }
 
 /* Hero and dimension drawing */
+.blueprint-home { padding-bottom:0; }
 .blueprint-hero { position:relative; overflow:hidden; min-height:610px; color:#EEF1F5; background:#0A1628; }
 .blueprint-grid,.closing-grid { position:absolute; inset:-12px; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px); background-size:26px 26px; }
 
@@ -263,7 +264,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
   .mobile-menu-trigger { display:grid; }
   .mobile-tabs { position:fixed; z-index:45; right:12px; bottom:max(10px,env(safe-area-inset-bottom)); left:12px; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:center; min-height:62px; padding:6px; border:1px solid var(--line); border-radius:16px; background:color-mix(in srgb,var(--surface) 94%,transparent); box-shadow:var(--shadow-card); backdrop-filter:blur(16px); }
   .mobile-tabs a,.mobile-more { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; min-width:0; min-height:48px; border:0; border-radius:10px; color:var(--muted); background:transparent; font-size:9px; font-weight:800; }
-  .mobile-tabs a.is-active { color:var(--ink); background:color-mix(in srgb,var(--accent) 24%,var(--surface)); }
+  .mobile-tabs a.is-active { color:var(--text); background:color-mix(in srgb,var(--accent) 18%,var(--surface)); }
   .mobile-more { color:var(--text); }
   .blueprint-hero { min-height:0; }
   .blueprint-hero-inner { width:calc(100% - 36px); padding:49px 0 52px; }
@@ -310,6 +311,7 @@ h1,h2,h3 { font-family: var(--font-manrope),sans-serif; font-weight: 800; letter
   .value-item a { min-height:28px; }
   .closing-section { padding:56px 18px 70px; }
   .closing-inner h2 { font-size:40px; }
+  .blueprint-home { padding-bottom:70px; }
   .site-footer { padding:30px 18px 105px; }
   .footer-top { display:grid; gap:12px; }
   .footer-top p { max-width:360px; }
