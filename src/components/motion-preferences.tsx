@@ -45,7 +45,7 @@ export function MotionPreferenceToggle() {
   const { reduceMotion, toggle } = useMotionPreference();
   return (
     <button className="motion-toggle" type="button" onClick={toggle} aria-pressed={reduceMotion}>
-      <Accessibility size={15} aria-hidden="true" />
+      <Accessibility size={15} strokeWidth={1.8} aria-hidden="true" />
       <span>Reduce motion</span>
       <span className={reduceMotion ? "toggle-state is-on" : "toggle-state"}>{reduceMotion ? "On" : "Off"}</span>
     </button>
