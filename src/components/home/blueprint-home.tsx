@@ -36,7 +36,7 @@ function DimensionLine({ exam, todayLabel, days }: { exam: Exam; todayLabel: str
       <motion.path d="M18 22V52M662 22V52" stroke="#FF6B2C" strokeWidth="1.6" initial={reduceMotion ? false : { opacity: 0, scaleY: .2 }} animate={{ opacity: 1, scaleY: 1 }} transition={{ duration: reduceMotion ? 0 : .2, delay: 1.18 }} style={{ transformOrigin: "center" }}/>
       <motion.path d="M340 25V49" stroke="#FF6B2C" strokeWidth="1.4" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.28 }}/>
       <motion.rect x="278" y="8" width="124" height="58" rx="8" fill="#FF6B2C" initial={reduceMotion ? false : { opacity: 0, scale: .82 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: reduceMotion ? 0 : .28, delay: 1.32, type: "spring", stiffness: 240, damping: 18 }} style={{ transformOrigin: "340px 37px" }}/>
-      <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.48 }}>{days} DAYS</motion.text>
+      <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-jetbrains-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.48 }}>{days} DAYS</motion.text>
       <motion.circle cx="18" cy="37" r="4" fill="#FF6B2C" animate={reduceMotion ? undefined : { opacity: [.55, 1, .55] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}/>
     </svg>
     <div className="dimension-caption"><span>EXAM DATE · {exam.start} IST</span><span>APPROVED TIMETABLE</span></div>
