@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { BookOpen, CalendarDays, ChartNoAxesCombined, Command, Search } from "lucide-react";
+import { BookOpen, CalendarDays, ChartNoAxesCombined } from "lucide-react";
+import { LearnIcon, PlanIcon, ProgressIcon } from "@/components/icons/section-icons";
 
 const destinations = [
-  { href: "/notes", label: "Notes library", detail: "Find material by subject and semester", icon: BookOpen },
-  { href: "/pyq", label: "Previous papers", detail: "Study from past examination papers", icon: Search },
-  { href: "/study-plan", label: "Exam planner", detail: "Turn your dates into a workable plan", icon: CalendarDays },
+  { href: "/notes", label: "Notes library", detail: "Find material by subject and semester", icon: LearnIcon },
+  { href: "/pyq", label: "Previous papers", detail: "Study from past examination papers", icon: BookOpen },
+  { href: "/study-plan", label: "Exam planner", detail: "Turn your dates into a workable plan", icon: PlanIcon },
 ];
 
 export default function HomePage() {
@@ -19,19 +20,19 @@ export default function HomePage() {
           <Link className="button button-primary" href="/study-plan">Plan my exams <ChartNoAxesCombined size={17} /></Link>
           <Link className="button button-secondary" href="/notes">Browse notes <BookOpen size={17} /></Link>
         </div>
-        <div className="hero-footnote"><Command size={14} /> Press <kbd>⌘ K</kbd> to find a subject or resource</div>
+        <div className="hero-footnote"><CalendarDays size={14} /> Academic dates retain their source and verification status.</div>
         <div className="hero-index" aria-hidden="true"><span>01</span><span>08</span><span>SEMESTERS</span></div>
       </section>
       <section className="destination-grid" aria-label="Explore Cohertx">
         {destinations.map(({ href, label, detail, icon: Icon }, index) => (
           <Link className="destination-card" href={href} key={href}>
             <span className="card-index">0{index + 1}</span>
-            <span className="destination-icon"><Icon size={20} strokeWidth={1.7} /></span>
+            <span className="destination-icon"><Icon width={20} height={20} /></span>
             <h2>{label}</h2><p>{detail}</p><span className="card-arrow">↗</span>
           </Link>
         ))}
       </section>
-      <p className="quiet-note">Academic dates and resources are shown with their verification status. Always refer to official KTU notices for final confirmation.</p>
+      <p className="quiet-note">A date entered by a student is not an official timetable. Always confirm examination details against the original KTU notice.</p>
     </main>
   );
 }
