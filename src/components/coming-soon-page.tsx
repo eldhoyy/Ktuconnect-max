@@ -5,7 +5,7 @@ export function ComingSoonPage({ title, description, stage, destination = "/", a
   return (
     <main className="editorial-page coming-soon-page">
       <header className="editorial-heading">
-        <span className="section-overline">COHERTX / IN PROGRESS · {stage}</span>
+        <span className="section-overline">DATUM / IN PROGRESS · {stage}</span>
         <h1>{title}<br/><em>is taking shape.</em></h1>
         <p>{description}</p>
       </header>
