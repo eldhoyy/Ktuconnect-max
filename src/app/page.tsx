@@ -9,6 +9,8 @@ import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
 import topics from "@/data/important-topics.json";
 
+export const dynamic = "force-dynamic";
+
 const StorySections = dynamic(
   () => import("@/components/home/story-sections").then((module) => module.StorySections),
   { loading: () => <div className="story-loading" aria-label="Loading the Learn, Plan and Track overview" /> },
@@ -19,8 +21,9 @@ export default function HomePage() {
   const datePart = (type: string) => dateParts.find((part) => part.type === type)?.value ?? "";
   const today = `${datePart("year")}-${datePart("month")}-${datePart("day")}`;
   const samplePapers = getApprovedPapers({ branch: "Mechanical", semester: "5", scheme: "2024" });
+  const currentTime = Date.now();
   const nextExam = samplePapers
-    .filter((exam) => exam.date >= today)
+    .filter((exam) => new Date(`${exam.date}T${exam.start}:00+05:30`).getTime() > currentTime)
     .sort((left, right) => left.date.localeCompare(right.date) || left.start.localeCompare(right.start))[0];
   const source = timetable.documents.find((document) => document.semester === 5 && document.scheme === 2024);
   const exam = nextExam && source ? { ...nextExam, sourceUrl: source.url } : null;
