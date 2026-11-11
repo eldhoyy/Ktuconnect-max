@@ -19,15 +19,6 @@ const week = ["M", "T", "W", "T", "F", "S", "S"];
 function formatShortDate(value: string) {
   return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "Asia/Kolkata" }).format(new Date(`${value}T00:00:00+05:30`)).toUpperCase();
 }
-function getDaysUntil(value: string) {
-  const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
-  const part = (type: string) => parts.find((item) => item.type === type)?.value ?? "";
-  const today = `${part("year")}-${part("month")}-${part("day")}`;
-  const start = new Date(`${today}T00:00:00+05:30`).getTime();
-  const end = new Date(`${value}T00:00:00+05:30`).getTime();
-  return Math.max(0, Math.ceil((end - start) / 86_400_000));
-}
-
 function DimensionLine({ exam, todayLabel, days }: { exam: Exam; todayLabel: string; days: number }) {
   const { reduceMotion } = useMotionPreference();
   return <div className="dimension-wrap" aria-label={`${days} days from today to ${exam.code} on ${formatShortDate(exam.date)}`}>
@@ -84,8 +75,7 @@ function SubjectRow({ subject, index }: { subject: Subject; index: number }) {
   </Link>;
 }
 
-export function BlueprintHome({ exam, todayLabel, subjects }: { exam: Exam; todayLabel: string; subjects: Subject[] }) {
-  const days = getDaysUntil(exam.date);
+export function BlueprintHome({ exam, todayLabel, days, subjects }: { exam: Exam; todayLabel: string; days: number; subjects: Subject[] }) {
   const { reduceMotion } = useMotionPreference();
   const { scrollY } = useScroll();
   const gridY = useTransform(scrollY, [0, 1200], [0, 12]);
