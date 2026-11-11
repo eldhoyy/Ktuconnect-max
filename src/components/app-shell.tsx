@@ -133,7 +133,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
           const active = isSectionActive(href, pathname);
           return <Link href={href} key={href} aria-current={active ? "page" : undefined} className={active ? "is-active" : ""}><Icon size={19} strokeWidth={1.8}/><span>{label}</span></Link>;
         })}
-        <button type="button" className="mobile-more" onClick={() => setMenuOpen(true)} aria-label="Open more navigation"><Menu size={19}/></button>
+        <button type="button" className="mobile-more" onClick={() => setMenuOpen(true)} aria-label="Open more navigation"><Menu size={19} strokeWidth={1.8}/></button>
       </nav>
 
       <AnimatePresence>
@@ -141,7 +141,7 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
           <motion.section className="mobile-menu-sheet" role="dialog" aria-modal="true" aria-label="Site navigation" onKeyDown={keepFocusInside}
             initial={reduceMotion ? false : { y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }}
             transition={{ duration: reduceMotion ? 0 : .28, ease: [0.22, 1, .36, 1] }}>
-            <div className="mobile-menu-heading"><Link href="/" className="brand"><span className="brand-mark"><BrandMark/></span><span>datum.</span></Link><button type="button" onClick={() => setMenuOpen(false)} aria-label="Close navigation menu"><X size={22}/></button></div>
+            <div className="mobile-menu-heading"><Link href="/" className="brand"><span className="brand-mark"><BrandMark/></span><span>datum.</span></Link><button type="button" onClick={() => setMenuOpen(false)} aria-label="Close navigation menu"><X size={22} strokeWidth={1.8}/></button></div>
             <nav>{[...desktopLinks, { href: "/timetable", label: "Timetable" }, { href: "/about", label: "About" }, { href: "/sources", label: "Sources" }].map(({ href, label }, index) => <Link href={href} key={href}><span>{String(index + 1).padStart(2, "0")}</span>{label}<b>↗</b></Link>)}</nav>
             <button type="button" className="motion-toggle" onClick={toggle}><span>Reduce motion</span><strong>{reduceMotion ? "On" : "Off"}</strong></button>
           </motion.section>
@@ -153,13 +153,13 @@ function NavigationContent({ children }: Readonly<{ children: React.ReactNode }>
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
           <motion.section className="command-dialog" role="dialog" aria-modal="true" aria-label="Search Datum" onKeyDown={keepFocusInside}
             initial={reduceMotion ? false : { opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }}>
-            <div className="command-input"><Search size={18}/><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search subjects and pages…"/><button onClick={() => setOpen(false)} aria-label="Close search"><X size={18}/></button></div>
+            <div className="command-input"><Search size={18} strokeWidth={1.8}/><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search subjects and pages…"/><button onClick={() => setOpen(false)} aria-label="Close search"><X size={18} strokeWidth={1.8}/></button></div>
             <div className="command-results">
               {filteredItems.map((item) => <Link href={item.href} key={`${item.kind}-${item.href}-${item.label}`} onClick={() => { setOpen(false); setQuery(""); }}><span><small>{item.kind}</small><strong>{item.label}</strong><small>{item.detail}</small></span><span>↗</span></Link>)}
               {filteredItems.length === 0 && <p className="command-empty">No matching subjects or pages in the current index.</p>}
             </div>
             <div className="command-resource-note"><strong>Resource search</strong><span>Notes and paper search will be connected in Stage 3.</span></div>
-            <p className="command-hint"><Command size={12}/> Ctrl / Cmd + K to search · Esc to close</p>
+            <p className="command-hint"><Command size={12} strokeWidth={1.8}/> Ctrl / Cmd + K to search · Esc to close</p>
           </motion.section>
         </motion.div>}
       </AnimatePresence>
