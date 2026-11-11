@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, BookOpen, CalendarDays, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookOpen, ShieldCheck } from "lucide-react";
 import { HeroIllustration } from "@/components/home/hero-illustration";
 import { MagneticLink } from "@/components/home/magnetic-link";
 import { NextExamCard } from "@/components/home/next-exam-card";
