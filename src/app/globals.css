@@ -442,3 +442,12 @@ html { scroll-padding-top: 96px; }
 }
 :root[data-reduce-motion="true"] { scroll-behavior:auto; }
 :root[data-reduce-motion="true"] *, :root[data-reduce-motion="true"] *::before, :root[data-reduce-motion="true"] *::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+
+/* Editorial link underline — transform-only reveal */
+.text-link,.footer-links a,.hero-bottom-line a,.mobile-menu-source { position:relative; }
+.text-link::after,.footer-links a::after,.hero-bottom-line a::after,.mobile-menu-source::after {
+  content:""; position:absolute; right:0; bottom:-3px; left:0; height:1px;
+  background:currentColor; transform:scaleX(0); transform-origin:left center;
+  transition:transform .22s ease;
+}
+.text-link:hover::after,.footer-links a:hover::after,.hero-bottom-line a:hover::after,.mobile-menu-source:hover::after { transform:scaleX(1); }
