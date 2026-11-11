@@ -69,13 +69,6 @@ export function ThemeInitializer() {
   }, []);
   return null;
 }
-export function ThemeInitializer() {
-  useEffect(() => {
-    const saved = localStorage.getItem("cohertx-theme");
-    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
-  }, []);
-  return null;
-}
 export function ThemeToggle() {
   function toggle() {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
