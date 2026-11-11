@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { BookOpen, CalendarDays, Command, Home, Search, X } from "lucide-react";
 import topics from "@/data/important-topics.json";
 import timetable from "@/data/november-2026-timetables.json";
-import { ThemeToggle } from "@/components/ui";
+import { ThemeInitializer, ThemeToggle } from "@/components/ui";
 
 const links = [
   { href: "/", label: "Home", icon: Home },
@@ -58,6 +58,7 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
 
   return (
     <>
+      <ThemeInitializer />
       <header className="topbar">
         <Link href="/" className="brand">
           <span className="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 5h9v9H5zM18 5h9v22h-9zM5 18h9v9H5z" fill="currentColor"/><path d="M9 9h1v1H9zM22 9h1v14h-1zM9 22h1v1H9z" fill="var(--canvas)"/></svg></span>
