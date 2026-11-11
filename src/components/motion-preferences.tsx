@@ -15,7 +15,7 @@ export function MotionPreferenceProvider({ children }: { children: ReactNode }) 
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReduceMotion(stored === null ? media.matches : stored === "true");
     const onChange = (event: MediaQueryListEvent) => {
-      if (window.localStorage.getItem("cohertx-reduce-motion") === null) setReduceMotion(event.matches);
+      if (window.localStorage.getItem("datum-reduce-motion") === null && window.localStorage.getItem("cohertx-reduce-motion") === null) setReduceMotion(event.matches);
     };
     media.addEventListener("change", onChange);
     return () => media.removeEventListener("change", onChange);
