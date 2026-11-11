@@ -5,7 +5,7 @@ import topics from "@/data/important-topics.json";
 
 export const metadata = {
   title: "Sources & verification",
-  description: "How Cohertx labels timetable sources, past-paper patterns and academic information.",
+  description: "How Datum labels timetable sources, past-paper patterns and academic information.",
 };
 
 export default function SourcesPage() {
