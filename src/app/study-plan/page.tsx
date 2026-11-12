@@ -1,10 +1,9 @@
 "use client";
 import { useMemo, useState } from "react";
-import { Zap, ListFilter, ChartNoAxesColumn, CalendarDays, List, Info, X } from "lucide-react";
+import { Zap, ListFilter, ChartNoAxesColumn, CalendarDays, Info, X } from "lucide-react";
 import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
 import { Gauge } from "@/components/pastel-ui";
-export const metadata = { title: "Exam schedule" };
 const profile = { branch: "Mechanical", semester: "S3", scheme: "2024" };
 const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export default function StudyPlanPage() {
