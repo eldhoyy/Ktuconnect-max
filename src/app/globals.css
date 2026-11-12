@@ -22,3 +22,28 @@
 @media(min-width:800px){.app-content{padding:24px 28px 160px}.screen{width:min(100%,1000px)}.home-layout{display:grid;grid-template-columns:minmax(350px,1.1fr) minmax(300px,.9fr);gap:22px;align-items:start}.home-secondary{padding-top:24px}.session-carousel{margin-inline:0;padding-inline:0}.schedule-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.study-day{margin-top:0}.learn-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;align-items:start}}
 @media(max-width:420px){.app-header{padding-inline:16px}.app-content{padding-inline:16px}.session-carousel{margin-inline:-16px;padding-inline:16px}.task-overview{grid-template-columns:1fr 150px}.donut-wrap{width:150px;height:150px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}:root[data-reduce-motion=true] *, :root[data-reduce-motion=true] *::before,:root[data-reduce-motion=true] *::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+
+/* Structural corrections: preserve the approved Cohertx palette and card language. */
+.app-header{position:sticky;top:0;z-index:70;height:72px;padding-top:calc(10px + env(safe-area-inset-top));padding-bottom:10px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.app-header h1{min-width:0;margin:0;text-align:center;font-size:22px;font-weight:500;letter-spacing:-.025em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-header{grid-template-columns:1fr auto}
+.inner-header{grid-template-columns:48px minmax(0,1fr) 48px;gap:12px}
+.inner-header .header-circle{width:48px;height:48px}
+.header-action{width:48px;height:48px;display:grid;place-items:center}
+.app-content{padding-top:10px;padding-bottom:calc(130px + env(safe-area-inset-bottom))}
+.hero-head{grid-template-columns:minmax(0,1fr);margin-top:20px}
+.info-card{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:22px;background:var(--card);box-shadow:var(--shadow);color:var(--pri)}
+.info-card>div{min-width:0;flex:1;color:var(--text)}
+.info-card strong{display:block;font-size:13px;font-weight:600}
+.info-card p{margin:3px 0 0;color:var(--mute);font-size:12px;line-height:1.5}
+.info-card a{color:var(--pri);text-decoration:underline;text-underline-offset:3px}
+.retry-button{display:inline-flex;align-items:center;gap:7px;min-height:40px;margin-top:10px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:var(--chip);color:var(--text);font-size:12px}
+.session-code{font:600 13px/1.3 ui-monospace,SFMono-Regular,monospace;letter-spacing:.02em}
+.session-topic{overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.session-bottom{gap:12px}.session-time{min-width:0;max-width:calc(100% - 64px)}
+.session-time small,.session-time strong{overflow-wrap:anywhere}
+.unlock-chip{display:inline-flex;align-items:center;max-width:100%;padding:4px 9px;border:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-radius:999px;background:var(--glass);white-space:normal}
+.nav-item{position:relative}.nav-icon{position:relative;width:50px;height:50px;display:grid;place-items:center}.nav-active-indicator{position:absolute;inset:0;border-radius:50%;background:var(--pri);z-index:0}.nav-icon svg{position:relative;z-index:1}.nav-item.active{background:transparent}.nav-item.active .nav-icon{color:var(--priText)}
+.source-info{margin-top:18px}
+@media(max-width:420px){.app-header{padding-inline:16px}.inner-header{gap:8px}.app-header h1{font-size:21px}.app-content{padding-inline:16px}.info-card{padding:13px 14px}}
+@media(min-width:800px){.app-header{padding-left:28px;padding-right:28px}}
