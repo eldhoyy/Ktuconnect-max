@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { Activity, BookOpen, CalendarDays, ClipboardList, FileText, LogOut, Plus, RefreshCw, ShieldCheck, Trash2, Check, X, AlertTriangle } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { BookOpen, CalendarDays, LogOut, Plus, RefreshCw, Trash2, Check, X, AlertTriangle } from "lucide-react";
 type Resource={id:string;title:string;resource_url:string;resource_type:string;verification_status:string;description?:string|null;created_at:string};
 type ReviewItem={id:string;name?:string;semester?:string;subject?:string|null;request_text?:string;report_type?:string;details?:string;status:string;admin_notes?:string|null;created_at:string};
 type Overview={counts:Record<string,number>;activity:{id:number;action:string;target_type:string;created_at:string}[];analytics:Record<string,number>};
@@ -8,7 +8,7 @@ const tabs=[["overview","Overview"],["resources","Resources"],["review","Review 
 export default function AdminDashboard(){
  const [tab,setTab]=useState<string>("overview"),[overview,setOverview]=useState<Overview|null>(null),[resources,setResources]=useState<Resource[]>([]),[requests,setRequests]=useState<ReviewItem[]>([]),[reports,setReports]=useState<ReviewItem[]>([]),[error,setError]=useState(""),[busy,setBusy]=useState(false);
  const [title,setTitle]=useState(""),[url,setUrl]=useState(""),[type,setType]=useState("notes"),[filter,setFilter]=useState("all");
- async function load(){
+ const load=useCallback(async ()=>{
   setBusy(true);setError("");
   try{
    const [o,r,q]=await Promise.all([fetch("/api/admin/overview",{cache:"no-store"}),fetch("/api/admin/resources",{cache:"no-store"}),fetch("/api/admin/reviews",{cache:"no-store"})]);
