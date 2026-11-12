@@ -16,8 +16,8 @@ export default function AdminDashboard(){
    if(!o.ok)throw new Error(od.error||"Overview unavailable");if(!r.ok)throw new Error(rd.error||"Resources unavailable");if(!q.ok)throw new Error(qd.error||"Review queues unavailable");
    setOverview(od);setResources(rd.resources||[]);setRequests(qd.requests||[]);setReports(qd.reports||[]);
   }catch(e){setError(e instanceof Error?e.message:"Could not load admin data.");}finally{setBusy(false);}
- }
- useEffect(()=>{void load();},[]);
+ },[]);
+ useEffect(()=>{void load();},[load]);
  async function signOut(){await fetch("/api/admin/logout",{method:"POST"});window.location.href="/admin/login";}
  async function createResource(e:React.FormEvent){e.preventDefault();setError("");const r=await fetch("/api/admin/resources",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({title,resource_url:url,resource_type:type})});const d=await r.json();if(!r.ok){setError(d.error||"Could not save resource.");return;}setTitle("");setUrl("");await load();}
  async function updateResource(id:string,status:string){const r=await fetch("/api/admin/resources",{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({id,verification_status:status})});if(!r.ok){const d=await r.json();setError(d.error||"Could not update resource.");return;}await load();}
