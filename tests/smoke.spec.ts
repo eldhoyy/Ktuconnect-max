@@ -5,11 +5,11 @@ for (const route of routes) {
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
   page.on("console", message => { if (message.type() === "error") errors.push(message.text()); });
+  await page.goto(route);
   for (const theme of ["light", "dark"]) {
-   await page.addInitScript(value => localStorage.setItem("datum-theme", value), theme);
+   await page.evaluate(value => { localStorage.setItem("datum-theme", value); document.documentElement.dataset.theme = value; }, theme);
    for (const width of [360, 390, 430]) {
     await page.setViewportSize({ width, height: 844 });
-    await page.goto(route);
     await expect(page.locator("body")).toBeVisible();
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     if (width === 390 && theme === "light") {
