@@ -1,0 +1,40 @@
+import { test, expect } from "@playwright/test";
+const routes = ["/", "/study-plan", "/subjects", "/profile", "/notes", "/pyq", "/syllabus", "/timetable", "/updates", "/sources", "/about", "/onboarding", "/progress", "/subjects/GYMAT301", "/semesters/3"];
+for (const route of routes) {
+ test(`renders ${route} at 390px without overflow or console errors`, async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", error => errors.push(error.message));
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(route);
+  await expect(page.locator("body")).toBeVisible();
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  const buttons = page.locator("button:visible");
+  const count = await buttons.count();
+  for (let i = 0; i < count; i++) {
+   const button = buttons.nth(i);
+   if (await button.isVisible() && await button.isEnabled()) {
+    const label = (await button.getAttribute("aria-label")) || (await button.innerText()).trim();
+    expect(label, `button on ${route} must have an accessible label`).not.toBe("");
+   }
+  }
+  expect(errors, `runtime errors on ${route}`).toEqual([]);
+ });
+}
+test("home goal, search and preferences controls open real surfaces", async ({ page }) => {
+ await page.setViewportSize({width:390,height:844});
+ await page.goto("/");
+ await page.getByRole("button",{name:/set your weekly study goal/i}).click();
+ await expect(page.getByRole("dialog",{name:/weekly study goal/i})).toBeVisible();
+ await page.getByRole("button",{name:/close/i}).click();
+ await page.getByRole("button",{name:/search/i}).click();
+ await expect(page.getByRole("dialog",{name:/search/i})).toBeVisible();
+ await page.getByRole("button",{name:/close/i}).click();
+ await page.getByRole("button",{name:/open menu and preferences/i}).click();
+ await expect(page.getByRole("dialog",{name:/preferences/i})).toBeVisible();
+});
+test("schedule date controls open selected-date details", async ({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto("/study-plan");
+ await page.locator(".date-cell").first().click();
+ await expect(page.getByRole("dialog",{name:/selected date details/i})).toBeVisible();
+});
