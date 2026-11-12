@@ -6,6 +6,7 @@ for (const route of routes) {
   page.on("pageerror", error => errors.push(error.message));
   page.on("console", message => { if (message.type() === "error") errors.push(message.text()); });
   await page.goto(route);
+  if (route === "/admin") await page.waitForURL("**/admin/login");
   for (const theme of ["light", "dark"]) {
    await page.evaluate(value => { localStorage.setItem("datum-theme", value); document.documentElement.dataset.theme = value; }, theme);
    for (const width of [360, 390, 430]) {
