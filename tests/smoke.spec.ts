@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-const routes = ["/", "/study-plan", "/subjects", "/profile", "/notes", "/pyq", "/syllabus", "/timetable", "/updates", "/sources", "/about", "/onboarding", "/progress", "/subjects/GYMAT301", "/semesters/3"];
+const routes = ["/", "/study-plan", "/subjects", "/profile", "/notes", "/pyq", "/syllabus", "/timetable", "/updates", "/sources", "/about", "/onboarding", "/progress", "/request", "/admin/login", "/admin", "/subjects/GYMAT301", "/semesters/3"];
 for (const route of routes) {
  test(`renders ${route} at 360/390/430px in both themes`, async ({ page }) => {
   const errors: string[] = [];
