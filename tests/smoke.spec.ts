@@ -4,6 +4,7 @@ for (const route of routes) {
  test(`renders ${route} at 390px without overflow or console errors`, async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
+  page.on("console", message => { if (message.type() === "error") errors.push(message.text()); });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(route);
   await expect(page.locator("body")).toBeVisible();
@@ -15,6 +16,12 @@ for (const route of routes) {
    if (await button.isVisible() && await button.isEnabled()) {
     const label = (await button.getAttribute("aria-label")) || (await button.innerText()).trim();
     expect(label, `button on ${route} must have an accessible label`).not.toBe("");
+    await button.click();
+    const dialog = page.locator('[role="dialog"]:visible').last();
+    if (await dialog.count()) {
+     const close = dialog.locator('button[aria-label*="Close"],button[aria-label*="close"]').first();
+     if (await close.count()) await close.click();
+    }
    }
   }
   expect(errors, `runtime errors on ${route}`).toEqual([]);
