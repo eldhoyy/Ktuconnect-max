@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, Search, Flag, Lock, CalendarDays, BookOpen } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Flag, Lock, BookOpen } from "lucide-react";
 import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
 import { LeafArt } from "@/components/pastel-ui";
