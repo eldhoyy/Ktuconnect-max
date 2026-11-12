@@ -29,6 +29,6 @@ export default function HomePage(){
     <div className="empty-note">Today · {dateLabel} · Sample planning cards are not counted as real study activity.</div>
    </div>
   </section>
-  {source&&<p className="source-meta" style={{textAlign:"center",marginTop:22}}>S3 MECHANICAL · 2024 SCHEME · <a href={source.url} target="_blank" rel="noreferrer">APPROVED TIMETABLE SOURCE ↗</a></p>}
+  {source&&<p className="source-meta" style={{textAlign:"center",marginTop:22}}>S3 MECHANICAL · 2024 SCHEME · SAMPLE PROFILE · <a href={source.url} target="_blank" rel="noreferrer">APPROVED TIMETABLE SOURCE ↗</a></p>}
  </div>
 }
