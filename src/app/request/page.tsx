@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
-export const metadata={title:"Request study materials"};
 export default function RequestPage(){
  const [name,setName]=useState(""),[semester,setSemester]=useState(""),[subject,setSubject]=useState(""),[requestText,setRequestText]=useState(""),[error,setError]=useState(""),[sent,setSent]=useState(false),[busy,setBusy]=useState(false);
  async function submit(e:React.FormEvent){e.preventDefault();setBusy(true);setError("");try{const r=await fetch("/api/requests",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({name,semester,subject,request_text:requestText})});const d=await r.json();if(!r.ok)throw new Error(d.error||"Request could not be sent.");setSent(true);setName("");setSemester("");setSubject("");setRequestText("");}catch(e){setError(e instanceof Error?e.message:"Request could not be sent.");}finally{setBusy(false);}}
