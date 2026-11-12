@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bell, BookOpen, GraduationCap, ClipboardList } from "lucide-react";
+import { Bell, BookOpen, ClipboardList } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { Donut } from "@/components/pastel-ui";
 export const metadata={title:"Subjects"};
