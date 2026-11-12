@@ -99,3 +99,6 @@
 .password-field input{border:0;background:transparent}.password-field button{width:36px;height:36px;display:grid;place-items:center}
 .admin-error{margin:0;color:#DC2626;font-size:12px}
 @media(max-width:680px){.admin-heading{display:grid}.admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-two-col{grid-template-columns:1fr}.admin-resource-form{grid-template-columns:1fr}.admin-row{align-items:flex-start;flex-direction:column}.admin-actions{width:100%}}
+
+.admin-resource-form textarea,.admin-form textarea,.admin-form select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:500 13px "Plus Jakarta Sans Variable",sans-serif}
+.admin-resource-form textarea,.admin-form textarea{resize:vertical}
