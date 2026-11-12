@@ -8,16 +8,33 @@ const tabs=[["overview","Overview"],["resources","Resources"],["review","Review 
 export default function AdminDashboard(){
  const [tab,setTab]=useState<string>("overview"),[overview,setOverview]=useState<Overview|null>(null),[resources,setResources]=useState<Resource[]>([]),[requests,setRequests]=useState<ReviewItem[]>([]),[reports,setReports]=useState<ReviewItem[]>([]),[error,setError]=useState(""),[busy,setBusy]=useState(false);
  const [title,setTitle]=useState(""),[url,setUrl]=useState(""),[type,setType]=useState("notes"),[filter,setFilter]=useState("all");
- const load=useCallback(async ()=>{
-  setBusy(true);setError("");
-  try{
-   const [o,r,q]=await Promise.all([fetch("/api/admin/overview",{cache:"no-store"}),fetch("/api/admin/resources",{cache:"no-store"}),fetch("/api/admin/reviews",{cache:"no-store"})]);
-   const od=await o.json(),rd=await r.json(),qd=await q.json();
-   if(!o.ok)throw new Error(od.error||"Overview unavailable");if(!r.ok)throw new Error(rd.error||"Resources unavailable");if(!q.ok)throw new Error(qd.error||"Review queues unavailable");
-   setOverview(od);setResources(rd.resources||[]);setRequests(qd.requests||[]);setReports(qd.reports||[]);
-  }catch(e){setError(e instanceof Error?e.message:"Could not load admin data.");}finally{setBusy(false);}
- },[]);
- useEffect(()=>{void load();},[load]);
+ const load = useCallback(
+  async () => {
+   setBusy(true);
+   setError("");
+   try {
+    const [o, r, q] = await Promise.all([
+     fetch("/api/admin/overview", { cache: "no-store" }),
+     fetch("/api/admin/resources", { cache: "no-store" }),
+     fetch("/api/admin/reviews", { cache: "no-store" }),
+    ]);
+    const od = await o.json(), rd = await r.json(), qd = await q.json();
+    if (!o.ok) throw new Error(od.error || "Overview unavailable");
+    if (!r.ok) throw new Error(rd.error || "Resources unavailable");
+    if (!q.ok) throw new Error(qd.error || "Review queues unavailable");
+    setOverview(od);
+    setResources(rd.resources || []);
+    setRequests(qd.requests || []);
+    setReports(qd.reports || []);
+   } catch (e) {
+    setError(e instanceof Error ? e.message : "Could not load admin data.");
+   } finally {
+    setBusy(false);
+   }
+  },
+  []
+ );
+ useEffect(() => { void load(); }, [load]);
  async function signOut(){await fetch("/api/admin/logout",{method:"POST"});window.location.href="/admin/login";}
  async function createResource(e:React.FormEvent){e.preventDefault();setError("");const r=await fetch("/api/admin/resources",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({title,resource_url:url,resource_type:type})});const d=await r.json();if(!r.ok){setError(d.error||"Could not save resource.");return;}setTitle("");setUrl("");await load();}
  async function updateResource(id:string,status:string){const r=await fetch("/api/admin/resources",{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({id,verification_status:status})});if(!r.ok){const d=await r.json();setError(d.error||"Could not update resource.");return;}await load();}
