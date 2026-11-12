@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, Flag, Lock, BookOpen } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Flag, Lock, BookOpen, Search } from "lucide-react";
 import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
 import { LeafArt } from "@/components/pastel-ui";
@@ -17,7 +17,7 @@ export default function HomePage(){
     <div className="tabs"><button className="tab active">Today</button><Link className="tab" href="/study-plan">Study plan</Link><Link className="tab" href="/study-plan">Weekly plan</Link></div>
     <Link href="/study-plan" className="goal-bar"><span className="goal-icon"><Flag size={22}/></span><span className="goal-label">Set your weekly study goal</span><ArrowRight className="goal-arrow" size={20}/></Link>
     <div className="session-carousel" aria-label="Upcoming exam sessions">
-     {sessions.length? sessions.map((s,i)=><article className="session-card" key={s.code}><div className="session-top"><span className="glass-icon"><BookOpen size={21}/></span></div><div><p className="session-subject">{s.title}</p><h2 className="session-topic">{s.code}</h2></div><div className="session-bottom"><span className="session-time"><small>Verified exam · {s.date}</small><strong>{s.start} IST</strong></span><span className="round-action"><ArrowUpRight size={25}/></span></div><LeafArt/></article>):<article className="session-card"><span className="glass-icon"><BookOpen size={21}/></span><div><p className="session-subject">No upcoming verified paper</p><h2 className="session-topic">Your timetable will appear here</h2></div><div className="session-bottom"><small>Check the approved timetable source</small><span className="round-action"><ArrowUpRight size={25}/></span></div></article>}
+     {sessions.length? sessions.map((s)=><article className="session-card" key={s.code}><div className="session-top"><span className="glass-icon"><BookOpen size={21}/></span></div><div><p className="session-subject">{s.title}</p><h2 className="session-topic">{s.code}</h2></div><div className="session-bottom"><span className="session-time"><small>Verified exam · {s.date}</small><strong>{s.start} IST</strong></span><span className="round-action"><ArrowUpRight size={25}/></span></div><LeafArt/></article>):<article className="session-card"><span className="glass-icon"><BookOpen size={21}/></span><div><p className="session-subject">No upcoming verified paper</p><h2 className="session-topic">Your timetable will appear here</h2></div><div className="session-bottom"><small>Check the approved timetable source</small><span className="round-action"><ArrowUpRight size={25}/></span></div></article>}
     </div>
    </div>
    <div className="home-secondary">
