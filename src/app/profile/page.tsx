@@ -1,0 +1,5 @@
+"use client";
+import {useState} from "react";
+import {ScreenHeader} from "@/components/reference-ui/shared";
+import {ThemeMenu} from "@/components/reference-ui/theme-menu";
+export default function ProfilePage(){const [reduceMotion,setReduceMotion]=useState(false);return <main className="screen-wrap"><ScreenHeader title="Profile"/><section className="profile-card"><h2>Your study profile</h2><p>No saved student profile is connected yet. Your plan and subject selections will appear here after onboarding.</p><span className="sample-label">PROFILE NOT SET UP</span></section><section className="profile-card"><h2>Appearance</h2><ThemeMenu/></section><section className="profile-card"><h2>Accessibility</h2><label className="setting-row"><span>Reduce motion</span><input type="checkbox" checked={reduceMotion} onChange={e=>{setReduceMotion(e.target.checked);localStorage.setItem("datum-reduce-motion",String(e.target.checked));document.documentElement.dataset.reduceMotion=String(e.target.checked);}}/></label></section></main>;}

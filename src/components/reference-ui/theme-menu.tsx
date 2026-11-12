@@ -1,0 +1,4 @@
+"use client";
+import {useEffect,useState} from "react";
+import {Sun,Moon,Monitor} from "lucide-react";
+export function ThemeMenu(){const [theme,setTheme]=useState("system");useEffect(()=>setTheme(localStorage.getItem("datum-theme")||"system"),[]);function select(v:string){setTheme(v);if(v==="system"){localStorage.removeItem("datum-theme");document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}else{localStorage.setItem("datum-theme",v);document.documentElement.dataset.theme=v;}}return <div className="theme-options"><button className={theme==="light"?"selected":""} onClick={()=>select("light")}><Sun/>Light</button><button className={theme==="dark"?"selected":""} onClick={()=>select("dark")}><Moon/>Dark</button><button className={theme==="system"?"selected":""} onClick={()=>select("system")}><Monitor/>System</button></div>;}
