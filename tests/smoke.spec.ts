@@ -1,26 +1,34 @@
 import { test, expect } from "@playwright/test";
 const routes = ["/", "/study-plan", "/subjects", "/profile", "/notes", "/pyq", "/syllabus", "/timetable", "/updates", "/sources", "/about", "/onboarding", "/progress", "/subjects/GYMAT301", "/semesters/3"];
 for (const route of routes) {
- test(`renders ${route} at 390px without overflow or console errors`, async ({ page }) => {
+ test(`renders ${route} at 360/390/430px in both themes`, async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
   page.on("console", message => { if (message.type() === "error") errors.push(message.text()); });
-  await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(route);
-  await expect(page.locator("body")).toBeVisible();
-  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  const buttons = page.locator("button:visible");
-  const count = await buttons.count();
-  for (let i = 0; i < count; i++) {
-   const button = buttons.nth(i);
-   if (await button.isVisible() && await button.isEnabled()) {
-    const label = (await button.getAttribute("aria-label")) || (await button.innerText()).trim();
-    expect(label, `button on ${route} must have an accessible label`).not.toBe("");
-    await button.click();
-    const dialog = page.locator('[role="dialog"]:visible').last();
-    if (await dialog.count()) {
-     const close = dialog.locator('button[aria-label*="Close"],button[aria-label*="close"]').first();
-     if (await close.count()) await close.click();
+  for (const theme of ["light", "dark"]) {
+   await page.addInitScript(value => localStorage.setItem("datum-theme", value), theme);
+   for (const width of [360, 390, 430]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto(route);
+    await expect(page.locator("body")).toBeVisible();
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    if (width === 390 && theme === "light") {
+     const buttons = page.locator("button:visible");
+     const count = await buttons.count();
+     for (let i = 0; i < count; i++) {
+      const button = buttons.nth(i);
+      if (await button.isVisible() && await button.isEnabled()) {
+       const label = (await button.getAttribute("aria-label")) || (await button.innerText()).trim();
+       expect(label, `button on ${route} must have an accessible label`).not.toBe("");
+       if (label.toLowerCase().includes("go back")) continue;
+       await button.click();
+       const dialog = page.locator('[role="dialog"]:visible').last();
+       if (await dialog.count()) {
+        const close = dialog.locator('button[aria-label*="Close"],button[aria-label*="close"]').first();
+        if (await close.count()) await close.click();
+       }
+      }
+     }
     }
    }
   }
