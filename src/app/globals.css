@@ -64,3 +64,38 @@
 :root{scrollbar-gutter:stable}
 
 @media(max-width:420px){.app-content{padding-inline:22px}.session-carousel{margin-inline:-22px;padding-inline:22px}}
+
+.admin-shell{width:min(100%,1080px);margin:0 auto;padding:8px 0 24px}
+.admin-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin:16px 0 22px}
+.admin-heading h1{margin:4px 0;font-size:27px;font-weight:600;letter-spacing:-.03em}
+.admin-heading .muted-copy{margin:0}
+.admin-tabs{display:flex;gap:7px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:none}
+.admin-tabs button{flex:0 0 auto;min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--mute);font-size:12px}
+.admin-tabs button.active{background:var(--pri);border-color:var(--pri);color:var(--priText)}
+.admin-content{display:grid;gap:16px;padding-bottom:22px}
+.admin-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.admin-stat{display:grid;gap:8px;padding:15px}.admin-stat span{font-size:12px;color:var(--mute)}.admin-stat strong{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.admin-two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.admin-two-col h2,.admin-content h2{margin:0 0 8px;font-size:17px;font-weight:600}
+.admin-metric{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px;text-transform:capitalize}
+.admin-metric small{color:var(--mute);text-align:right}
+.admin-resource-form{display:grid;grid-template-columns:1fr 1.4fr .8fr auto;align-items:end;gap:10px;margin-top:14px}
+.admin-resource-form label,.admin-form label{display:grid;gap:6px;color:var(--mute);font-size:12px}
+.admin-resource-form input,.admin-resource-form select,.admin-form input{width:100%;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:500 13px "Plus Jakarta Sans Variable",sans-serif}
+.admin-resource-form .goal-save{min-height:44px;margin:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 12px;white-space:nowrap}
+.admin-list{display:grid;gap:10px}
+.admin-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px}
+.admin-row strong{display:block;font-size:14px}
+.admin-row p{margin:4px 0;color:var(--mute);font-size:12px}
+.admin-row a{color:var(--pri);font-size:11px;overflow-wrap:anywhere}
+.admin-row small,.admin-kicker{color:var(--mute);font-size:11px}
+.admin-actions{display:flex;flex-wrap:wrap;gap:7px}
+.admin-alert{color:#B45309}
+.admin-login{max-width:440px;margin:28px auto;padding:24px}
+.admin-login h1{margin:16px 0 4px;font-size:24px;font-weight:600}
+.admin-login .muted-copy{margin:0}
+.admin-form{display:grid;gap:14px;margin-top:22px}
+.password-field{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding-right:10px}
+.password-field input{border:0;background:transparent}.password-field button{width:36px;height:36px;display:grid;place-items:center}
+.admin-error{margin:0;color:#DC2626;font-size:12px}
+@media(max-width:680px){.admin-heading{display:grid}.admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-two-col{grid-template-columns:1fr}.admin-resource-form{grid-template-columns:1fr}.admin-row{align-items:flex-start;flex-direction:column}.admin-actions{width:100%}}
