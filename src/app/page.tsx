@@ -13,7 +13,7 @@ export default function HomePage(){
  return <div className="screen page-enter">
   <section className="home-layout">
    <div className="home-primary">
-    <div className="hero-head"><h1 className="hero-title">Start Your<br/>Exam Prep</h1><button className="circle-button" aria-label="Search" onClick={()=>document.dispatchEvent(new KeyboardEvent("keydown",{key:"k",ctrlKey:true}))}><Search size={22}/></button></div>
+    <div className="hero-head"><h1 className="hero-title">Start Your<br/>Exam Prep</h1><Link className="circle-button" aria-label="Search subjects" href="/subjects"><Search size={22}/></Link></div>
     <div className="tabs"><button className="tab active">Today</button><Link className="tab" href="/study-plan">Study plan</Link><Link className="tab" href="/study-plan">Weekly plan</Link></div>
     <Link href="/study-plan" className="goal-bar"><span className="goal-icon"><Flag size={22}/></span><span className="goal-label">Set your weekly study goal</span><ArrowRight className="goal-arrow" size={20}/></Link>
     <div className="session-carousel" aria-label="Upcoming exam sessions">
