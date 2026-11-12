@@ -23,7 +23,7 @@ export default function HomePage(){
    <div className="home-secondary">
     <div className="module-grid">
      <article className="pastel-card"><span className="glass-icon lock-icon"><Lock size={20}/></span><h3>Module 2</h3><small className="unlock-chip">Unlocks with your plan</small><p>Axial loading and deformation</p><LeafArt/></article>
-     <article className="pastel-card pink"><span className="glass-icon lock-icon"><Lock size={20}/></span><h3>Module 3</h3><small>Sample · Unlock date not set</small><p>Thermal stresses</p><LeafArt/></article>
+     <article className="pastel-card pink"><span className="glass-icon lock-icon"><Lock size={20}/></span><h3>Module 3</h3><small>Unlocks with your plan</small><p>Thermal stresses</p><LeafArt/></article>
     </div>
     <div className="info-card"><BookOpen size={20}/><div><strong>Sample academic preview</strong><p>Academic content remains a sample until a student profile and verified subject modules are connected.</p></div></div>
     <div className="info-card"><Flag size={20}/><div><strong>Today · {dateLabel}</strong><p>Sample planning cards are not counted as real study activity.</p></div></div>
