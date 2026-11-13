@@ -28,7 +28,7 @@ export default function Template({ children }: { children: ReactNode }) {
     sessionStorage.setItem(stackKey, JSON.stringify(stack.slice(-30)));
     setDirection(nextDirection);
   }, [pathname]);
-  const offset = reduceMotion ? 0 : direction === "forward" ? -8 : 8;
+  const offset = reduceMotion ? 0 : direction === "forward" ? 8 : -8;
   return <motion.div key={pathname}
     initial={reduceMotion ? { opacity: 0 } : { opacity: 0, x: offset }}
     animate={{ opacity: 1, x: 0 }}
