@@ -19,7 +19,7 @@ function clientIp(request: Request) {
 export async function POST(request: Request) {
   const limit = rateLimit(`admin-login:${clientIp(request)}`, { limit: 5, windowMs: 15 * 60_000, blockMs: 15 * 60_000 });
   if (!limit.allowed) return NextResponse.json({ error: "Too many attempts. Try again later." }, { status: 429 });
-  const expectedEmail = process.env.ADMIN_EMAIL;
+  const expectedEmail = process.env.ADMIN_USERNAME || process.env.ADMIN_EMAIL || "admin@exampilot.com";
   const expectedPassword = process.env.ADMIN_PASSWORD;
   if (!expectedEmail || !expectedPassword) return NextResponse.json({ error: "Admin access is not configured." }, { status: 503 });
 
