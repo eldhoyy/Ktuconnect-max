@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useLayoutEffect, useMemo, useState, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { Accessibility } from "lucide-react";
 import { motionSeconds, motionEase, motionStagger } from "@/lib/motion";
@@ -11,7 +11,7 @@ const MotionContext = createContext<MotionContextValue>({ reduceMotion: false, t
 export function MotionPreferenceProvider({ children }: { children: ReactNode }) {
   const [reduceMotion, setReduceMotion] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const stored = window.localStorage.getItem("datum-reduce-motion") ?? localStorage.getItem("cohertx-reduce-motion");
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReduceMotion(stored === null ? media.matches : stored === "true");
