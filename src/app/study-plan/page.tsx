@@ -10,7 +10,7 @@ import { Gauge } from "@/components/pastel-ui";
 const profile = { branch: "Mechanical", semester: "S3", scheme: "2024" };
 const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export default function StudyPlanPage() {
- const papers = getApprovedPapers(profile);
+ const papers = useMemo(() => getApprovedPapers(profile), []);
  const { reduceMotion } = useMotionPreference();
  const day = useMemo(() => { const now = new Date(); return new Date(now.getFullYear(), now.getMonth(), now.getDate()); }, []);
  const start = useMemo(() => { const value = new Date(day); value.setDate(day.getDate() - ((day.getDay() + 6) % 7)); return value; }, [day]);
