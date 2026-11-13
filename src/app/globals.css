@@ -130,7 +130,6 @@
 .nav-active-indicator{will-change:transform}
 .task-check svg{width:18px;height:18px;display:block}
 .task-check svg path{stroke-dasharray:24;stroke-dashoffset:0}
-:root[data-reduce-motion=true] *,@media(prefers-reduced-motion:reduce){ }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .pastel-card,.session-card,.subject-tile,.subject-row,.tab,.date-cell,.mini-action,.task-row{transform:none!important}
