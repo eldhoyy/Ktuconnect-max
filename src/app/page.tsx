@@ -4,6 +4,7 @@ import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
 import { LeafArt } from "@/components/pastel-ui";
 import { GoalBar } from "@/components/goal-bar";
+import { SessionCarousel } from "@/components/session-carousel";
 export const dynamic="force-dynamic";
 const profile={branch:"Mechanical",semester:"S3",scheme:"2024"};
 export default function HomePage(){
@@ -17,9 +18,9 @@ export default function HomePage(){
     <div className="hero-head"><h1 className="hero-title">Start Your<br/>Exam Prep</h1></div>
     <div className="tabs"><button className="tab active">Today</button><Link className="tab" href="/study-plan">Study plan</Link><Link className="tab" href="/study-plan">Weekly plan</Link></div>
     <GoalBar/>
-    <div className="session-carousel" aria-label="Upcoming exam sessions">
+    <SessionCarousel>
      {sessions.length? sessions.map((s)=><Link href="/study-plan" className="session-card" key={s.code}><div className="session-top"><span className="glass-icon"><BookOpen size={21}/></span></div><div><p className="session-subject">{s.title.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p><h2 className="session-topic session-code">{s.code}</h2></div><div className="session-bottom"><span className="session-time"><small>Verified exam · {s.date}</small><strong>{s.start} IST</strong></span><span className="round-action"><ArrowUpRight size={25}/></span></div><LeafArt/></Link>):<Link href="/sources" className="session-card"><span className="glass-icon"><BookOpen size={21}/></span><div><p className="session-subject">No upcoming verified paper</p><h2 className="session-topic">Your timetable will appear here</h2></div><div className="session-bottom"><small>Check the approved timetable source</small><span className="round-action"><ArrowUpRight size={25}/></span></div></Link>}
-    </div>
+    </SessionCarousel>
    </div>
    <div className="home-secondary">
     <div className="module-grid">
