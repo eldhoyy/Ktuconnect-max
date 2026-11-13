@@ -122,8 +122,8 @@
 .tab,.admin-tabs button,.date-cell,.mini-action,.theme-options button,.preference-row,.motion-toggle,.task-row,.search-link,.subject-row,.ui-button,.ui-icon-button{transition:transform var(--motion-fast) ease-out,opacity var(--motion-fast) ease-out}
 .tab:active,.admin-tabs button:active,.date-cell:active,.mini-action:active,.theme-options button:active,.preference-row:active,.motion-toggle:active,.task-row:active,.search-link:active,.subject-row:active,.ui-button:active,.ui-icon-button:active{transform:scale(.98)}
 @media(hover:hover) and (pointer:fine){
-  .pastel-card,.session-card,.subject-tile,.surface-card,.subject-row{transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
-  .pastel-card:hover,.session-card:hover,.subject-tile:hover,.subject-row:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .pastel-card,.session-card,.subject-tile,.surface-card,.subject-row{transition:transform var(--motion-fast) ease-out}
+  .pastel-card:hover,.session-card:hover,.subject-tile:hover,.subject-row:hover{transform:translateY(-2px)}
 }
 .sheet-backdrop{background:rgba(10,9,18,.48);backdrop-filter:none;-webkit-backdrop-filter:none;touch-action:pan-y}
 .settings-sheet,.search-sheet{will-change:transform}
@@ -140,7 +140,7 @@
 /* Touch press feedback and scroll-snap card emphasis */
 .session-card:active,.pastel-card:active,.subject-tile:active,.surface-card:active{transform:scale(.98)}
 .session-carousel{scroll-snap-type:x mandatory;scroll-padding-inline:22px;overscroll-behavior-x:contain}
-.session-card{scroll-snap-align:center;transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
+.session-card{scroll-snap-align:center;transition:transform var(--motion-fast) ease-out}
 .tab:focus-visible,.date-cell:focus-visible{outline-offset:2px}
 
 .session-card{transform:scale(.97);transition:transform var(--motion-standard) ease-in-out}
