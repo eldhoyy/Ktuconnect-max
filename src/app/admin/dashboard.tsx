@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { BookOpen, CalendarDays, Check, ClipboardList, Download, LogOut, Plus, RefreshCw, Trash2, X, AlertTriangle, Pencil, ShieldCheck } from "lucide-react";
+import { Check, Download, LogOut, Plus, RefreshCw, Trash2, X, AlertTriangle, Pencil, ShieldCheck } from "lucide-react";
 
 type Row = Record<string, any> & { id: string };
 type Overview = { counts: Record<string, number>; activity: Row[]; analytics: Record<string, number> };
