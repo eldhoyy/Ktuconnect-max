@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useId } from "react";
 import { GraduationCap } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useMotionPreference } from "@/components/motion-preferences";
 import { motionSeconds, motionEase } from "@/lib/motion";
 export function LeafArt(){return <svg className="leaf-art" viewBox="0 0 100 92" fill="currentColor" aria-hidden="true"><path d="M48 88C15 65 10 39 20 16c23 5 35 25 28 72Z" opacity=".8"/><path d="M51 88C38 50 48 19 69 4c17 20 12 49-18 84Z" opacity=".75"/><path d="M52 89C62 54 82 39 98 40c4 25-13 43-46 49Z" opacity=".7"/></svg>}
 export function Gauge({value=60}:{value?:number}){
- const r=34,c=2*Math.PI*r,offset=c*(1-value/100),ref=useRef<SVGSVGElement>(null),seenKey="ktu-gauge-seen:"+value;
+ const r=34,c=2*Math.PI*r,offset=c*(1-value/100),ref=useRef<SVGSVGElement>(null),instanceId=useId(),seenKey="ktu-gauge-seen:"+instanceId;
  const inView=useInView(ref,{once:true,amount:.5}),{reduceMotion}=useMotionPreference();
  const [seen,setSeen]=useState(false);
  useEffect(()=>{try{setSeen(sessionStorage.getItem(seenKey)==="1")}catch{setSeen(false)}},[seenKey]);
