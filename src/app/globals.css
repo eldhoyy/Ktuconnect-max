@@ -117,8 +117,8 @@
 @media(max-width:680px){.admin-form-grid{grid-template-columns:1fr}.admin-wide{grid-column:auto}.admin-filters{width:100%}.admin-filters input,.admin-filters select{width:100%}.admin-filters .outline-link{width:100%;justify-content:center}}
 
 /* Unified motion polish — approved pastel tokens remain unchanged */
-:root{--motion-fast:120ms;--motion-standard:220ms;--motion-slow:400ms;--motion-ease-enter:cubic-bezier(.16,1,.3,1);--motion-ease-move:cubic-bezier(.4,0,.2,1)}
-:root.theme-transition body,:root.theme-transition body *{transition-property:color,background-color,border-color,box-shadow,fill,stroke!important;transition-duration:200ms!important;transition-timing-function:ease-in-out!important}
+:root{--motion-fast:120ms;--motion-standard:220ms;--motion-slow:400ms;--motion-theme:200ms;--motion-ease-enter:cubic-bezier(.16,1,.3,1);--motion-ease-move:cubic-bezier(.4,0,.2,1)}
+:root.theme-transition body,:root.theme-transition body *{transition-property:color,background-color,border-color,box-shadow,fill,stroke!important;transition-duration:var(--motion-theme)!important;transition-timing-function:ease-in-out!important}
 .tab,.admin-tabs button,.date-cell,.mini-action,.theme-options button,.preference-row,.motion-toggle,.task-row,.search-link,.subject-row,.ui-button,.ui-icon-button{transition:background-color var(--motion-fast) ease-out,color var(--motion-fast) ease-out,border-color var(--motion-fast) ease-out,opacity var(--motion-fast) ease-out}
 .tab:active,.admin-tabs button:active,.date-cell:active,.mini-action:active,.theme-options button:active,.preference-row:active,.motion-toggle:active,.task-row:active,.search-link:active,.subject-row:active,.ui-button:active,.ui-icon-button:active{transform:scale(.98)}
 @media(hover:hover) and (pointer:fine){
