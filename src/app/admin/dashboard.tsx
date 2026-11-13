@@ -1,61 +1,114 @@
 "use client";
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { BookOpen, CalendarDays, LogOut, Plus, RefreshCw, Trash2, Check, X, AlertTriangle } from "lucide-react";
-type Resource={id:string;title:string;resource_url:string;resource_type:string;verification_status:string;description?:string|null;created_at:string};
-type ReviewItem={id:string;name?:string;semester?:string;subject?:string|null;request_text?:string;report_type?:string;details?:string;status:string;admin_notes?:string|null;created_at:string};
-type Overview={counts:Record<string,number>;activity:{id:number;action:string;target_type:string;created_at:string}[];analytics:Record<string,number>};
-const tabs=[["overview","Overview"],["resources","Resources"],["review","Review queues"],["subjects","Subjects"],["timetable","Timetable"],["topics","Important topics"],["settings","Settings"]] as const;
-export default function AdminDashboard(){
- const [tab,setTab]=useState<string>("overview"),[overview,setOverview]=useState<Overview|null>(null),[resources,setResources]=useState<Resource[]>([]),[requests,setRequests]=useState<ReviewItem[]>([]),[reports,setReports]=useState<ReviewItem[]>([]),[error,setError]=useState(""),[busy,setBusy]=useState(false);
- const [title,setTitle]=useState(""),[url,setUrl]=useState(""),[type,setType]=useState("notes"),[filter,setFilter]=useState("all");
- const load = useCallback(
-  async () => {
-   setBusy(true);
-   setError("");
-   try {
-    const [o, r, q] = await Promise.all([
-     fetch("/api/admin/overview", { cache: "no-store" }),
-     fetch("/api/admin/resources", { cache: "no-store" }),
-     fetch("/api/admin/reviews", { cache: "no-store" }),
-    ]);
-    const od = await o.json(), rd = await r.json(), qd = await q.json();
-    if (!o.ok) throw new Error(od.error || "Overview unavailable");
-    if (!r.ok) throw new Error(rd.error || "Resources unavailable");
-    if (!q.ok) throw new Error(qd.error || "Review queues unavailable");
-    setOverview(od);
-    setResources(rd.resources || []);
-    setRequests(qd.requests || []);
-    setReports(qd.reports || []);
-   } catch (e) {
-    setError(e instanceof Error ? e.message : "Could not load admin data.");
-   } finally {
-    setBusy(false);
-   }
-  },
-  []
- );
- useEffect(() => { void load(); }, [load]);
- async function signOut(){await fetch("/api/admin/logout",{method:"POST"});window.location.href="/admin/login";}
- async function createResource(e:React.FormEvent){e.preventDefault();setError("");const r=await fetch("/api/admin/resources",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({title,resource_url:url,resource_type:type})});const d=await r.json();if(!r.ok){setError(d.error||"Could not save resource.");return;}setTitle("");setUrl("");await load();}
- async function updateResource(id:string,status:string){const r=await fetch("/api/admin/resources",{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({id,verification_status:status})});if(!r.ok){const d=await r.json();setError(d.error||"Could not update resource.");return;}await load();}
- async function deleteResource(id:string){if(!confirm("Delete this resource permanently?"))return;const r=await fetch("/api/admin/resources",{method:"DELETE",headers:{"content-type":"application/json"},body:JSON.stringify({id})});if(!r.ok){setError("Could not delete resource.");return;}await load();}
- async function updateReview(kind:"request"|"report",item:ReviewItem,status:string){const r=await fetch("/api/admin/reviews",{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({kind,id:item.id,status,admin_notes:item.admin_notes||""})});if(!r.ok){setError("Could not update review item.");return;}await load();}
- const allReviews=[...requests.map(x=>({...x,kind:"request" as const})),...reports.map(x=>({...x,kind:"report" as const}))];
- const pendingResources=resources.filter(x=>filter==="all"||x.verification_status===filter);
- return <main className="admin-shell">
-  <header className="admin-heading"><div><p className="section-overline">COHERTX / ADMIN CENTRE</p><h1>Workspace management</h1><p className="muted-copy">Review resources, academic data and student requests.</p></div><div className="admin-actions"><button className="outline-link" onClick={()=>void load()}><RefreshCw size={16}/> Refresh</button><button className="outline-link" onClick={signOut}><LogOut size={16}/> Sign out</button></div></header>
-  {error&&<div className="info-card admin-alert"><AlertTriangle size={20}/><div><strong>Action needs attention</strong><p>{error}</p></div></div>}
-  <nav className="admin-tabs" aria-label="Admin sections">{tabs.map(([id,label])=><button key={id} className={tab===id?"active":""} onClick={()=>setTab(id)}>{label}</button>)}</nav>
-  {tab==="overview"&&<section className="admin-content">
-   <div className="admin-stats">{[["Resources",overview?.counts.resources],["Pending review",overview?.counts.pending],["Requests",overview?.counts.requests],["Reports",overview?.counts.reports],["Subjects",overview?.counts.subjects],["Timetable docs",overview?.counts.timetableDocuments]].map(([label,value])=><article className="surface-card admin-stat" key={String(label)}><span>{label}</span><strong>{busy?"…":Number(value||0).toLocaleString()}</strong></article>)}</div>
-   <div className="admin-two-col"><section className="surface-card"><h2>Consented feature analytics</h2><p className="muted-copy">Recent usage events; anonymous browser activity only.</p>{Object.entries(overview?.analytics||{}).sort((a,b)=>b[1]-a[1]).map(([k,v])=><div className="admin-metric" key={k}><span>{k.replaceAll("_"," ")}</span><strong>{v}</strong></div>)}</section><section className="surface-card"><h2>Recent admin activity</h2>{overview?.activity.length?overview.activity.map(a=><div className="admin-metric" key={a.id}><span>{a.action} · {a.target_type}</span><small>{new Date(a.created_at).toLocaleString()}</small></div>):<p className="muted-copy">No admin actions recorded yet.</p>}</section></div>
-  </section>}
-  {tab==="resources"&&<section className="admin-content"><section className="surface-card"><h2>Add a resource</h2><form className="admin-resource-form" onSubmit={createResource}><label>Title<input value={title} onChange={e=>setTitle(e.target.value)} required maxLength={180}/></label><label>Resource URL<input type="url" value={url} onChange={e=>setUrl(e.target.value)} required placeholder="https://…"/></label><label>Type<select value={type} onChange={e=>setType(e.target.value)}><option value="notes">Notes</option><option value="pdf">PDF</option><option value="question_paper">PYQ</option><option value="video">Video</option><option value="reference">Link / Reference</option></select></label><button className="goal-save"><Plus size={17}/> Add for review</button></form></section><div className="section-row"><h2>Resource library</h2><select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All statuses</option><option value="pending">Pending</option><option value="under_review">Under review</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div><div className="admin-list">{pendingResources.map(item=><article className="surface-card admin-row" key={item.id}><div><strong>{item.title}</strong><p>{item.resource_type} · {item.verification_status}</p><a href={item.resource_url} target="_blank" rel="noreferrer">{item.resource_url}</a></div><div className="admin-actions"><button className="outline-link" onClick={()=>void updateResource(item.id,"approved")} aria-label={"Approve "+item.title}><Check size={16}/> Approve</button><button className="outline-link" onClick={()=>void updateResource(item.id,"rejected")} aria-label={"Reject "+item.title}><X size={16}/> Reject</button><button className="outline-link" onClick={()=>void deleteResource(item.id)} aria-label={"Delete "+item.title}><Trash2 size={16}/></button></div></article>)}</div></section>}
-  {tab==="review"&&<section className="admin-content"><h2>Material requests and reports</h2><div className="admin-list">{allReviews.map(item=><article className="surface-card admin-row" key={item.kind+item.id}><div><span className="admin-kicker">{item.kind} · {item.status}</span><strong>{item.kind==="request"?item.request_text:item.details}</strong><p>{item.name||item.report_type} · {item.semester||item.subject||"Academic content"}</p><small>{new Date(item.created_at).toLocaleString()}</small></div><div className="admin-actions"><button className="outline-link" onClick={()=>void updateReview(item.kind,item,"in_progress")}>In progress</button><button className="outline-link" onClick={()=>void updateReview(item.kind,item,"done")}>Done</button></div></article>)}{!allReviews.length&&<p className="muted-copy">No open requests or reports.</p>}</div></section>}
-  {tab==="subjects"&&<section className="admin-content"><section className="surface-card"><h2>Verified subject catalogue</h2><p className="muted-copy">Subject and module CRUD uses the approved curriculum records. This workspace will show verified records after the official syllabus source has been imported.</p><Link className="outline-link" href="/subjects">View public subjects <BookOpen size={16}/></Link></section></section>}
-  {tab==="timetable"&&<section className="admin-content"><section className="surface-card"><h2>Timetable documents</h2><p className="muted-copy">The November 2026 approved catalogue is imported by the seed script. Student-entered dates remain unverified and cannot be promoted from this screen.</p><a className="outline-link" href="/sources">Review source catalogue <CalendarDays size={16}/></a></section></section>}
-  {tab==="topics"&&<section className="admin-content"><section className="surface-card"><h2>Important topics</h2><p className="muted-copy">Past-paper patterns, not predictions. Evidence and paper counts are stored in the important topic patterns table.</p></section></section>}
-  {tab==="settings"&&<section className="admin-content"><section className="surface-card"><h2>Admin safety</h2><p className="muted-copy">Login is rate-limited. Sessions are signed, HTTP-only and expire after 12 hours. Admin actions are written to the audit log.</p><p className="muted-copy">Keep ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_SESSION_SECRET and SUPABASE_SERVICE_ROLE_KEY in Vercel server-side environment variables only.</p></section></section>}
- </main>;
+import { Check, Download, LogOut, Plus, RefreshCw, Trash2, X, AlertTriangle, Pencil, ShieldCheck } from "lucide-react";
+
+type Row = { [key: string]: unknown; id: string; title?: string; name?: string; subject_code?: string; subject_title?: string; resource_url?: string; resource_type?: string; verification_status?: string; description?: string; status?: string; request_text?: string; details?: string; report_type?: string; semester?: string | number; credits?: number | null; subject_id?: string; subject?: string; created_at: string; admin_notes?: string; module_number?: number | string; topics?: string[]; evidence?: string; paper_count?: number; exam_session?: string; notice_title?: string; notice_url?: string; document_url?: string; source_url?: string; source_title?: string; published_at?: string; review_notes?: string; verification_notes?: string; target_type?: string; target_id?: string; action?: string; };
+type Overview = { counts: Record<string, number>; activity: Row[]; analytics: Record<string, number> };
+const tabs = [["overview","Overview"],["resources","Resources"],["review","Review queues"],["subjects","Subjects & modules"],["timetable","Timetable"],["topics","Important topics"],["settings","Audit & safety"]] as const;
+const getReviewNote = (id: string) => { const el = document.getElementById("note-" + id); return el instanceof HTMLTextAreaElement ? el.value : ""; };
+const jsonDownload = (name: string, value: unknown) => {
+  const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = name; a.click(); URL.revokeObjectURL(url);
+};
+export default function AdminDashboard() {
+  const [tab,setTab]=useState<string>("overview"),[overview,setOverview]=useState<Overview|null>(null);
+  const [resources,setResources]=useState<Row[]>([]),[requests,setRequests]=useState<Row[]>([]),[reports,setReports]=useState<Row[]>([]);
+  const [subjects,setSubjects]=useState<Row[]>([]),[modules,setModules]=useState<Row[]>([]),[selectedSubject,setSelectedSubject]=useState("");
+  const [timetable,setTimetable]=useState<{universities:Row[];candidates:Row[];sources:Row[];timetables:Row[]}>({universities:[],candidates:[],sources:[],timetables:[]});
+  const [topics,setTopics]=useState<Row[]>([]),[audit,setAudit]=useState<Row[]>([]);
+  const [error,setError]=useState(""),[busy,setBusy]=useState(false),[query,setQuery]=useState(""),[statusFilter,setStatusFilter]=useState("all");
+  const [resourceForm,setResourceForm]=useState({title:"",resource_url:"",resource_type:"notes",description:""});
+  const [subjectForm,setSubjectForm]=useState({subject_code:"",title:"",semester:"1",credits:"",scheme_id:"",branch_id:""});
+  const [moduleForm,setModuleForm]=useState({module_number:"1",title:"",topics:"",source_page:""});
+  const [candidateForm,setCandidateForm]=useState({university_id:"",notice_title:"",notice_url:"",discovered_from_url:"https://ktu.edu.in/",document_url:"",semester:"",exam_session:"",published_at:""});
+  const [topicForm,setTopicForm]=useState({subject_code:"",subject_title:"",paper_count:"0",evidence:"",topics:""});
+  const [editingResource,setEditingResource]=useState("");
+  const load=useCallback(async()=>{
+    setBusy(true);setError("");
+    try{
+      const paths=["overview","resources","reviews","subjects","modules","timetable","topics","audit"];
+      const responses=await Promise.all(paths.map(p=>fetch("/api/admin/"+p,{cache:"no-store"})));
+      const data=await Promise.all(responses.map(r=>r.json()));
+      const failed=responses.findIndex(r=>!r.ok);
+      if(failed>=0)throw new Error(data[failed]?.error||"Could not load admin records.");
+      setOverview(data[0]);setResources(data[1].resources||[]);setRequests(data[2].requests||[]);setReports(data[2].reports||[]);
+      setSubjects(data[3].subjects||[]);setModules(data[4].modules||[]);setTimetable(data[5]);setTopics(data[6].topics||[]);setAudit(data[7].entries||[]);
+    }catch(e){setError(e instanceof Error?e.message:"Could not load admin data.");}
+    finally{setBusy(false);}
+  },[]);
+  useEffect(()=>{void load();},[load]);
+  async function api(path:string,method="POST",body?:unknown){
+    const r=await fetch("/api/admin/"+path,{method,headers:{"content-type":"application/json"},body:body===undefined?undefined:JSON.stringify(body)});
+    const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||"Action failed.");return d;
+  }
+  async function act(fn:()=>Promise<unknown>){try{setError("");await fn();await load();}catch(e){setError(e instanceof Error?e.message:"Action failed.");}}
+  async function signOut(){await fetch("/api/admin/logout",{method:"POST"});window.location.href="/admin/login";}
+  async function saveResource(e:React.FormEvent){e.preventDefault();await act(async()=>{if(editingResource)await api("resources","PATCH",{id:editingResource,...resourceForm});else await api("resources","POST",resourceForm);setResourceForm({title:"",resource_url:"",resource_type:"notes",description:""});setEditingResource("");});}
+  async function saveSubject(e:React.FormEvent){e.preventDefault();await act(async()=>{await api("subjects","POST",{...subjectForm,semester:Number(subjectForm.semester),credits:subjectForm.credits?Number(subjectForm.credits):null});setSubjectForm({...subjectForm,subject_code:"",title:""});});}
+  async function saveModule(e:React.FormEvent){e.preventDefault();await act(async()=>{await api("modules","POST",{...moduleForm,subject_id:selectedSubject,module_number:Number(moduleForm.module_number),topics:moduleForm.topics.split("\n").map(x=>x.trim()).filter(Boolean)});setModuleForm({...moduleForm,title:"",topics:""});});}
+  async function saveCandidate(e:React.FormEvent){e.preventDefault();await act(async()=>{await api("timetable","POST",{...candidateForm,semester:candidateForm.semester?Number(candidateForm.semester):null});setCandidateForm({...candidateForm,notice_title:"",notice_url:"",document_url:"",semester:"",exam_session:"",published_at:""});});}
+  async function saveTopic(e:React.FormEvent){e.preventDefault();await act(async()=>{await api("topics","POST",{...topicForm,paper_count:Number(topicForm.paper_count),topics:topicForm.topics.split("\n").map(x=>x.trim()).filter(Boolean)});setTopicForm({...topicForm,subject_code:"",subject_title:"",evidence:"",topics:""});});}
+  const filteredResources=resources.filter(x=>(statusFilter==="all"||x.verification_status===statusFilter)&&(!query||String(x.title).toLowerCase().includes(query.toLowerCase())||String(x.resource_url).toLowerCase().includes(query.toLowerCase())));
+  const reviews=[...requests.map(x=>({...x,kind:"request"})),...reports.map(x=>({...x,kind:"report"}))];
+  return <main className="admin-shell">
+    <header className="admin-heading"><div><p className="section-overline">KTU CONNECT / ADMIN CENTRE</p><h1>Workspace management</h1><p className="muted-copy">Manage academic records, resources, timetable sources and student reports.</p></div><div className="admin-actions"><button className="outline-link" onClick={()=>void load()}><RefreshCw size={16}/> Refresh</button><button className="outline-link" onClick={signOut}><LogOut size={16}/> Sign out</button></div></header>
+    {error&&<div className="info-card admin-alert"><AlertTriangle size={20}/><div><strong>Action needs attention</strong><p>{error}</p></div></div>}
+    <nav className="admin-tabs" aria-label="Admin sections">{tabs.map(([id,label])=><button key={id} className={tab===id?"active":""} onClick={()=>setTab(id)}>{label}</button>)}</nav>
+    {tab==="overview"&&<section className="admin-content">
+      <div className="admin-stats">{[["Resources",overview?.counts.resources],["Pending review",overview?.counts.pending],["Requests",overview?.counts.requests],["Reports",overview?.counts.reports],["Subjects",overview?.counts.subjects],["Timetable docs",overview?.counts.timetableDocuments]].map(([label,value])=><article className="surface-card admin-stat" key={String(label)}><span>{label}</span><strong>{busy?"…":Number(value||0).toLocaleString()}</strong></article>)}</div>
+      <div className="admin-two-col"><section className="surface-card"><h2>Consented feature analytics</h2><p className="muted-copy">Feature event counts from the privacy-conscious usage log.</p>{Object.entries(overview?.analytics||{}).sort((a,b)=>b[1]-a[1]).map(([k,v])=><div className="admin-metric" key={k}><span>{k.replaceAll("_"," ")}</span><strong>{v}</strong></div>)}</section><section className="surface-card"><h2>Recent admin activity</h2>{overview?.activity?.length?overview.activity.map(a=><div className="admin-metric" key={a.id}><span>{a.action} · {a.target_type}</span><small>{new Date(a.created_at).toLocaleString()}</small></div>):<p className="muted-copy">No admin actions recorded yet.</p>}</section></div>
+    </section>}
+    {tab==="resources"&&<section className="admin-content">
+      <section className="surface-card"><h2>{editingResource?"Edit resource":"Add a resource"}</h2><form className="admin-resource-form" onSubmit={saveResource}>
+        <label>Title<input value={resourceForm.title} onChange={e=>setResourceForm({...resourceForm,title:e.target.value})} required maxLength={180}/></label>
+        <label>Resource URL<input type="url" value={resourceForm.resource_url} onChange={e=>setResourceForm({...resourceForm,resource_url:e.target.value})} required placeholder="https://…"/></label>
+        <label>Type<select value={resourceForm.resource_type} onChange={e=>setResourceForm({...resourceForm,resource_type:e.target.value})}><option value="notes">Notes</option><option value="pdf">PDF</option><option value="question_paper">PYQ</option><option value="video">Video</option><option value="reference">Link / Reference</option></select></label>
+        <button className="goal-save"><Plus size={16}/>{editingResource?"Save changes":"Add for review"}</button>
+        <label className="admin-wide">Description<textarea rows={2} value={resourceForm.description} onChange={e=>setResourceForm({...resourceForm,description:e.target.value})}/></label>
+        {editingResource&&<button type="button" className="outline-link" onClick={()=>{setEditingResource("");setResourceForm({title:"",resource_url:"",resource_type:"notes",description:""});}}>Cancel edit</button>}
+      </form></section>
+      <div className="section-row"><h2>Resource library ({filteredResources.length})</h2><div className="admin-filters"><input aria-label="Search resources" placeholder="Search title or URL" value={query} onChange={e=>setQuery(e.target.value)}/><select value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value="all">All statuses</option>{["pending","under_review","approved","rejected","needs_recheck"].map(s=><option key={s}>{s}</option>)}</select><button className="outline-link" onClick={()=>jsonDownload("ktu-resources.json",resources)}><Download size={15}/> Export JSON</button></div></div>
+      <div className="admin-list">{filteredResources.map(item=><article className="surface-card admin-row" key={item.id}><div><strong>{item.title}</strong><p>{item.resource_type} · {item.verification_status}</p>{item.resource_url&&<a href={item.resource_url} target="_blank" rel="noreferrer">{item.resource_url}</a>}</div><div className="admin-actions"><button className="outline-link" onClick={()=>void act(()=>api("resources","PATCH",{id:item.id,verification_status:"approved"}))}><Check size={15}/> Approve</button><button className="outline-link" onClick={()=>void act(()=>api("resources","PATCH",{id:item.id,verification_status:"rejected"}))}><X size={15}/> Reject</button><button className="outline-link" onClick={()=>{setEditingResource(item.id);setResourceForm({title:item.title??"",resource_url:item.resource_url??"",resource_type:item.resource_type??"notes",description:item.description??""});window.scrollTo({top:0,behavior:"smooth"});}}><Pencil size={15}/> Edit</button><button className="outline-link" onClick={()=>{if(confirm("Delete this resource permanently?"))void act(()=>api("resources","DELETE",{id:item.id}));}}><Trash2 size={15}/></button></div></article>)}</div>
+    </section>}
+    {tab==="review"&&<section className="admin-content">
+      <h2>Material requests and content reports</h2>
+      <div className="admin-list">
+        {reviews.map(item=><article className="surface-card admin-row" key={item.kind+item.id}>
+          <div>
+            <span className="admin-kicker">{item.kind} · {item.status}</span>
+            <strong>{item.kind==="request"?item.request_text:item.details}</strong>
+            <p>{item.name||item.report_type} · {item.semester||item.subject||item.subject_code||"Academic content"}</p>
+            <small>{new Date(item.created_at).toLocaleString()}</small>
+            <label className="admin-notes">Admin notes<textarea defaultValue={item.admin_notes||""} rows={2} id={"note-"+item.id}/></label>
+          </div>
+          <div className="admin-actions">
+            {["new","in_progress","done"].map(s=><button key={s} className="outline-link" onClick={()=>void act(()=>api("reviews","PATCH",{kind:item.kind,id:item.id,status:s,admin_notes:getReviewNote(item.id)}))}>{s.replace("_"," ")}</button>)}
+          </div>
+        </article>)}
+        {!reviews.length&&<p className="muted-copy">No requests or reports have been submitted.</p>}
+      </div>
+    </section>}
+    {tab==="subjects"&&<section className="admin-content">
+      <section className="surface-card"><h2>Add subject</h2><form className="admin-form admin-form-grid" onSubmit={saveSubject}>
+        <label>Subject code<input value={subjectForm.subject_code} onChange={e=>setSubjectForm({...subjectForm,subject_code:e.target.value})} required/></label><label>Subject title<input value={subjectForm.title} onChange={e=>setSubjectForm({...subjectForm,title:e.target.value})} required/></label>
+        <label>Semester<input type="number" min="1" max="12" value={subjectForm.semester} onChange={e=>setSubjectForm({...subjectForm,semester:e.target.value})} required/></label><label>Credits<input type="number" min="0" step=".5" value={subjectForm.credits} onChange={e=>setSubjectForm({...subjectForm,credits:e.target.value})}/></label>
+        <label>Scheme ID<input value={subjectForm.scheme_id} onChange={e=>setSubjectForm({...subjectForm,scheme_id:e.target.value})} required placeholder="UUID from academic_schemes"/></label><label>Branch ID<input value={subjectForm.branch_id} onChange={e=>setSubjectForm({...subjectForm,branch_id:e.target.value})} required placeholder="UUID from branches"/></label><button className="goal-save">Create pending subject</button>
+      </form></section>
+      <section className="surface-card"><h2>Subject catalogue ({subjects.length})</h2><div className="admin-list">{subjects.map(s=><article className="admin-row" key={s.id}><div><strong>{s.subject_code} · {s.title}</strong><p>Semester {s.semester} · {s.credits??"—"} credits · {s.verification_status}</p></div><div className="admin-actions"><button className="outline-link" onClick={()=>void act(()=>api("subjects","PATCH",{id:s.id,verification_status:"verified"}))}>Verify</button><button className="outline-link" onClick={()=>void act(()=>api("subjects","PATCH",{id:s.id,verification_status:"rejected"}))}>Reject</button><button className="outline-link" onClick={()=>{if(confirm("Delete this subject and its modules?"))void act(()=>api("subjects","DELETE",{id:s.id}));}}><Trash2 size={15}/></button></div></article>)}</div></section>
+      <section className="surface-card"><h2>Subject modules</h2><label className="admin-field">Select subject<select value={selectedSubject} onChange={e=>setSelectedSubject(e.target.value)}><option value="">Choose a subject</option>{subjects.map(s=><option key={s.id} value={s.id}>{s.subject_code} · {s.title}</option>)}</select></label><form className="admin-form admin-form-grid" onSubmit={saveModule}><label>Module number<input type="number" min="1" value={moduleForm.module_number} onChange={e=>setModuleForm({...moduleForm,module_number:e.target.value})} required/></label><label>Module title<input value={moduleForm.title} onChange={e=>setModuleForm({...moduleForm,title:e.target.value})} required/></label><label className="admin-wide">Topics (one per line)<textarea rows={4} value={moduleForm.topics} onChange={e=>setModuleForm({...moduleForm,topics:e.target.value})}/></label><label>Source page<input value={moduleForm.source_page} onChange={e=>setModuleForm({...moduleForm,source_page:e.target.value})}/></label><button className="goal-save" disabled={!selectedSubject}>Add module</button></form><div className="admin-list">{modules.filter(m=>!selectedSubject||m.subject_id===selectedSubject).map(m=><article className="admin-row" key={m.id}><div><strong>Module {m.module_number} · {m.title}</strong><p>{Array.isArray(m.topics)?m.topics.join(" · "):""}</p></div><button className="outline-link" onClick={()=>{if(confirm("Delete this module?"))void act(()=>api("modules","DELETE",{id:m.id}));}}><Trash2 size={15}/></button></article>)}</div></section>
+    </section>}
+    {tab==="timetable"&&<section className="admin-content">
+      <section className="surface-card"><h2>Add KTU timetable notice candidate</h2><p className="muted-copy">New records stay in discovered status. They are not shown as verified timetable data until an admin checks the official source.</p><form className="admin-form admin-form-grid" onSubmit={saveCandidate}>
+        <label>University<select required value={candidateForm.university_id} onChange={e=>setCandidateForm({...candidateForm,university_id:e.target.value})}><option value="">Select university</option>{timetable.universities.map(u=><option key={u.id} value={u.id}>{u.name}</option>)}</select></label>
+        <label>Notice title<input required value={candidateForm.notice_title} onChange={e=>setCandidateForm({...candidateForm,notice_title:e.target.value})}/></label>
+        <label>Notice URL<input type="url" required value={candidateForm.notice_url} onChange={e=>setCandidateForm({...candidateForm,notice_url:e.target.value})}/></label><label>Official source page<input type="url" required value={candidateForm.discovered_from_url} onChange={e=>setCandidateForm({...candidateForm,discovered_from_url:e.target.value})}/></label>
+        <label>Document URL<input type="url" value={candidateForm.document_url} onChange={e=>setCandidateForm({...candidateForm,document_url:e.target.value})}/></label><label>Semester<input type="number" min="1" max="12" value={candidateForm.semester} onChange={e=>setCandidateForm({...candidateForm,semester:e.target.value})}/></label>
+        <label>Exam session<input value={candidateForm.exam_session} onChange={e=>setCandidateForm({...candidateForm,exam_session:e.target.value})}/></label><label>Published date<input type="date" value={candidateForm.published_at} onChange={e=>setCandidateForm({...candidateForm,published_at:e.target.value})}/></label><button className="goal-save">Add candidate</button>
+      </form></section>
+      <section className="surface-card"><h2>Discovered timetable notices</h2><div className="admin-list">{timetable.candidates.map(c=><article className="admin-row" key={c.id}><div><strong>{c.notice_title}</strong><p>{c.exam_session||"Session not specified"} · Semester {c.semester||"—"} · {c.status}</p><a href={c.notice_url} target="_blank" rel="noreferrer">Open notice</a>{c.document_url&&<p><a href={c.document_url} target="_blank" rel="noreferrer">Open document</a></p>}</div><div className="admin-actions"><select aria-label="Candidate status" value={c.status} onChange={e=>void act(()=>api("timetable","PATCH",{kind:"candidate",id:c.id,status:e.target.value,review_notes:c.review_notes||""}))}>{["discovered","downloaded","parsed","under_review","verified","rejected","superseded"].map(s=><option key={s}>{s}</option>)}</select></div></article>)}{!timetable.candidates.length&&<p className="muted-copy">No timetable candidates yet.</p>}</div></section>
+      <section className="surface-card"><h2>Registered timetable sources</h2>{timetable.sources.map(s=><article className="admin-row" key={s.id}><div><strong>{s.source_title||s.source_url}</strong><p>{s.verification_status} · Published {s.published_at||"date unavailable"}</p><a href={s.source_url} target="_blank" rel="noreferrer">Open source</a></div><div className="admin-actions"><select aria-label="Source verification" value={s.verification_status} onChange={e=>void act(()=>api("timetable","PATCH",{kind:"source",id:s.id,status:e.target.value,verification_notes:s.verification_notes||""}))}>{["pending","verified","rejected","superseded"].map(x=><option key={x}>{x}</option>)}</select></div></article>)}</section>
+    </section>}
+    {tab==="topics"&&<section className="admin-content"><section className="surface-card"><h2>Add important-topic evidence</h2><p className="muted-copy">Past-paper patterns, not predictions. Record source evidence and actual paper counts; do not present these as exam guarantees.</p><form className="admin-form admin-form-grid" onSubmit={saveTopic}><label>Subject code<input required value={topicForm.subject_code} onChange={e=>setTopicForm({...topicForm,subject_code:e.target.value})}/></label><label>Subject title<input required value={topicForm.subject_title} onChange={e=>setTopicForm({...topicForm,subject_title:e.target.value})}/></label><label>Past papers analysed<input type="number" min="0" required value={topicForm.paper_count} onChange={e=>setTopicForm({...topicForm,paper_count:e.target.value})}/></label><label className="admin-wide">Evidence / methodology<textarea rows={3} required value={topicForm.evidence} onChange={e=>setTopicForm({...topicForm,evidence:e.target.value})}/></label><label className="admin-wide">Topics (one per line)<textarea rows={4} value={topicForm.topics} onChange={e=>setTopicForm({...topicForm,topics:e.target.value})}/></label><button className="goal-save">Save topic pattern</button></form></section><section className="surface-card"><h2>Saved topic patterns ({topics.length})</h2><div className="admin-list">{topics.map(t=><article className="admin-row" key={t.id}><div><strong>{t.subject_code} · {t.subject_title}</strong><p>{t.paper_count} papers analysed · {Array.isArray(t.topics)?t.topics.join(" · "):""}</p><small>{t.evidence}</small><p className="admin-kicker">Past-paper patterns, not predictions</p></div><button className="outline-link" onClick={()=>{if(confirm("Delete this topic pattern?"))void act(()=>api("topics","DELETE",{id:t.id}));}}><Trash2 size={15}/></button></article>)}</div></section></section>}
+    {tab==="settings"&&<section className="admin-content"><section className="surface-card"><h2><ShieldCheck size={18}/> Admin security</h2><p className="muted-copy">Login is rate-limited. Sessions are signed, HTTP-only and expire after 12 hours. Keep all secrets server-side.</p><p className="muted-copy">Required Vercel environment variables: ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_SESSION_SECRET (32+ characters), NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.</p><p className="muted-copy">The service-role key must never be exposed to browser code. Only verified timetable sources and approved resources are public.</p></section><section className="surface-card"><div className="section-row"><h2>Admin audit log</h2><button className="outline-link" onClick={()=>jsonDownload("ktu-admin-audit.json",audit)}><Download size={15}/> Export JSON</button></div><div className="admin-list">{audit.map(a=><article className="admin-row" key={a.id}><div><strong>{a.action}</strong><p>{a.target_type} · {a.target_id||"—"}</p><small>{new Date(a.created_at).toLocaleString()}</small></div></article>)}{!audit.length&&<p className="muted-copy">No audit entries yet.</p>}</div></section></section>}
+  </main>;
 }

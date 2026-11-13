@@ -102,3 +102,16 @@
 
 .admin-resource-form textarea,.admin-form textarea,.admin-form select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:500 13px "Plus Jakarta Sans Variable",sans-serif}
 .admin-resource-form textarea,.admin-form textarea{resize:vertical}
+
+/* Admin workspace form refinements */
+.admin-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.admin-form-grid label,.admin-field,.admin-notes{display:grid;gap:6px;color:var(--mute);font-size:12px}
+.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea,.admin-field select,.admin-notes textarea,.admin-filters input,.admin-filters select,.admin-actions select{width:100%;min-height:42px;padding:9px 11px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:500 13px "Plus Jakarta Sans Variable",sans-serif}
+.admin-wide{grid-column:1/-1}
+.admin-filters{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.admin-filters input{width:min(220px,100%)}
+.admin-filters select{width:auto}
+.admin-notes{margin-top:10px;max-width:520px}
+.admin-actions select{width:auto;min-width:130px}
+.admin-form-grid button:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:680px){.admin-form-grid{grid-template-columns:1fr}.admin-wide{grid-column:auto}.admin-filters{width:100%}.admin-filters input,.admin-filters select{width:100%}.admin-filters .outline-link{width:100%;justify-content:center}}
