@@ -38,7 +38,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     } else {
       root.dataset.theme = m; localStorage.setItem("datum-theme", m); setTheme(m); setSystem(false);
     }
-    window.setTimeout(() => root.classList.remove("theme-transition"), motionSeconds.standard * 1000);
+    window.setTimeout(() => root.classList.remove("theme-transition"), motionSeconds.theme * 1000);
   }
   function back() { if (window.history.length > 1) router.back(); else router.push(parentFor(pathname)); }
   const home = pathname === "/";
