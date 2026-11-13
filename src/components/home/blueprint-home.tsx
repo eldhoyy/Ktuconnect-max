@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { motionSeconds, motionEase, motionStagger, motionSpring } from "@/lib/motion";
+import { motionSeconds, motionEase, motionStagger } from "@/lib/motion";
 import { ArrowRight, BookOpen, CalendarDays, ListChecks } from "lucide-react";
 import { useMotionPreference } from "@/components/motion-preferences";
 
@@ -29,7 +29,7 @@ function DimensionLine({ exam, todayLabel, days }: { exam: Exam; todayLabel: str
       <motion.path d="M18 37H662" stroke="#FF6B2C" strokeWidth="1.6" fill="none" markerStart="url(#dimension-arrow)" markerEnd="url(#dimension-arrow)" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.slow, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger }}/>
       <motion.path d="M18 22V52M662 22V52" stroke="#FF6B2C" strokeWidth="1.6" initial={reduceMotion ? false : { opacity: 0, scaleY: .2 }} animate={{ opacity: 1, scaleY: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger * 2 }} style={{ transformOrigin: "center" }}/>
       <motion.path d="M340 25V49" stroke="#FF6B2C" strokeWidth="1.4" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: motionSeconds.fast, delay: reduceMotion ? 0 : motionStagger * 3 }}/>
-      <motion.rect x="278" y="8" width="124" height="58" rx="8" fill="#FF6B2C" initial={reduceMotion ? false : { opacity: 0, scale: .82 }} animate={{ opacity: 1, scale: 1 }} transition={reduceMotion ? { duration: motionSeconds.fast } : { ...motionSpring.navPill, delay: motionStagger * 3 }} style={{ transformOrigin: "340px 37px" }}/>
+      <motion.rect x="278" y="8" width="124" height="58" rx="8" fill="#FF6B2C" initial={reduceMotion ? false : { opacity: 0, scale: .82 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger * 3 }} style={{ transformOrigin: "340px 37px" }}/>
       <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-jetbrains-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: motionSeconds.fast, delay: reduceMotion ? 0 : motionStagger * 4 }}>{days} DAYS</motion.text>
       <motion.circle cx="18" cy="37" r="4" fill="#FF6B2C" animate={reduceMotion ? undefined : { opacity: [.65, 1, .65] }} transition={{ duration: motionSeconds.slow * 3, repeat: Infinity, ease: motionEase.move }}/>
     </svg>
@@ -59,7 +59,7 @@ function TodayCard() {
     <div className="task-list">{sampleTasks.map((task, index) => {
       const done = completed.includes(task.id);
       return <motion.button key={task.id} type="button" className={done ? "task-row is-done" : "task-row"} onClick={() => toggleTask(task.id)} initial={reduceMotion ? false : { opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, delay: reduceMotion ? 0 : motionStagger * (index + 1), ease: motionEase.enter }} aria-pressed={done}>
-        <span className="task-check"><AnimatePresence>{done && <motion.svg viewBox="0 0 18 18" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} exit={reduceMotion ? { opacity: 0 } : { pathLength: 0 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, ease: motionEase.enter }}><motion.path d="M3 9l4 4 8-8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard }}/></motion.svg>}</AnimatePresence></span>
+        <span className="task-check"><AnimatePresence>{done && <motion.svg viewBox="0 0 18 18" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: motionSeconds.fast }}><motion.path d="M3 9l4 4 8-8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard }}/></motion.svg>}</AnimatePresence></span>
         <span className="task-copy"><strong>{task.title}</strong><small>{task.detail}</small></span><span className="task-minutes">{task.minutes} MIN</span>
       </motion.button>;
     })}</div>
