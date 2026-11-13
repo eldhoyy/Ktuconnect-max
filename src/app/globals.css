@@ -136,3 +136,9 @@
 }
 :root[data-reduce-motion=true] *,:root[data-reduce-motion=true] *::before,:root[data-reduce-motion=true] *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 :root[data-reduce-motion=true] .pastel-card,:root[data-reduce-motion=true] .session-card,:root[data-reduce-motion=true] .subject-tile,:root[data-reduce-motion=true] .subject-row,:root[data-reduce-motion=true] .tab,:root[data-reduce-motion=true] .date-cell,:root[data-reduce-motion=true] .mini-action,:root[data-reduce-motion=true] .task-row{transform:none!important}
+
+/* Touch press feedback and scroll-snap card emphasis */
+.session-card:active,.pastel-card:active,.subject-tile:active,.surface-card:active{transform:scale(.98)}
+.session-carousel{scroll-snap-type:x mandatory;scroll-padding-inline:22px;overscroll-behavior-x:contain}
+.session-card{scroll-snap-align:center;transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
+.tab:focus-visible,.date-cell:focus-visible{outline-offset:2px}
