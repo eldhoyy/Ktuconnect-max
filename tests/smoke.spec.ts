@@ -43,7 +43,17 @@ test("home goal, search and preferences controls open real surfaces", async ({ p
  await page.getByRole("button",{name:/close/i}).click();
  await page.getByRole("button",{name:/open menu and preferences/i}).click();
  await expect(page.getByRole("dialog",{name:/preferences/i})).toBeVisible();
-});
+ await page.getByRole("button",{name:"Dark"}).click();
+ await expect.poll(()=>page.locator("html").getAttribute("data-theme")).toBe("dark");
+ await page.getByRole("button",{name:"Light"}).click();
+ await expect.poll(()=>page.locator("html").getAttribute("data-theme")).toBe("light");
+ const reduce=page.getByRole("button",{name:/reduce motion/i});
+ await reduce.click();
+ await expect(reduce).toHaveAttribute("aria-pressed","true");
+ await reduce.click();
+ await expect(reduce).toHaveAttribute("aria-pressed","false");
+ await page.getByRole("button",{name:/close/i}).click();
+}
 test("schedule date controls open selected-date details", async ({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto("/study-plan");
