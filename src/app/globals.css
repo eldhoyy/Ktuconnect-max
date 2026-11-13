@@ -142,3 +142,9 @@
 .session-carousel{scroll-snap-type:x mandatory;scroll-padding-inline:22px;overscroll-behavior-x:contain}
 .session-card{scroll-snap-align:center;transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
 .tab:focus-visible,.date-cell:focus-visible{outline-offset:2px}
+
+.session-card{transform:scale(.97);transition:transform var(--motion-standard) ease-in-out,box-shadow var(--motion-fast) ease-out}
+.session-card[data-snap-active=true]{transform:scale(1)}
+@media(hover:hover) and (pointer:fine){.session-card:hover{transform:scale(.97) translateY(-2px)}.session-card[data-snap-active=true]:hover{transform:scale(1) translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.session-card{transform:none!important}}
+:root[data-reduce-motion=true] .session-card{transform:none!important}
