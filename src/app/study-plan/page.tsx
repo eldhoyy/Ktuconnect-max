@@ -1,5 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { useMotionPreference } from "@/components/motion-preferences";
+import { motionSeconds, motionEase, motionSpring } from "@/lib/motion";
 import { Zap, ListFilter, ChartNoAxesColumn, CalendarDays, Info, X } from "lucide-react";
 import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
@@ -7,9 +10,10 @@ import { Gauge } from "@/components/pastel-ui";
 const profile = { branch: "Mechanical", semester: "S3", scheme: "2024" };
 const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export default function StudyPlanPage() {
- const papers = getApprovedPapers(profile), now = new Date();
- const day = new Date(now.getFullYear(), now.getMonth(), now.getDate()), start = new Date(day);
- start.setDate(day.getDate() - ((day.getDay() + 6) % 7));
+ const papers = getApprovedPapers(profile);
+ const { reduceMotion } = useMotionPreference();
+ const day = useMemo(() => { const now = new Date(); return new Date(now.getFullYear(), now.getMonth(), now.getDate()); }, []);
+ const start = useMemo(() => { const value = new Date(day); value.setDate(day.getDate() - ((day.getDay() + 6) % 7)); return value; }, [day]);
  const days = useMemo(() => Array.from({ length: 14 }, (_, i) => { const d = new Date(start); d.setDate(start.getDate() + i); const iso = [d.getFullYear(), String(d.getMonth()+1).padStart(2,"0"), String(d.getDate()).padStart(2,"0")].join("-"); return { iso, day: d.getDate(), past: d < day, today: d.toDateString() === day.toDateString(), exam: papers.some(p => p.date === iso), weekday: labels[d.getDay()] }; }), [papers, day, start]);
  const [selected, setSelected] = useState(days.find(d => d.today)?.iso ?? days[0].iso);
  const [todayOnly, setTodayOnly] = useState(false), [listView, setListView] = useState(false);
@@ -29,6 +33,6 @@ export default function StudyPlanPage() {
   </article>
   <article className="surface-card study-day"><div className="study-day-heading"><span className="task-icon"><ChartNoAxesColumn size={24}/></span><div><strong>Study activity</strong><small>{month} · Sample chart</small></div></div><div className="bar-chart">{bars.map((v,i)=><div className="bar-col" key={labels[i]}><span className={i===5?"tooltip-pill":"bar-label"}>{labels[i]}</span><div className={i===5?"bar selected":"bar"} style={{height:v+"%"}}/><span className="bar-date">{i+1}</span></div>)}</div></article>
  </section><div className="info-card source-info"><Info size={20}/><div><strong>Verified calendar · Sample activity chart</strong><p>Calendar dots reflect approved S3 Mechanical timetable dates. Progress bars are Sample data and do not represent student activity.{source&&<> <a href={source.url} target="_blank" rel="noreferrer">Source ↗</a></>}</p></div></div>
- {sheetOpen && <div className="sheet-backdrop" role="presentation" onMouseDown={e=>{if(e.target===e.currentTarget)setSheetOpen(false);}}><section className="settings-sheet" role="dialog" aria-modal="true" aria-label="Selected date details"><div className="sheet-heading"><h2>{selectedDay?.weekday} · {selected}</h2><button className="header-circle" onClick={()=>setSheetOpen(false)} aria-label="Close date details"><X size={21}/></button></div>{selectedPapers.length ? selectedPapers.map(p=><article className="date-list-row" key={p.code}><strong>{p.code} · {p.title}</strong><span>{p.start}–{p.end} IST · Verified timetable</span></article>) : <div className="info-card"><CalendarDays size={20}/><div><strong>No verified exam listed</strong><p>No approved examination is recorded for this date. Student-entered dates remain unverified.</p></div></div>}</section></div>}
+ <AnimatePresence>{sheetOpen && <motion.div className="sheet-backdrop" role="presentation" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard }} onMouseDown={e=>{if(e.target===e.currentTarget)setSheetOpen(false);}}><motion.section className="settings-sheet" role="dialog" aria-modal="true" aria-label="Selected date details" initial={reduceMotion?{opacity:0}:{y:"100%"}} animate={reduceMotion?{opacity:1}:{y:0}} exit={reduceMotion?{opacity:0}:{y:"100%"}} transition={reduceMotion?{duration:motionSeconds.fast}:motionSpring.sheet} drag={reduceMotion?false:"y"} dragConstraints={{top:0,bottom:0}} dragElastic={{top:0,bottom:.18}} onDragEnd={(_,info)=>{if(info.offset.y>110||info.velocity.y>520)setSheetOpen(false);}}><div className="sheet-heading"><h2>{selectedDay?.weekday} · {selected}</h2><button className="header-circle" onClick={()=>setSheetOpen(false)} aria-label="Close date details"><X size={21}/></button></div>{selectedPapers.length ? selectedPapers.map(p=><article className="date-list-row" key={p.code}><strong>{p.code} · {p.title}</strong><span>{p.start}–{p.end} IST · Verified timetable</span></article>) : <div className="info-card"><CalendarDays size={20}/><div><strong>No verified exam listed</strong><p>No approved examination is recorded for this date. Student-entered dates remain unverified.</p></div></div>}</motion.section></motion.div>}</AnimatePresence>
  </div>;
 }
