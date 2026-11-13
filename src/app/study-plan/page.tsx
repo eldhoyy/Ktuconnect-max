@@ -2,7 +2,7 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useMotionPreference } from "@/components/motion-preferences";
-import { motionSeconds, motionEase, motionSpring } from "@/lib/motion";
+import { motionSeconds, motionSpring } from "@/lib/motion";
 import { Zap, ListFilter, ChartNoAxesColumn, CalendarDays, Info, X } from "lucide-react";
 import { getApprovedPapers } from "@/lib/approved-timetable";
 import timetable from "@/data/november-2026-timetables.json";
