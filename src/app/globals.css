@@ -60,7 +60,7 @@
 .goal-field{display:grid;gap:8px;margin-top:18px;color:var(--mute);font-size:13px}
 .goal-field input{width:100%;height:48px;padding:0 14px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--text);font:500 15px "Plus Jakarta Sans Variable",sans-serif}
 .goal-save{width:100%;min-height:48px;margin-top:14px;border:0;border-radius:999px;background:var(--pri);color:var(--priText);font-weight:600}
-@media(prefers-reduced-motion:no-preference){.session-card,.pastel-card,.subject-tile{transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}.session-card:active,.pastel-card:active,.subject-tile:active{transform:scale(.985)}}
+@media(prefers-reduced-motion:no-preference){.session-card,.pastel-card,.subject-tile{transition:transform var(--motion-fast) ease-out}.session-card:active,.pastel-card:active,.subject-tile:active{transform:scale(.985)}}
 :root{scrollbar-gutter:stable}
 
 @media(max-width:420px){.app-content{padding-inline:22px}.session-carousel{margin-inline:-22px;padding-inline:22px}}
@@ -118,8 +118,8 @@
 
 /* Unified motion polish — approved pastel tokens remain unchanged */
 :root{--motion-fast:120ms;--motion-standard:220ms;--motion-slow:400ms;--motion-theme:200ms;--motion-ease-enter:cubic-bezier(.16,1,.3,1);--motion-ease-move:cubic-bezier(.4,0,.2,1)}
-:root.theme-transition body,:root.theme-transition body *{transition-property:color,background-color,border-color,box-shadow,fill,stroke!important;transition-duration:var(--motion-theme)!important;transition-timing-function:ease-in-out!important}
-.tab,.admin-tabs button,.date-cell,.mini-action,.theme-options button,.preference-row,.motion-toggle,.task-row,.search-link,.subject-row,.ui-button,.ui-icon-button{transition:background-color var(--motion-fast) ease-out,color var(--motion-fast) ease-out,border-color var(--motion-fast) ease-out,opacity var(--motion-fast) ease-out}
+:root.theme-transition body,:root.theme-transition body *{transition-property:color,background-color,border-color,fill,stroke!important;transition-duration:var(--motion-theme)!important;transition-timing-function:ease-in-out!important}
+.tab,.admin-tabs button,.date-cell,.mini-action,.theme-options button,.preference-row,.motion-toggle,.task-row,.search-link,.subject-row,.ui-button,.ui-icon-button{transition:transform var(--motion-fast) ease-out,opacity var(--motion-fast) ease-out}
 .tab:active,.admin-tabs button:active,.date-cell:active,.mini-action:active,.theme-options button:active,.preference-row:active,.motion-toggle:active,.task-row:active,.search-link:active,.subject-row:active,.ui-button:active,.ui-icon-button:active{transform:scale(.98)}
 @media(hover:hover) and (pointer:fine){
   .pastel-card,.session-card,.subject-tile,.surface-card,.subject-row{transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
@@ -143,7 +143,7 @@
 .session-card{scroll-snap-align:center;transition:transform var(--motion-fast) ease-out,box-shadow var(--motion-fast) ease-out}
 .tab:focus-visible,.date-cell:focus-visible{outline-offset:2px}
 
-.session-card{transform:scale(.97);transition:transform var(--motion-standard) ease-in-out,box-shadow var(--motion-fast) ease-out}
+.session-card{transform:scale(.97);transition:transform var(--motion-standard) ease-in-out}
 .session-card[data-snap-active=true]{transform:scale(1)}
 @media(hover:hover) and (pointer:fine){.session-card:hover{transform:scale(.97) translateY(-2px)}.session-card[data-snap-active=true]:hover{transform:scale(1) translateY(-2px)}}
 @media(prefers-reduced-motion:reduce){.session-card{transform:none!important}}
