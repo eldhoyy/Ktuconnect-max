@@ -53,7 +53,7 @@ test("home goal, search and preferences controls open real surfaces", async ({ p
  await reduce.click();
  await expect(reduce).toHaveAttribute("aria-pressed","false");
  await page.getByRole("button",{name:/close/i}).click();
-}
+});
 test("schedule date controls open selected-date details", async ({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto("/study-plan");
