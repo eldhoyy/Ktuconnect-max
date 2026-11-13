@@ -7,6 +7,7 @@ type Row = Record<string, any> & { id: string };
 type Overview = { counts: Record<string, number>; activity: Row[]; analytics: Record<string, number> };
 const tabs = [["overview","Overview"],["resources","Resources"],["review","Review queues"],["subjects","Subjects & modules"],["timetable","Timetable"],["topics","Important topics"],["settings","Audit & safety"]] as const;
 const inputClass = "admin-input";
+const getReviewNote = (id: string) => { const el = document.getElementById("note-" + id); return el instanceof HTMLTextAreaElement ? el.value : ""; };
 const jsonDownload = (name: string, value: unknown) => {
   const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = name; a.click(); URL.revokeObjectURL(url);
@@ -71,7 +72,24 @@ export default function AdminDashboard() {
       <div className="section-row"><h2>Resource library ({filteredResources.length})</h2><div className="admin-filters"><input aria-label="Search resources" placeholder="Search title or URL" value={query} onChange={e=>setQuery(e.target.value)}/><select value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value="all">All statuses</option>{["pending","under_review","approved","rejected","needs_recheck"].map(s=><option key={s}>{s}</option>)}</select><button className="outline-link" onClick={()=>jsonDownload("ktu-resources.json",resources)}><Download size={15}/> Export JSON</button></div></div>
       <div className="admin-list">{filteredResources.map(item=><article className="surface-card admin-row" key={item.id}><div><strong>{item.title}</strong><p>{item.resource_type} · {item.verification_status}</p><a href={item.resource_url} target="_blank" rel="noreferrer">{item.resource_url}</a></div><div className="admin-actions"><button className="outline-link" onClick={()=>void act(()=>api("resources","PATCH",{id:item.id,verification_status:"approved"}))}><Check size={15}/> Approve</button><button className="outline-link" onClick={()=>void act(()=>api("resources","PATCH",{id:item.id,verification_status:"rejected"}))}><X size={15}/> Reject</button><button className="outline-link" onClick={()=>{setEditingResource(item.id);setResourceForm({title:item.title,resource_url:item.resource_url,resource_type:item.resource_type,description:item.description||""});window.scrollTo({top:0,behavior:"smooth"});}}><Pencil size={15}/> Edit</button><button className="outline-link" onClick={()=>{if(confirm("Delete this resource permanently?"))void act(()=>api("resources","DELETE",{id:item.id}));}}><Trash2 size={15}/></button></div></article>)}</div>
     </section>}
-    {tab==="review"&&<section className="admin-content"><h2>Material requests and content reports</h2><div className="admin-list">{reviews.map(item=><article className="surface-card admin-row" key={item.kind+item.id}><div><span className="admin-kicker">{item.kind} · {item.status}</span><strong>{item.kind==="request"?item.request_text:item.details}</strong><p>{item.name||item.report_type} · {item.semester||item.subject||item.subject_code||"Academic content"}</p><small>{new Date(item.created_at).toLocaleString()}</small><label className="admin-notes">Admin notes<textarea defaultValue={item.admin_notes||""} rows={2} id={"note-"+item.id}/></label></div><div className="admin-actions">{["new","in_progress","done"].map(s=><button key={s} className="outline-link" onClick={()=>void act(()=>api("reviews","PATCH",{kind:item.kind,id:item.id,status:s,admin_notes:(document.getElementById("note-"+item.id) as HTMLTextAreaElement|null)?.value||""}))}>{s.replace("_"," ")}</button>}</div></article>)}{!reviews.length&&<p className="muted-copy">No requests or reports have been submitted.</p>}</div></section>}
+    {tab==="review"&&<section className="admin-content">
+      <h2>Material requests and content reports</h2>
+      <div className="admin-list">
+        {reviews.map(item=><article className="surface-card admin-row" key={item.kind+item.id}>
+          <div>
+            <span className="admin-kicker">{item.kind} · {item.status}</span>
+            <strong>{item.kind==="request"?item.request_text:item.details}</strong>
+            <p>{item.name||item.report_type} · {item.semester||item.subject||item.subject_code||"Academic content"}</p>
+            <small>{new Date(item.created_at).toLocaleString()}</small>
+            <label className="admin-notes">Admin notes<textarea defaultValue={item.admin_notes||""} rows={2} id={"note-"+item.id}/></label>
+          </div>
+          <div className="admin-actions">
+            {["new","in_progress","done"].map(s=><button key={s} className="outline-link" onClick={()=>void act(()=>api("reviews","PATCH",{kind:item.kind,id:item.id,status:s,admin_notes:getReviewNote(item.id)}))}>{s.replace("_"," ")}</button>)}
+          </div>
+        </article>)}
+        {!reviews.length&&<p className="muted-copy">No requests or reports have been submitted.</p>}
+      </div>
+    </section>}
     {tab==="subjects"&&<section className="admin-content">
       <section className="surface-card"><h2>Add subject</h2><form className="admin-form admin-form-grid" onSubmit={saveSubject}>
         <label>Subject code<input value={subjectForm.subject_code} onChange={e=>setSubjectForm({...subjectForm,subject_code:e.target.value})} required/></label><label>Subject title<input value={subjectForm.title} onChange={e=>setSubjectForm({...subjectForm,title:e.target.value})} required/></label>
