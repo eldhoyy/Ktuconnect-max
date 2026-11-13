@@ -72,7 +72,7 @@ test("390px light/dark visual audit screenshots for every screen", async ({ page
     document.documentElement.dataset.theme=value;
    },theme);
    await page.waitForTimeout(220);
-   await page.evaluate(()=>document.fonts.ready);
+   await page.evaluate(()=>document.fonts.ready.then(()=>true));
    await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
    await page.screenshot({path:path.join(output,slug+"-"+theme+".png"),fullPage:true,animations:"disabled"});
   }
