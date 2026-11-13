@@ -1,25 +1,14 @@
 "use client";
-
 import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useMotionPreference } from "@/components/motion-preferences";
-
+import { motionSeconds, motionEase } from "@/lib/motion";
 export function PageTransition({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  const { reduceMotion } = useMotionPreference();
-
-  return (
-    <AnimatePresence mode="wait" initial={false}>
-      <motion.div
-        key={pathname}
-        initial={reduceMotion ? false : { opacity: 0, y: 6 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : -6 }}
-        transition={{ duration: reduceMotion ? 0 : 0.2, ease: "easeOut" }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
-  );
+ const pathname=usePathname(),{reduceMotion}=useMotionPreference();
+ return <AnimatePresence initial={false}>
+  <motion.div key={pathname} initial={reduceMotion?{opacity:0}:{opacity:0,x:-8}} animate={{opacity:1,x:0}} exit={reduceMotion?{opacity:0}:{opacity:0,x:8}} transition={{duration:reduceMotion?motionSeconds.fast:motionSeconds.standard,ease:motionEase.move}}>
+   {children}
+  </motion.div>
+ </AnimatePresence>;
 }

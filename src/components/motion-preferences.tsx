@@ -1,8 +1,9 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useLayoutEffect, useMemo, useState, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { Accessibility } from "lucide-react";
+import { motionSeconds, motionEase, motionStagger } from "@/lib/motion";
 
 type MotionContextValue = { reduceMotion: boolean; toggle: () => void };
 const MotionContext = createContext<MotionContextValue>({ reduceMotion: false, toggle: () => undefined });
@@ -10,7 +11,7 @@ const MotionContext = createContext<MotionContextValue>({ reduceMotion: false, t
 export function MotionPreferenceProvider({ children }: { children: ReactNode }) {
   const [reduceMotion, setReduceMotion] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const stored = window.localStorage.getItem("datum-reduce-motion") ?? localStorage.getItem("cohertx-reduce-motion");
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReduceMotion(stored === null ? media.matches : stored === "true");
@@ -54,13 +55,21 @@ export function MotionPreferenceToggle() {
 
 export function MotionReveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   const { reduceMotion } = useMotionPreference();
+  const [alreadySeen, setAlreadySeen] = useState(false);
+  useEffect(() => {
+    try { setAlreadySeen(sessionStorage.getItem("ktu-motion-seen:" + className) === "1"); }
+    catch { setAlreadySeen(false); }
+  }, [className]);
   return (
     <motion.div
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      initial={reduceMotion || alreadySeen ? false : { opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: reduceMotion ? 0 : 0.55, delay: reduceMotion ? 0 : delay, ease: [0.22, 1, 0.36, 1] }}
+      onAnimationComplete={() => {
+        try { sessionStorage.setItem("ktu-motion-seen:" + className, "1"); } catch { /* session storage may be unavailable */ }
+      }}
+      transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, delay: reduceMotion ? 0 : Math.min(delay, motionStagger * 4), ease: motionEase.enter }}
     >
       {children}
     </motion.div>

@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import { motionSeconds, motionEase, motionStagger } from "@/lib/motion";
 import { ArrowRight, BookOpen, CalendarDays, ListChecks } from "lucide-react";
 import { useMotionPreference } from "@/components/motion-preferences";
 
@@ -25,12 +26,12 @@ function DimensionLine({ exam, todayLabel, days }: { exam: Exam; todayLabel: str
     <div className="dimension-labels"><span>TODAY · {todayLabel}</span><span>{formatShortDate(exam.date)} · {exam.code}</span></div>
     <svg className="dimension-svg" viewBox="0 0 680 76" role="img" aria-hidden="true">
       <defs><marker id="dimension-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="none" stroke="#FF6B2C" strokeWidth="1.2"/></marker></defs>
-      <motion.path d="M18 37H662" stroke="#FF6B2C" strokeWidth="1.6" fill="none" markerStart="url(#dimension-arrow)" markerEnd="url(#dimension-arrow)" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? 0 : .9, ease: "easeOut", delay: .42 }}/>
-      <motion.path d="M18 22V52M662 22V52" stroke="#FF6B2C" strokeWidth="1.6" initial={reduceMotion ? false : { opacity: 0, scaleY: .2 }} animate={{ opacity: 1, scaleY: 1 }} transition={{ duration: reduceMotion ? 0 : .2, delay: 1.18 }} style={{ transformOrigin: "center" }}/>
-      <motion.path d="M340 25V49" stroke="#FF6B2C" strokeWidth="1.4" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.28 }}/>
-      <motion.rect x="278" y="8" width="124" height="58" rx="8" fill="#FF6B2C" initial={reduceMotion ? false : { opacity: 0, scale: .82 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: reduceMotion ? 0 : .28, delay: 1.32, type: "spring", stiffness: 240, damping: 18 }} style={{ transformOrigin: "340px 37px" }}/>
-      <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-jetbrains-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.48 }}>{days} DAYS</motion.text>
-      <motion.circle cx="18" cy="37" r="4" fill="#FF6B2C" animate={reduceMotion ? undefined : { opacity: [.55, 1, .55] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}/>
+      <motion.path d="M18 37H662" stroke="#FF6B2C" strokeWidth="1.6" fill="none" markerStart="url(#dimension-arrow)" markerEnd="url(#dimension-arrow)" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.slow, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger }}/>
+      <motion.path d="M18 22V52M662 22V52" stroke="#FF6B2C" strokeWidth="1.6" initial={reduceMotion ? false : { opacity: 0, scaleY: .2 }} animate={{ opacity: 1, scaleY: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger * 2 }} style={{ transformOrigin: "center" }}/>
+      <motion.path d="M340 25V49" stroke="#FF6B2C" strokeWidth="1.4" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: motionSeconds.fast, delay: reduceMotion ? 0 : motionStagger * 3 }}/>
+      <motion.rect x="278" y="8" width="124" height="58" rx="8" fill="#FF6B2C" initial={reduceMotion ? false : { opacity: 0, scale: .82 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger * 3 }} style={{ transformOrigin: "340px 37px" }}/>
+      <motion.text x="340" y="43" textAnchor="middle" fill="#0A1628" fontFamily="var(--font-jetbrains-mono)" fontSize="17" fontWeight="500" initial={reduceMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: motionSeconds.fast, delay: reduceMotion ? 0 : motionStagger * 4 }}>{days} DAYS</motion.text>
+      <motion.circle cx="18" cy="37" r="4" fill="#FF6B2C" animate={reduceMotion ? undefined : { opacity: [.65, 1, .65] }} transition={{ duration: motionSeconds.slow * 3, repeat: Infinity, ease: motionEase.move }}/>
     </svg>
     <div className="dimension-caption"><span>EXAM DATE · {exam.start} IST</span><a href={exam.sourceUrl} target="_blank" rel="noreferrer">VIEW APPROVED TIMETABLE ↗</a></div>
   </div>;
@@ -52,13 +53,13 @@ function TodayCard() {
       return next;
     });
   }
-  return <motion.aside className="today-card" initial={reduceMotion ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduceMotion ? 0 : .55, delay: .5, type: "spring", stiffness: 90, damping: 18 }} aria-label="Sample daily study plan">
+  return <motion.aside className="today-card" initial={reduceMotion ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.slow, ease: motionEase.enter, delay: reduceMotion ? 0 : motionStagger }} aria-label="Sample daily study plan">
     <div className="today-head"><div><span className="today-overline">YOUR DAILY DESK</span><h2>Today · <span className="mono">75 min</span></h2></div><span className="streak-chip">4-DAY STREAK <span className="sample-dot">SAMPLE</span></span></div>
-    <div className="week-strip" aria-label="Sample four-day streak this week">{week.map((day, index) => <div className="week-day" key={`${day}-${index}`}><span>{day}</span><motion.i initial={reduceMotion ? false : { scaleY: 0 }} animate={{ scaleX: index < 3 ? 1 : index === 3 ? .45 + (completed.length / 3) * .55 : .18 }} transition={{ duration: reduceMotion ? 0 : .32, delay: reduceMotion ? 0 : .72 + index * .07 }} style={{ transformOrigin: "left center" }} className={index < 4 ? "is-filled" : ""}/></div>)}</div>
+    <div className="week-strip" aria-label="Sample four-day streak this week">{week.map((day, index) => <div className="week-day" key={`${day}-${index}`}><span>{day}</span><motion.i initial={reduceMotion ? false : { scaleX: 0 }} animate={{ scaleX: index < 3 ? 1 : index === 3 ? .45 + (completed.length / 3) * .55 : .18 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, delay: reduceMotion ? 0 : motionStagger * (index + 1), ease: motionEase.enter }} style={{ transformOrigin: "left center" }} className={index < 4 ? "is-filled" : ""}/></div>)}</div>
     <div className="task-list">{sampleTasks.map((task, index) => {
       const done = completed.includes(task.id);
-      return <motion.button key={task.id} type="button" className={done ? "task-row is-done" : "task-row"} onClick={() => toggleTask(task.id)} initial={reduceMotion ? false : { opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: reduceMotion ? 0 : .28, delay: reduceMotion ? 0 : .78 + index * .08 }} aria-pressed={done}>
-        <span className="task-check"><AnimatePresence>{done && <motion.svg viewBox="0 0 18 18" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} exit={{ pathLength: 0 }}><motion.path d="M3 9l4 4 8-8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></motion.svg>}</AnimatePresence></span>
+      return <motion.button key={task.id} type="button" className={done ? "task-row is-done" : "task-row"} onClick={() => toggleTask(task.id)} initial={reduceMotion ? false : { opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard, delay: reduceMotion ? 0 : motionStagger * (index + 1), ease: motionEase.enter }} aria-pressed={done}>
+        <span className="task-check"><AnimatePresence>{done && <motion.svg viewBox="0 0 18 18" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: motionSeconds.fast }}><motion.path d="M3 9l4 4 8-8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" initial={reduceMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.standard }}/></motion.svg>}</AnimatePresence></span>
         <span className="task-copy"><strong>{task.title}</strong><small>{task.detail}</small></span><span className="task-minutes">{task.minutes} MIN</span>
       </motion.button>;
     })}</div>
@@ -77,15 +78,13 @@ function SubjectRow({ subject, index }: { subject: Subject; index: number }) {
 
 export function BlueprintHome({ exam, todayLabel, days, subjects }: { exam: Exam; todayLabel: string; days: number; subjects: Subject[] }) {
   const { reduceMotion } = useMotionPreference();
-  const { scrollY } = useScroll();
-  const gridY = useTransform(scrollY, [0, 1200], [0, 12]);
   return <main className="blueprint-home">
     <section className="blueprint-hero">
-      <motion.div className="blueprint-grid" aria-hidden="true" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reduceMotion ? 0 : .8 }} style={reduceMotion ? undefined : { y: gridY }}/>
+      <motion.div className="blueprint-grid" aria-hidden="true" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reduceMotion ? motionSeconds.fast : motionSeconds.slow, ease: motionEase.enter }}/>
       <div className="blueprint-hero-inner">
         <div className="hero-tag"><span className="signal-square"/> S3 · NOVEMBER 2026 EXAMS <span className="hero-sample-tag">SAMPLE VIEW</span></div>
-        <motion.h1 initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .06, delayChildren: .08 } } }}>
-          <motion.span variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}>{days} days to your first paper.</motion.span>
+        <motion.h1 initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: motionStagger, delayChildren: motionStagger } } }}>
+          <motion.span variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}>{days} days to your first paper.</motion.span>
           <motion.span variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}>Let&apos;s use every one.</motion.span>
         </motion.h1>
         <DimensionLine exam={exam} todayLabel={todayLabel.toUpperCase()} days={days}/>
