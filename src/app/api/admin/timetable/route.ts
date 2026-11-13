@@ -10,13 +10,14 @@ const text = (value: unknown, max = 500) => typeof value === "string" ? value.tr
 export async function GET() {
   if (!(await isAdminSession())) return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   const db = createAdminClient();
-  const [candidates, sources, timetables] = await Promise.all([
+  const [universities, candidates, sources, timetables] = await Promise.all([
+    db.from("universities").select("id,name,short_name").order("name"),
     db.from("timetable_discovery_candidates").select("*").order("discovered_at", { ascending: false }).limit(500),
     db.from("timetable_sources").select("*").order("created_at", { ascending: false }).limit(500),
     db.from("exam_timetables").select("id,semester,exam_session,version_label,status,created_at,source_id").order("created_at", { ascending: false }).limit(500),
   ]);
-  if (candidates.error || sources.error || timetables.error) return NextResponse.json({ error: "Could not load timetable records. Confirm migrations 001–007 are applied." }, { status: 503 });
-  return NextResponse.json({ candidates: candidates.data ?? [], sources: sources.data ?? [], timetables: timetables.data ?? [] });
+  if (universities.error || candidates.error || sources.error || timetables.error) return NextResponse.json({ error: "Could not load timetable records. Confirm migrations 001–007 are applied." }, { status: 503 });
+  return NextResponse.json({ universities: universities.data ?? [], candidates: candidates.data ?? [], sources: sources.data ?? [], timetables: timetables.data ?? [] });
 }
 
 export async function POST(request: Request) {
