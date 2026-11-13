@@ -1,5 +1,5 @@
-export const motionDuration = { fast: 120, standard: 220, slow: 400 } as const;
-export const motionSeconds = { fast: .12, standard: .22, slow: .4 } as const;
+export const motionDuration = { fast: 120, standard: 220, slow: 400, theme: 200 } as const;
+export const motionSeconds = { fast: .12, standard: .22, slow: .4, theme: .2 } as const;
 export const motionEase = {
   enter: [0.16, 1, 0.3, 1] as const,
   move: [0.4, 0, 0.2, 1] as const,
