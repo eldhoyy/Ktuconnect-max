@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>AI Activity Points Calculator | Kerala Timetable</title>
+    <meta name="description" content="Upload your B.Tech certificates and calculate your KTU Activity Points and percentage progress based on official KTU 2024 & 2019 Handbook rules.">
+    <link rel="canonical" href="https://keralatimetable.in/activity-points-ai.html" />
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <script src="/tailwind-local.js" onerror="this.onerror=null;this.src='https://cdn.tailwindcss.com';"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+            background: 
+                radial-gradient(at 0% 0%, rgba(224, 231, 255, 0.68) 0px, transparent 52%),
+                radial-gradient(at 100% 0%, rgba(209, 250, 229, 0.58) 0px, transparent 52%),
+                radial-gradient(at 100% 100%, rgba(219, 234, 254, 0.58) 0px, transparent 52%),
+                radial-gradient(at 0% 100%, rgba(243, 232, 255, 0.50) 0px, transparent 52%),
+                #f8fafc;
+            min-height: 100vh;
+            letter-spacing: -0.01em;
+        }
+
+        @keyframes orbDrift1 {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(32px, -24px, 0) scale(1.07); }
+        }
+        @keyframes orbDrift2 {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(-28px, 22px, 0) scale(1.06); }
+        }
+        .ambient-orb-1 { animation: orbDrift1 14s ease-in-out infinite; }
+        .ambient-orb-2 { animation: orbDrift2 18s ease-in-out 2s infinite; }
+        .ambient-orb-3 { animation: orbDrift1 20s ease-in-out 4s infinite reverse; }
+
+        .real-glass {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1.5px solid rgba(15, 23, 42, 0.11);
+            box-shadow: 0 14px 34px -10px rgba(31, 38, 135, 0.08);
+        }
+        @media (min-width: 768px) {
+            .real-glass {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.58) 100%);
+                backdrop-filter: blur(24px) saturate(180%);
+                -webkit-backdrop-filter: blur(24px) saturate(180%);
+            }
+        }
+
+        .result-glass {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1.5px solid rgba(15, 23, 42, 0.10);
+            box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.24s ease;
+        }
+        .result-glass:hover {
+            transform: translate3d(0, -3px, 0);
+            background: #ffffff;
+            border-color: rgba(79, 70, 229, 0.42);
+            box-shadow: 0 18px 36px -8px rgba(79, 70, 229, 0.13);
+        }
+
+        .inner-glass {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1.5px solid rgba(15, 23, 42, 0.10);
+        }
+
+        .glass-input {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1.5px solid rgba(15, 23, 42, 0.13);
+            color: #0f172a;
+            transition: all 0.2s ease;
+        }
+        .glass-input:focus {
+            outline: none;
+            background: #ffffff;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+        }
+
+        .dropzone-border {
+            border: 2px dashed rgba(79, 70, 229, 0.38);
+            transition: all 0.25s ease;
+        }
+        .dropzone-border:hover, .dropzone-border.drag-over {
+            border-color: #4f46e5;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        @keyframes springFadeUp {
+            0% { opacity: 0; transform: translate3d(0, 14px, 0); }
+            100% { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .spring-enter {
+            opacity: 0;
+            animation: springFadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .progress-bar-fill { transition: width 0.35s ease; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col relative text-slate-800 selection:bg-indigo-600 selection:text-white">
+
+    <!-- Hidden on mobile (<768px) to prevent Android Chrome GPU Low-Memory Killer when opening File Picker -->
+    <div class="hidden md:block fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+        <div id="parallax-orb-1" class="absolute -top-20 -left-20 w-[26rem] h-[26rem]">
+            <div class="ambient-orb-1 w-full h-full rounded-full bg-indigo-400/20 blur-[85px]"></div>
+        </div>
+        <div id="parallax-orb-2" class="absolute top-1/3 -right-24 w-[28rem] h-[28rem]">
+            <div class="ambient-orb-2 w-full h-full rounded-full bg-emerald-400/20 blur-[90px]"></div>
+        </div>
+        <div id="parallax-orb-3" class="absolute -bottom-24 left-1/4 w-96 h-96">
+            <div class="ambient-orb-3 w-full h-full rounded-full bg-sky-400/18 blur-[80px]"></div>
+        </div>
+    </div>
+
+    <div id="navigation-container" class="z-50 sticky top-0"></div>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-9 pb-20 w-full flex-grow relative z-10">
+
+        <div class="flex items-center justify-between gap-3 mb-5 spring-enter">
+            <a href="/activity-points.html" class="inner-glass inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-700 hover:text-indigo-600 hover:-translate-y-0.5 shadow-sm transition-all active:scale-95">
+                <i class="fas fa-arrow-left text-indigo-500 text-xs"></i>
+                <span>Back to Manual Calculator</span>
+            </a>
+        </div>
+
+        <div class="text-center mb-7 max-w-2xl mx-auto spring-enter">
+            <h1 class="text-2xl sm:text-4xl md:text-[2.6rem] font-extrabold text-slate-900 tracking-tight leading-tight mb-2.5">
+                AI <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-600 to-emerald-500">Activity Points</span> Calculator
+            </h1>
+            <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
+                Upload your official certificates to verify authenticity with KTU Vision Brain AI (Qwen3-VL-8B), apply the exact 2024 APJAKTU Handbook rules (highest point per rule, zero duplicate points), and calculate your progress.
+            </p>
+        </div>
+
+        <!-- ==================== UPLOAD & SETTINGS ==================== -->
+        <section class="real-glass rounded-[2rem] p-4 sm:p-7 mb-7 spring-enter">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pb-5 mb-5 border-b border-slate-200/70">
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">KTU Scheme</label>
+                    <select id="ai-scheme" onchange="recalculateAuditMath()" class="glass-input w-full rounded-xl px-4 py-3 text-xs sm:text-sm font-bold cursor-pointer">
+                        <option value="2024" selected>2024 Scheme (120 Points)</option>
+                        <option value="2019">2019 Scheme (100 Points)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Student Category</label>
+                    <select id="ai-category" onchange="recalculateAuditMath()" class="glass-input w-full rounded-xl px-4 py-3 text-xs sm:text-sm font-bold cursor-pointer">
+                        <option value="regular" selected>Regular Student (120 Pts • 40/Group)</option>
+                        <option value="lateral">Lateral Entry (90 Pts • 30/Group)</option>
+                        <option value="pwd">PwD Student (60 Pts • 20/Group)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="cert-dropzone" onclick="document.getElementById('cert-file-input').click()" class="dropzone-border inner-glass rounded-2xl p-7 sm:p-10 text-center cursor-pointer group">
+                <input type="file" id="cert-file-input" accept="image/*,application/pdf" multiple class="hidden" onchange="handleFilesSelected(this.files); this.value='';">
+                
+                <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 border border-indigo-200 flex items-center justify-center mx-auto mb-3.5 text-2xl shadow-sm group-hover:scale-110 transition-transform">
+                    <i class="fas fa-file-arrow-up"></i>
+                </div>
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-900 mb-1">
+                    Select or Drop Official Certificates Here
+                </h3>
+                <p class="text-xs text-slate-500 max-w-md mx-auto">
+                    Supports PDFs, JPG, PNG, and WebP (up to 30 files at once). Standalone logos, posters, and screenshots are automatically rejected.
+                </p>
+            </div>
+
+            <!-- Upload Rendering Progress -->
+            <div id="upload-progress-wrap" class="hidden mt-4 inner-glass rounded-2xl p-4">
+                <div class="flex items-center justify-between text-xs font-bold mb-2">
+                    <span id="upload-status-text" class="text-indigo-600 flex items-center gap-2">
+                        <i class="fas fa-circle-notch fa-spin"></i> <span>Uploading &amp; rendering previews...</span>
+                    </span>
+                    <span id="upload-pct-text" class="text-slate-800 font-extrabold">0%</span>
+                </div>
+                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
+                    <div id="upload-progress-bar" class="progress-bar-fill h-full bg-indigo-600 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Queued Thumbnails -->
+            <div id="queued-files-section" class="hidden mt-5 pt-5 border-t border-slate-200/70">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5">
+                    <span class="text-xs font-bold text-slate-700">
+                        Uploaded Certificates (<span id="queued-count">0</span>/30)
+                    </span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="document.getElementById('cert-file-input').click()" class="px-3.5 py-1.5 rounded-xl bg-white text-slate-700 border border-slate-200 text-xs font-bold hover:bg-slate-50">
+                            <i class="fas fa-plus text-indigo-500 mr-1"></i> Add More
+                        </button>
+                        <button type="button" onclick="clearQueuedFiles()" class="px-3.5 py-1.5 rounded-xl bg-rose-50 text-rose-600 border border-rose-200 text-xs font-bold hover:bg-rose-100">
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+
+                <div id="queued-thumbnails-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2.5 max-h-64 overflow-y-auto p-1 hide-scrollbar"></div>
+
+                <!-- Live Analysis Progress Ticker -->
+                <div id="scan-progress-wrap" class="hidden mt-4 inner-glass rounded-2xl p-4">
+                    <div class="flex items-center justify-between text-xs font-bold mb-2">
+                        <span id="scan-status-text" class="text-indigo-600 flex items-center gap-2">
+                            <i class="fas fa-circle-notch fa-spin"></i> <span>Connecting to KTU Vision Brain (Qwen3-VL-8B)...</span>
+                        </span>
+                        <span id="scan-pct-text" class="text-slate-800 font-extrabold">0%</span>
+                    </div>
+                    <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
+                        <div id="scan-progress-bar" class="progress-bar-fill h-full bg-gradient-to-r from-indigo-600 to-emerald-500 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <button type="button" id="btn-run-audit" onclick="runAICertificateAudit()" class="w-full mt-4 bg-gradient-to-r from-indigo-600 via-blue-600 to-emerald-500 hover:from-indigo-500 hover:to-emerald-400 active:scale-[0.99] text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 text-sm">
+                    <i class="fas fa-calculator"></i>
+                    <span>Verify Certificates &amp; Calculate Points</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ==================== RESULTS ==================== -->
+        <section id="audit-results-section" class="hidden space-y-6">
+            <div class="real-glass rounded-[2rem] p-5 sm:p-7">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-5 mb-5 border-b border-slate-200/70">
+                    <div class="w-full md:w-auto">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <span class="text-xs font-bold text-slate-500">Total Eligible Points</span>
+                            <span id="audit-overall-pct-badge" class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 text-xs font-bold border border-emerald-500/25">
+                                0% Completed
+                            </span>
+                        </div>
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span id="audit-total-pts" class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">0</span>
+                            <span class="text-sm font-semibold text-slate-500">/ <span id="audit-target-pts">120</span> pts (<span id="audit-overall-pct-inline" class="text-indigo-600 font-bold">0%</span>)</span>
+                        </div>
+                        <div class="w-full md:w-80 h-2.5 bg-slate-200/80 rounded-full overflow-hidden mb-2">
+                            <div id="audit-overall-bar" class="progress-bar-fill h-full bg-gradient-to-r from-indigo-600 to-emerald-500 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p id="audit-counts-summary" class="text-xs text-slate-500 font-medium">
+                            0 Accepted • 0 Duplicate/Capped • 0 Ineligible
+                        </p>
+                    </div>
+
+                    <button type="button" onclick="syncVerifiedToMainCalculator()" class="w-full md:w-auto px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all">
+                        <i class="fas fa-check"></i>
+                        <span>Save Points to Calculator</span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                    <div class="inner-glass rounded-2xl p-4">
+                        <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                            <span class="text-slate-800">Group I</span>
+                            <span id="audit-g1-text" class="text-blue-600">0 / 40 (0%)</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div id="audit-g1-bar" class="progress-bar-fill h-full bg-blue-600 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="inner-glass rounded-2xl p-4">
+                        <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                            <span class="text-slate-800">Group II</span>
+                            <span id="audit-g2-text" class="text-purple-600">0 / 40 (0%)</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div id="audit-g2-bar" class="progress-bar-fill h-full bg-purple-600 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="inner-glass rounded-2xl p-4">
+                        <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                            <span class="text-slate-800">Group III</span>
+                            <span id="audit-g3-text" class="text-emerald-600">0 / 40 (0%)</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div id="audit-g3-bar" class="progress-bar-fill h-full bg-emerald-600 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3.5">
+                <div class="flex flex-wrap items-center justify-between gap-2 px-1">
+                    <h2 class="text-sm sm:text-base font-bold text-slate-900">Forensic Certificate Breakdown</h2>
+                    <span class="text-[11px] font-semibold text-slate-500">Highest point per rule code applied • Duplicates excluded</span>
+                </div>
+                <div id="audit-cards-list" class="grid grid-cols-1 md:grid-cols-2 gap-3.5"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-6 text-center relative z-10">
+        <div class="max-w-3xl mx-auto px-4">
+            <h3 class="text-slate-800 font-bold text-sm sm:text-base mb-1">Kerala Timetable</h3>
+            <p class="text-slate-500 text-xs leading-relaxed max-w-lg mx-auto">
+                Powered by KTU Vision Brain (Qwen3-VL-8B Forensic Auditor) • Official APJAKTU 2024 Activity Points Handbook Engine.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/components.js?v=18" onerror="this.onerror=null;this.src='components.js';"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js";
+
+        if (typeof loadNavigation === 'function') loadNavigation('activity', '', false);
+
+        // Lazy-load pdf.js ONLY when a PDF is selected (prevents Android Chrome Low-Memory kills!)
+        let pdfJsLoadedPromise = null;
+        async function ensurePdfJsLoaded() {
+            if (window.pdfjsLib) return window.pdfjsLib;
+            if (!pdfJsLoadedPromise) {
+                pdfJsLoadedPromise = new Promise((resolve, reject) => {
+                    const s = document.createElement('script');
+                    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+                    s.onload = () => {
+                        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+                        resolve(window.pdfjsLib);
+                    };
+                    s.onerror = reject;
+                    document.head.appendChild(s);
+                });
+            }
+            return pdfJsLoadedPromise;
+        }
+
+        const VISION_SPACE_POOL  = [
+            "KeralaTimetable/ktu-vision-brain"
+            // Add duplicated Spaces here to multiply queue concurrency:
+            // "KeralaTimetable/ktu-vision-brain-2"
+        ];
+        const API_BASE_URL       = "https://keralatimetable-ktu-papers-api.hf.space";
+        const VISION_PROXY_URL   = `${API_BASE_URL}/vision-audit`;
+        const AUTH_URL           = `${API_BASE_URL}/gemini-auth`;
+        const STORAGE_KEY        = 'ktu_activity_points_tracker_v2';
+
+        // --- FIREBASE LOGGING ---
+        let db = null;
+        try {
+            const firebaseConfig = {
+                apiKey: "AIzaSyAqJ6wDmjJKCVip3dhgBDi35BzxC0QhIac",
+                authDomain: "keralatimetable-5e155.firebaseapp.com",
+                databaseURL: "https://keralatimetable-5e155-default-rtdb.asia-southeast1.firebasedatabase.app",
+                projectId: "keralatimetable-5e155"
+            };
+            const fbApp = initializeApp(firebaseConfig);
+            db = getDatabase(fbApp);
+        } catch (e) {
+            console.warn("Firebase init skipped:", e);
+        }
+
+        // =========================================================================
+        // COMPLETE OFFICIAL 2024 APJAKTU HANDBOOK TABLE (ALL 59 CODES: 1.1 TO 3.17)
+        // Includes exact maximum caps and shared sub-block caps from the 2024 PDF
+        // =========================================================================
+        const KTU_RULES_2024 = {
+            // GROUP I (1.1 to 1.21)
+            "1.1":  { group: "Group I", max: 40, block: "G1_SPORTS_ARTS", blockMax: 40, eventFamily: "FAM_SPORTS_ARTS", name: "Sports/Games/Arts Participation" },
+            "1.2":  { group: "Group I", max: 40, block: "G1_SPORTS_ARTS", blockMax: 40, eventFamily: "FAM_SPORTS_ARTS", name: "Sports/Games/Arts Winner (Single)" },
+            "1.3":  { group: "Group I", max: 40, block: "G1_SPORTS_ARTS", blockMax: 40, eventFamily: "FAM_SPORTS_ARTS", name: "Sports/Games/Arts Winner (Group)" },
+            "1.4":  { group: "Group I", max: 20, block: "1.4",            blockMax: 20, eventFamily: "1.4",             name: "Publication in College Magazine" },
+            "1.5":  { group: "Group I", max: 5,  block: "1.5",            blockMax: 5,  eventFamily: "1.5",             name: "Four-Wheeler Driving License (LMV)" },
+            "1.6":  { group: "Group I", max: 10, block: "G1_COMM_SERV",   blockMax: 10, eventFamily: "FAM_COMM_SERV",   name: "Community Service & Allied (2 Days)" },
+            "1.7":  { group: "Group I", max: 10, block: "G1_COMM_SERV",   blockMax: 10, eventFamily: "FAM_COMM_SERV",   name: "Community Service & Allied (1 Week)" },
+            "1.8":  { group: "Group I", max: 10, block: "1.8",            blockMax: 10, eventFamily: "1.8",             name: "Blood Donation" },
+            "1.9":  { group: "Group I", max: 20, block: "1.9",            blockMax: 20, eventFamily: "1.9",             name: "THRIVE Project (Min 5 Days/Sem)" },
+            "1.10": { group: "Group I", max: 5,  block: "1.10",           blockMax: 5,  eventFamily: "1.10",            name: "Tree Geo-Tagging (University NSS Cell)" },
+            "1.11": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.11",            name: "NSS Volunteer (2 Years Completed)" },
+            "1.12": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.12",            name: "University Leadership Camp (100 Hrs)" },
+            "1.13": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.13",            name: "State NSS Festival / Meet Winner" },
+            "1.14": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.14",            name: "NSS/NCC Special Service Appreciation" },
+            "1.15": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.15",            name: "NSS/NCC State or National Award" },
+            "1.16": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.16",            name: "Approved National Camp (NIC/NYF/Pre-RDC)" },
+            "1.17": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.17",            name: "10-Day (50 Hrs) Official State Service" },
+            "1.18": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.18",            name: "RDC / IDC / International NSS-NCC Event" },
+            "1.19": { group: "Group I", max: 40, block: "G1_NSS_NCC",     blockMax: 40, eventFamily: "1.19",            name: "NCC Certificate (1Yr / B / C)" },
+            "1.20": { group: "Group I", max: 10, block: "G1_LIFE_SKILLS", blockMax: 10, eventFamily: "1.20",            name: "First Aid / CPR / BLS / Fire Safety" },
+            "1.21": { group: "Group I", max: 10, block: "G1_LIFE_SKILLS", blockMax: 10, eventFamily: "1.21",            name: "Basic Swimming Proficiency" },
+
+            // GROUP II (2.1 to 2.25)
+            "2.1":  { group: "Group II", max: 40, block: "G2_TECH_COMP",  blockMax: 40, eventFamily: "FAM_TECH_FEST",   name: "Tech-Fest / Hackathon Participation" },
+            "2.2":  { group: "Group II", max: 40, block: "G2_TECH_COMP",  blockMax: 40, eventFamily: "FAM_TECH_FEST",   name: "Tech-Fest Winner" },
+            "2.3":  { group: "Group II", max: 40, block: "G2_TECH_COMP",  blockMax: 40, eventFamily: "FAM_PROF_COMP",   name: "Professional Society Competition Participation" },
+            "2.4":  { group: "Group II", max: 40, block: "G2_TECH_COMP",  blockMax: 40, eventFamily: "FAM_PROF_COMP",   name: "Professional Society Competition Winner" },
+            "2.5":  { group: "Group II", max: 15, block: "2.5",           blockMax: 15, eventFamily: "2.5",             name: "Workshop/Seminar at IIT/NIT/INI/NIRF Top 100" },
+            "2.6":  { group: "Group II", max: 40, block: "G2_PAPERS",     blockMax: 40, eventFamily: "2.6",             name: "Poster Presentation Participation" },
+            "2.7":  { group: "Group II", max: 40, block: "G2_PAPERS",     blockMax: 40, eventFamily: "FAM_PAPER_PREM",  name: "Paper Presentation (KTU/IIT/NIT/NIRF Top 100)" },
+            "2.8":  { group: "Group II", max: 40, block: "G2_PAPERS",     blockMax: 40, eventFamily: "FAM_PAPER_PREM",  name: "Paper Presentation Winner (KTU/IIT/NIT/NIRF)" },
+            "2.9":  { group: "Group II", max: 40, block: "G2_PAPERS",     blockMax: 40, eventFamily: "FAM_PAPER_COLL",  name: "Paper Presentation (KTU Affiliated College)" },
+            "2.10": { group: "Group II", max: 40, block: "G2_PAPERS",     blockMax: 40, eventFamily: "FAM_PAPER_COLL",  name: "Paper Presentation Winner (KTU College)" },
+            "2.11": { group: "Group II", max: 15, block: "2.11",          blockMax: 15, eventFamily: "2.11",            name: "Student Professional Society Role (IEEE/IET/ACM)" },
+            "2.12": { group: "Group II", max: 30, block: "2.12",          blockMax: 30, eventFamily: "2.12",            name: "College / University Union Member or Bearer" },
+            "2.13": { group: "Group II", max: 10, block: "2.13",          blockMax: 10, eventFamily: "2.13",            name: "Department Student Association Role" },
+            "2.14": { group: "Group II", max: 10, block: "2.14",          blockMax: 10, eventFamily: "2.14",            name: "Class Representative (CR)" },
+            "2.15": { group: "Group II", max: 5,  block: "2.15",          blockMax: 5,  eventFamily: "2.15",            name: "Industrial Visit Coordinator (Min 6 Days)" },
+            "2.16": { group: "Group II", max: 10, block: "2.16",          blockMax: 10, eventFamily: "2.16",            name: "Placement Cell (CGPU) Member/Coordinator" },
+            "2.17": { group: "Group II", max: 10, block: "2.17",          blockMax: 10, eventFamily: "2.17",            name: "IEDC Cell Execom / Office Bearer / Coordinator" },
+            "2.18": { group: "Group II", max: 10, block: "2.18",          blockMax: 10, eventFamily: "2.18",            name: "YIP (K-DISC) Student Coordinator" },
+            "2.19": { group: "Group II", max: 20, block: "2.19",          blockMax: 20, eventFamily: "2.19",            name: "STRIDE (K-DISC) Volunteer / Leadership Role" },
+            "2.20": { group: "Group II", max: 10, block: "2.20",          blockMax: 10, eventFamily: "2.20",            name: "College Magazine Editorial Board Member" },
+            "2.21": { group: "Group II", max: 10, block: "2.21",          blockMax: 10, eventFamily: "2.21",            name: "Hobby Club Execom Member / Convenor" },
+            "2.22": { group: "Group II", max: 20, block: "2.22",          blockMax: 20, eventFamily: "2.22",            name: "ICFOSS / FOSS Club Activity & Contributions" },
+            "2.23": { group: "Group II", max: 10, block: "2.23",          blockMax: 10, eventFamily: "2.23",            name: "Short-Term Internship (>= 2 Weeks / 10 Days)" },
+            "2.24": { group: "Group II", max: 30, block: "2.24",          blockMax: 30, eventFamily: "2.24",            name: "English Proficiency (TOEFL/IELTS/PTE/BEC)" },
+            "2.25": { group: "Group II", max: 30, block: "2.25",          blockMax: 30, eventFamily: "2.25",            name: "Aptitude Proficiency (GRE/GATE/CAT/GMAT)" },
+
+            // GROUP III (3.1 to 3.17)
+            "3.1":  { group: "Group III", max: 20, block: "G3_IND_PROJ",  blockMax: 20, eventFamily: "3.1",             name: "Industrial Visit Report (Min 4 Industries)" },
+            "3.2":  { group: "Group III", max: 20, block: "G3_IND_PROJ",  blockMax: 20, eventFamily: "3.2",             name: "Best Mini Project / Best Project / Best Seminar" },
+            "3.3":  { group: "Group III", max: 20, block: "G3_IND_PROJ",  blockMax: 20, eventFamily: "3.3",             name: "Long-Term Internship (Min 3.5 Months)" },
+            "3.4":  { group: "Group III", max: 30, block: "3.4",          blockMax: 30, eventFamily: "3.4",             name: "LEAP – IIT Madras Incubation Cell" },
+            "3.5":  { group: "Group III", max: 35, block: "3.5",          blockMax: 35, eventFamily: "3.5",             name: "YIP – Young Innovators Programme (K-DISC)" },
+            "3.6":  { group: "Group III", max: 35, block: "3.6",          blockMax: 35, eventFamily: "3.6",             name: "STRIDE Innovation Programme (K-DISC)" },
+            "3.7":  { group: "Group III", max: 35, block: "3.7",          blockMax: 35, eventFamily: "3.7",             name: "GDC AI Workforce Internship (AICTE/NHM)" },
+            "3.8":  { group: "Group III", max: 25, block: "3.8",          blockMax: 25, eventFamily: "3.8",             name: "ICFOSS Certified Working FOSS Solution" },
+            "3.9":  { group: "Group III", max: 40, block: "G3_IPR_INNOV", blockMax: 40, eventFamily: "3.9",             name: "Legally Registered Start-up Company" },
+            "3.10": { group: "Group III", max: 40, block: "G3_IPR_INNOV", blockMax: 40, eventFamily: "3.10",            name: "Patents (Filed / Published / Granted / Licensed)" },
+            "3.11": { group: "Group III", max: 40, block: "G3_IPR_INNOV", blockMax: 40, eventFamily: "3.11",            name: "Validated Prototype / Industry Adopted Tech" },
+            "3.12": { group: "Group III", max: 40, block: "G3_IPR_INNOV", blockMax: 40, eventFamily: "3.12",            name: "Venture Capital / Angel Funding" },
+            "3.13": { group: "Group III", max: 40, block: "G3_IPR_INNOV", blockMax: 40, eventFamily: "3.13",            name: "Validated Societal Innovation" },
+            "3.14": { group: "Group III", max: 40, block: "3.14",         blockMax: 40, eventFamily: "3.14",            name: "Research Publication in SCI/Scopus Journal" },
+            "3.15": { group: "Group III", max: 40, block: "3.15",         blockMax: 40, eventFamily: "3.15",            name: "National Hackathon Winner (SIH/KAVACH/MoE/AICTE)" },
+            "3.16": { group: "Group III", max: 40, block: "3.16",         blockMax: 40, eventFamily: "3.16",            name: "International Hackathon (NASA/Imagine Cup/etc.)" },
+            "3.17": { group: "Group III", max: 40, block: "3.17",         blockMax: 40, eventFamily: "3.17",            name: "University Approved Skilling Course (1 Pt/Hr)" }
+        };
+
+        let queuedCerts = [];
+        let rawAIResults = [];
+        let processedAuditItems = [];
+
+        function notifyUI(msg, type = 'info') {
+            if (window.KTUFlow?.toast) window.KTUFlow.toast(msg, type);
+            else if (window.KTUFlow?.capsule) window.KTUFlow.capsule(type, msg);
+        }
+
+        function createLiveProgressController(barEl, pctEl) {
+            let currentPct = 0, targetPct = 0, maxCrawl = 0, timer = null;
+            function render() {
+                const d = Math.min(100, Math.round(currentPct));
+                if (barEl) barEl.style.width = `${d}%`;
+                if (pctEl) pctEl.innerText = `${d}%`;
+            }
+            return {
+                start(initialTarget = 5, crawlLimit = 94) {
+                    currentPct = 1; targetPct = initialTarget; maxCrawl = crawlLimit; render();
+                    if (timer) clearInterval(timer);
+                    timer = setInterval(() => {
+                        if (currentPct < targetPct) {
+                            currentPct = Math.min(targetPct, currentPct + Math.max(1, (targetPct - currentPct) * 0.35));
+                            render();
+                        } else if (currentPct < maxCrawl) {
+                            currentPct += 0.35;
+                            render();
+                        }
+                    }, 200);
+                },
+                advanceTo(t, c) { if (t > targetPct) targetPct = t; if (c > maxCrawl) maxCrawl = c; },
+                finish() {
+                    if (timer) clearInterval(timer);
+                    targetPct = 100; maxCrawl = 100;
+                    const ft = setInterval(() => {
+                        if (currentPct < 100) { currentPct = Math.min(100, currentPct + 5); render(); }
+                        else clearInterval(ft);
+                    }, 20);
+                },
+                stop() { if (timer) clearInterval(timer); }
+            };
+        }
+
+        // --- UPLOAD HANDLER ---
+        const dropzone = document.getElementById('cert-dropzone');
+        dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('drag-over'); });
+        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault(); dropzone.classList.remove('drag-over');
+            if (e.dataTransfer.files?.length) handleFilesSelected(e.dataTransfer.files);
+        });
+
+        window.handleFilesSelected = async function(fileList) {
+            if (!fileList || !fileList.length) return;
+            const incoming = Array.from(fileList);
+            if (queuedCerts.length + incoming.length > 30) {
+                notifyUI('Maximum 30 certificates per calculation', 'amber');
+            }
+            const allowed = incoming.slice(0, 30 - queuedCerts.length);
+            if (!allowed.length) return;
+
+            const upWrap = document.getElementById('upload-progress-wrap');
+            const upBar  = document.getElementById('upload-progress-bar');
+            const upPct  = document.getElementById('upload-pct-text');
+            const upTxt  = document.getElementById('upload-status-text');
+
+            upWrap.classList.remove('hidden');
+            const ticker = createLiveProgressController(upBar, upPct);
+            ticker.start(10, 94);
+
+            for (let i = 0; i < allowed.length; i++) {
+                const file = allowed[i];
+                upTxt.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> <span>Reading file ${i + 1} of ${allowed.length}...</span>`;
+                ticker.advanceTo(Math.round(((i + 0.8) / allowed.length) * 95), 98);
+
+                const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+                const certItem = {
+                    id: `cert_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+                    file,
+                    name: file.name,
+                    isPdf,
+                    canvasDataUrl: null,
+                    extractedText: ""
+                };
+
+                try {
+                    await prepareCertItem(certItem);
+                    certItem.file = null; // Free raw File memory immediately
+                    queuedCerts.push(certItem);
+                    renderQueuedGrid();
+                } catch (e) {
+                    console.error("Prep error:", file.name, e);
+                }
+            }
+
+            ticker.finish();
+            setTimeout(() => upWrap.classList.add('hidden'), 400);
+            notifyUI(`${queuedCerts.length} file(s) ready for forensic audit`, 'success');
+        };
+
+        async function prepareCertItem(certItem) {
+            if (certItem.canvasDataUrl) return certItem;
+            const file = certItem.file;
+
+            if (certItem.isPdf) {
+                const pdfjs = await ensurePdfJsLoaded();
+                const arrayBuffer = await file.arrayBuffer();
+                const pdf = await pdfjs.getDocument({ data: arrayBuffer }).promise;
+                const page = await pdf.getPage(1);
+
+                try {
+                    const textContent = await page.getTextContent();
+                    certItem.extractedText = textContent.items.map(it => it.str).join(' ').replace(/\s+/g, ' ').trim().slice(0, 900);
+                } catch (e) {}
+
+                const baseVp = page.getViewport({ scale: 1.0 });
+                const scale = Math.min(1.5, 1024 / Math.max(baseVp.width, baseVp.height));
+                const viewport = page.getViewport({ scale });
+                const canvas = document.createElement('canvas');
+                canvas.width = viewport.width; canvas.height = viewport.height;
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+                await page.render({ canvasContext: ctx, viewport }).promise;
+
+                certItem.canvasDataUrl = canvas.toDataURL('image/jpeg', 0.84);
+                try { pdf.destroy(); } catch (e) {}
+                return certItem;
+            } else {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    const url = URL.createObjectURL(file);
+                    img.onload = () => {
+                        const maxDim = 1024;
+                        let w = img.width, h = img.height;
+                        if (w > maxDim || h > maxDim) {
+                            if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; }
+                            else { w = Math.round((w * maxDim) / h); h = maxDim; }
+                        }
+                        const canvas = document.createElement('canvas');
+                        canvas.width = w; canvas.height = h;
+                        const ctx = canvas.getContext('2d');
+                        ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, w, h);
+                        ctx.drawImage(img, 0, 0, w, h);
+                        URL.revokeObjectURL(url);
+                        certItem.canvasDataUrl = canvas.toDataURL('image/jpeg', 0.84);
+                        resolve(certItem);
+                    };
+                    img.onerror = (err) => {
+                        URL.revokeObjectURL(url);
+                        reject(err);
+                    };
+                    img.src = url;
+                });
+            }
+        }
+
+        function renderQueuedGrid() {
+            const sec = document.getElementById('queued-files-section');
+            const grid = document.getElementById('queued-thumbnails-grid');
+            document.getElementById('queued-count').innerText = queuedCerts.length;
+            if (queuedCerts.length === 0) { sec.classList.add('hidden'); return; }
+            sec.classList.remove('hidden');
+
+            grid.innerHTML = queuedCerts.map((c, idx) => `
+                <div class="inner-glass rounded-xl p-2 relative flex flex-col justify-between hover:-translate-y-0.5 transition-transform">
+                    <button type="button" onclick="removeQueuedCert('${c.id}')" class="absolute top-1 right-1 w-5 h-5 rounded-full bg-slate-900/70 text-white text-[10px] flex items-center justify-center hover:bg-rose-600 transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img src="${c.canvasDataUrl}" alt="${c.name}" class="w-full h-16 object-cover rounded-lg mb-1.5 bg-white border border-slate-200">
+                    <span class="text-[10px] font-bold text-slate-700 truncate block">#${idx + 1} ${c.name}</span>
+                </div>
+            `).join('');
+        }
+
+        window.removeQueuedCert = function(id) {
+            queuedCerts = queuedCerts.filter(c => c.id !== id);
+            renderQueuedGrid();
+        };
+
+        window.clearQueuedFiles = function() {
+            queuedCerts = [];
+            renderQueuedGrid();
+            document.getElementById('audit-results-section').classList.add('hidden');
+        };
+
+        async function createLabeledCertImage(item) {
+            const img = await new Promise(res => {
+                const im = new Image();
+                im.onload = () => res(im);
+                im.src = item.canvasDataUrl;
+            });
+
+            const headerH = 36;
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height + headerH;
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = '#1e1b4b';
+            ctx.fillRect(0, 0, canvas.width, headerH);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 16px Inter, sans-serif';
+            ctx.fillText(`CERT #${item.globalIndex}`, 12, 24);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, headerH, img.width, img.height);
+            ctx.drawImage(img, 0, headerH);
+
+            return canvas.toDataURL('image/jpeg', 0.84).split(',')[1];
+        }
+
+        function parseVisionBrainResponse(rawOutput) {
+            if (!rawOutput) throw new Error("Empty response from KTU Vision Brain");
+
+            if (Array.isArray(rawOutput)) {
+                if (rawOutput.length > 0 && typeof rawOutput[0] === 'object' && 'certIndex' in rawOutput[0]) {
+                    return rawOutput;
+                }
+                if (typeof rawOutput[0] === 'string') {
+                    return parseVisionBrainResponse(rawOutput[0]);
+                }
+            }
+
+            if (typeof rawOutput === 'object') {
+                if (rawOutput.status === 'error') {
+                    throw new Error(rawOutput.message || "Vision Brain returned an error");
+                }
+                if (Array.isArray(rawOutput.results)) return rawOutput.results;
+                if (Array.isArray(rawOutput.data)) return parseVisionBrainResponse(rawOutput.data);
+            }
+
+            const str = String(rawOutput)
+                .replace(/<think>[\s\S]*?<\/think>/gi, '')
+                .replace(/```json/gi, '')
+                .replace(/```/g, '')
+                .trim();
+
+            const parsedObj = JSON.parse(str);
+            if (parsedObj.status === 'error') {
+                throw new Error(parsedObj.message || "Vision Brain returned an error");
+            }
+            if (Array.isArray(parsedObj.results)) return parsedObj.results;
+            if (Array.isArray(parsedObj)) return parsedObj;
+
+            throw new Error("Could not parse KTU Vision Brain output");
+        }
+
+        async function requestKTUVisionBrain(payloadObj, hfToken, statusTxtEl) {
+            const payloadJsonStr = JSON.stringify(payloadObj);
+            const shuffledSpaces = [...VISION_SPACE_POOL].sort(() => Math.random() - 0.5);
+
+            // 1. Primary: Direct Browser-to-ZeroGPU (Uses Student's own IP quota)
+            for (const spaceId of shuffledSpaces) {
+                try {
+                    if (statusTxtEl) {
+                        statusTxtEl.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> <span>Qwen3-VL-8B inspecting recipient name, signatures &amp; KTU 2024 rules...</span>`;
+                    }
+                    const app = await Client.connect(spaceId);
+                    const result = await app.predict("/audit", [payloadJsonStr]);
+                    const parsed = parseVisionBrainResponse(result?.data);
+                    if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+                } catch (directErr) {
+                    console.warn(`Direct ZeroGPU call on ${spaceId} warning:`, directErr);
+                }
+            }
+
+            // 2. Secondary: Authenticated Gradio Client with HF_TOKEN from /gemini-auth
+            if (hfToken) {
+                for (const spaceId of shuffledSpaces) {
+                    try {
+                        const app = await Client.connect(spaceId, { hf_token: hfToken });
+                        const result = await app.predict("/audit", [payloadJsonStr]);
+                        const parsed = parseVisionBrainResponse(result?.data);
+                        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+                    } catch (tokenErr) {
+                        console.warn(`Authenticated ZeroGPU call on ${spaceId} warning:`, tokenErr);
+                    }
+                }
+            }
+
+            // 3. Tertiary: Server-side relay through ktu-papers-api (/vision-audit)
+            const proxyRes = await fetch(VISION_PROXY_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: payloadJsonStr
+            });
+            if (!proxyRes.ok) {
+                const errText = await proxyRes.text();
+                throw new Error(errText || `HTTP ${proxyRes.status}`);
+            }
+            const proxyData = await proxyRes.json();
+            return parseVisionBrainResponse(proxyData);
+        }
+
+        // --- EXECUTION ---
+        window.runAICertificateAudit = async function() {
+            if (queuedCerts.length === 0) return;
+
+            const btn = document.getElementById('btn-run-audit');
+            const progWrap = document.getElementById('scan-progress-wrap');
+            const progBar = document.getElementById('scan-progress-bar');
+            const pctTxt = document.getElementById('scan-pct-text');
+            const statusTxt = document.getElementById('scan-status-text');
+
+            btn.disabled = true;
+            progWrap.classList.remove('hidden');
+
+            const ticker = createLiveProgressController(progBar, pctTxt);
+            ticker.start(10, 95);
+
+            try {
+                let hfToken = "";
+                try {
+                    const authRes = await fetch(AUTH_URL, { method: "POST" });
+                    if (authRes.ok) {
+                        const authData = await authRes.json();
+                        if (Array.isArray(authData.h) && authData.h.length > 0) {
+                            hfToken = authData.h.map(b => String.fromCharCode(b ^ 42)).join('');
+                        }
+                    }
+                } catch (e) {}
+
+                const itemsWithIndex = queuedCerts.map((c, i) => ({ ...c, globalIndex: i + 1 }));
+                const allResults = [];
+
+                const batchSize = 5;
+                for (let i = 0; i < itemsWithIndex.length; i += batchSize) {
+                    const batch = itemsWithIndex.slice(i, i + batchSize);
+                    const batchNum = Math.floor(i / batchSize) + 1;
+                    const totalBatches = Math.ceil(itemsWithIndex.length / batchSize);
+
+                    const pctTarget = Math.min(92, Math.round(((i + batch.length * 0.5) / itemsWithIndex.length) * 90));
+                    ticker.advanceTo(pctTarget, 96);
+
+                    statusTxt.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> <span>Qwen3-VL-8B forensic audit: batch ${batchNum} of ${totalBatches}...</span>`;
+
+                    const b64Images = await Promise.all(batch.map(item => createLabeledCertImage(item)));
+                    const pdfSummary = batch.map(c =>
+                        `CERT #${c.globalIndex} (PDF Layer) Text: ${c.extractedText || "[Image file]"}`
+                    ).join("\n");
+
+                    const payloadObj = {
+                        sheets: b64Images,
+                        pdfSummary: pdfSummary,
+                        totalCerts: batch.length
+                    };
+
+                    const batchResults = await requestKTUVisionBrain(payloadObj, hfToken, statusTxt);
+
+                    batchResults.forEach((resItem, idxInBatch) => {
+                        const expectedGlobalIdx = batch[idxInBatch]?.globalIndex || resItem.certIndex;
+                        allResults.push({
+                            ...resItem,
+                            certIndex: expectedGlobalIdx
+                        });
+                    });
+                }
+
+                rawAIResults = allResults;
+
+                ticker.finish();
+                setTimeout(() => progWrap.classList.add('hidden'), 350);
+
+                recalculateAuditMath();
+                logToFirebase();
+
+                document.getElementById('audit-results-section').classList.remove('hidden');
+                document.getElementById('audit-results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                notifyUI(`Qwen3-VL-8B audit complete for ${queuedCerts.length} file(s)!`, 'success');
+            } catch (err) {
+                console.error("KTU Vision Brain Error:", err);
+                ticker.stop();
+                progWrap.classList.add('hidden');
+                notifyUI(`Vision Brain error: ${err.message || 'Check Space status and retry.'}`, 'error');
+            } finally {
+                btn.disabled = false;
+            }
+        };
+
+        // =========================================================================
+        // EXACT 2024 KTU MATH ENGINE:
+        // 1. Takes ONLY the SINGLE HIGHEST POINT certificate per Rule Code / Event Family
+        //    (Guideline i: No combining participation & winner; no duplicate rule points)
+        // 2. Enforces Sub-Block Caps (e.g. NSS/NCC 40, Comm Serv 10, Life Skills 10, etc.)
+        // 3. Enforces Group I, Group II, Group III Caps (40 / 30 / 20 pts)
+        // =========================================================================
+        window.recalculateAuditMath = function() {
+            if (!rawAIResults.length) return;
+
+            const scheme = document.getElementById('ai-scheme').value;
+            const category = document.getElementById('ai-category').value;
+            const groupCap = scheme === '2024' ? (category === 'lateral' ? 30 : category === 'pwd' ? 20 : 40) : 100;
+            const totalTarget = scheme === '2024' ? (category === 'lateral' ? 90 : category === 'pwd' ? 60 : 120) : (category === 'lateral' ? 75 : category === 'pwd' ? 50 : 100);
+
+            const indexed = rawAIResults.map((r, i) => ({
+                ...r,
+                originalOrder: i,
+                certObj: queuedCerts[(r.certIndex || (i + 1)) - 1] || queuedCerts[i]
+            }));
+
+            // Find the single highest-scoring certificate for each Rule Code AND Event Family
+            // so duplicate uploads or lower-level certificates in the same rule/family are superseded
+            const bestOrderByCode = {};
+            const bestPtsByCode = {};
+            const bestOrderByFamily = {};
+            const bestPtsByFamily = {};
+
+            indexed.forEach(item => {
+                const code = String(item.code || '').replace(/^#/, '').trim();
+                const rule = KTU_RULES_2024[code];
+                const pts = Number(item.points) || 0;
+                if (!item.eligible || !rule || pts <= 0) return;
+
+                if (bestPtsByCode[code] === undefined || pts > bestPtsByCode[code]) {
+                    bestPtsByCode[code] = pts;
+                    bestOrderByCode[code] = item.originalOrder;
+                }
+
+                const fam = rule.eventFamily || code;
+                if (bestPtsByFamily[fam] === undefined || pts > bestPtsByFamily[fam]) {
+                    bestPtsByFamily[fam] = pts;
+                    bestOrderByFamily[fam] = item.originalOrder;
+                }
+            });
+
+            const blockEarned = {};
+            const processedByOrder = new Array(indexed.length);
+
+            // Process eligible items in descending order of points so highest points claim block caps first
+            const sortedForScoring = [...indexed].sort((a, b) => (Number(b.points) || 0) - (Number(a.points) || 0));
+
+            sortedForScoring.forEach(item => {
+                const code = String(item.code || '').replace(/^#/, '').trim();
+                const rule = KTU_RULES_2024[code];
+                const pts = Number(item.points) || 0;
+
+                if (!item.eligible || !rule || pts <= 0) {
+                    processedByOrder[item.originalOrder] = {
+                        ...item,
+                        code,
+                        status: 'rejected',
+                        awardedPoints: 0,
+                        group: rule?.group || 'Ineligible',
+                        note: item.reason || 'Does not meet KTU 2024 Handbook eligibility criteria.'
+                    };
+                    return;
+                }
+
+                const fam = rule.eventFamily || code;
+
+                // Rule 1: Only the single highest-point certificate per Rule Code is taken (No duplicate rule points)
+                if (bestOrderByCode[code] !== item.originalOrder) {
+                    processedByOrder[item.originalOrder] = {
+                        ...item,
+                        code,
+                        status: 'capped',
+                        awardedPoints: 0,
+                        group: rule.group,
+                        note: `Superseded (No Duplicate Points): Highest achievement (${bestPtsByCode[code]} pts) for Code #${code} (${rule.name}) is already counted.`
+                    };
+                    return;
+                }
+
+                // Rule 2: Guideline (i) Page 20 — Participation & Winning points cannot be combined; highest achievement is taken
+                if (bestOrderByFamily[fam] !== item.originalOrder) {
+                    processedByOrder[item.originalOrder] = {
+                        ...item,
+                        code,
+                        status: 'capped',
+                        awardedPoints: 0,
+                        group: rule.group,
+                        note: `Superseded per KTU Guideline (i): Participation and winning points cannot be combined—highest achievement (${bestPtsByFamily[fam]} pts) is already counted.`
+                    };
+                    return;
+                }
+
+                // Rule 3: Enforce shared Sub-Block Maximum Cap from KTU 2024 Table 2
+                const blkKey = rule.block || code;
+                const blkMax = rule.blockMax || rule.max;
+                const currentBlk = blockEarned[blkKey] || 0;
+
+                if (currentBlk >= blkMax) {
+                    processedByOrder[item.originalOrder] = {
+                        ...item,
+                        code,
+                        status: 'capped',
+                        awardedPoints: 0,
+                        group: rule.group,
+                        note: `Maximum sub-block limit (${blkMax} pts) reached for ${rule.name}.`
+                    };
+                    return;
+                }
+
+                const award = Math.min(pts, rule.max, blkMax - currentBlk);
+                blockEarned[blkKey] = currentBlk + award;
+
+                processedByOrder[item.originalOrder] = {
+                    ...item,
+                    code,
+                    status: 'accepted',
+                    awardedPoints: award,
+                    group: rule.group,
+                    note: item.reason || `Verified under Code #${code} (${rule.name}).`
+                };
+            });
+
+            processedAuditItems = processedByOrder;
+
+            let g1 = 0, g2 = 0, g3 = 0;
+            let acc = 0, cap = 0, rej = 0;
+
+            processedAuditItems.forEach(p => {
+                if (p.status === 'accepted') {
+                    acc++;
+                    if (p.group === 'Group I') g1 += p.awardedPoints;
+                    else if (p.group === 'Group II') g2 += p.awardedPoints;
+                    else if (p.group === 'Group III') g3 += p.awardedPoints;
+                } else if (p.status === 'capped') cap++;
+                else rej++;
+            });
+
+            const cG1 = scheme === '2024' ? Math.min(g1, groupCap) : g1;
+            const cG2 = scheme === '2024' ? Math.min(g2, groupCap) : g2;
+            const cG3 = scheme === '2024' ? Math.min(g3, groupCap) : g3;
+            const total = scheme === '2024' ? (cG1 + cG2 + cG3) : Math.min(g1 + g2 + g3, totalTarget);
+
+            const overallPct = Math.min(100, Math.round((total / totalTarget) * 100));
+            const g1Pct = Math.min(100, Math.round((cG1 / groupCap) * 100));
+            const g2Pct = Math.min(100, Math.round((cG2 / groupCap) * 100));
+            const g3Pct = Math.min(100, Math.round((cG3 / groupCap) * 100));
+
+            document.getElementById('audit-total-pts').innerText = total;
+            document.getElementById('audit-target-pts').innerText = totalTarget;
+            document.getElementById('audit-overall-pct-badge').innerText = `${overallPct}% Completed`;
+            document.getElementById('audit-overall-pct-inline').innerText = `${overallPct}%`;
+            document.getElementById('audit-overall-bar').style.width = `${overallPct}%`;
+            document.getElementById('audit-counts-summary').innerText = `${acc} Accepted • ${cap} Duplicate/Capped • ${rej} Ineligible`;
+
+            document.getElementById('audit-g1-text').innerText = `${cG1} / ${groupCap} (${g1Pct}%)`;
+            document.getElementById('audit-g1-bar').style.width = `${g1Pct}%`;
+            document.getElementById('audit-g2-text').innerText = `${cG2} / ${groupCap} (${g2Pct}%)`;
+            document.getElementById('audit-g2-bar').style.width = `${g2Pct}%`;
+            document.getElementById('audit-g3-text').innerText = `${cG3} / ${groupCap} (${g3Pct}%)`;
+            document.getElementById('audit-g3-bar').style.width = `${g3Pct}%`;
+
+            renderCards(totalTarget);
+        };
+
+        function renderCards(totalTarget) {
+            const listEl = document.getElementById('audit-cards-list');
+            listEl.innerHTML = processedAuditItems.map(item => {
+                const sharePct = item.awardedPoints > 0 ? Math.round((item.awardedPoints / totalTarget) * 100) : 0;
+                let badge = '', border = '';
+
+                if (item.status === 'accepted') {
+                    badge = `<span class="px-2.5 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-700 text-xs font-bold">+${item.awardedPoints} pts (${item.group} • ${sharePct}%)</span>`;
+                    border = 'border-emerald-500/35';
+                } else if (item.status === 'capped') {
+                    badge = `<span class="px-2.5 py-0.5 rounded-lg bg-amber-500/15 text-amber-700 text-xs font-bold">0 pts (Duplicate / Capped)</span>`;
+                    border = 'border-amber-500/35';
+                } else {
+                    badge = `<span class="px-2.5 py-0.5 rounded-lg bg-rose-500/15 text-rose-700 text-xs font-bold">0 pts (Rejected)</span>`;
+                    border = 'border-rose-500/35';
+                }
+
+                const thumb = item.certObj?.canvasDataUrl || '';
+
+                return `
+                    <div class="result-glass rounded-2xl p-4 sm:p-5 flex flex-col justify-between gap-3 border ${border}">
+                        <div class="flex items-start gap-3">
+                            ${thumb ? `<img src="${thumb}" class="w-14 h-14 object-cover rounded-xl border border-slate-200 shrink-0 bg-white">` : ''}
+                            <div class="min-w-0 flex-1">
+                                <div class="flex flex-wrap items-center justify-between gap-1.5 mb-1">
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-bold">
+                                        ${item.code && item.code !== 'none' ? `Code #${item.code}` : 'Rejected'}
+                                    </span>
+                                    ${badge}
+                                </div>
+                                <h3 class="text-sm font-bold text-slate-900 leading-snug truncate mb-0.5">${item.detectedTitle || item.certObj?.name}</h3>
+                                ${item.detectedLogo && item.detectedLogo !== 'None' ? `<span class="text-[10px] font-semibold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200"><i class="fas fa-certificate mr-1 text-indigo-500"></i>Issuer: ${item.detectedLogo}</span>` : ''}
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 bg-slate-100/80 p-2.5 rounded-xl leading-relaxed">
+                            ${item.note}
+                        </p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        async function logToFirebase() {
+            if (!db) return;
+            try {
+                for (const it of processedAuditItems) {
+                    await set(push(ref(db, 'ktu_ai_scan_logs')), {
+                        title: it.detectedTitle || it.certObj?.name || 'Unknown',
+                        logo: it.detectedLogo || 'None',
+                        code: String(it.code || 'none'),
+                        points: Number(it.awardedPoints || 0),
+                        status: it.status || 'rejected',
+                        timestamp: new Date().toISOString()
+                    });
+                }
+            } catch (e) {}
+        }
+
+        window.syncVerifiedToMainCalculator = function() {
+            const accepted = processedAuditItems.filter(i => i.status === 'accepted' && i.awardedPoints > 0);
+            if (!accepted.length) { notifyUI('No eligible certificates to save', 'amber'); return; }
+
+            const scheme = document.getElementById('ai-scheme').value;
+            const category = document.getElementById('ai-category').value;
+
+            let existing = [];
+            try { existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}').items || []; } catch (e) {}
+
+            const otherItems = existing.filter(i => i.scheme !== scheme);
+            const newItems = accepted.map(it => ({
+                id: `ai_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+                code: String(it.code),
+                title: it.detectedTitle,
+                group: it.group,
+                points: it.awardedPoints,
+                scheme
+            }));
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({ scheme, category, items: [...otherItems, ...newItems] }));
+            notifyUI(`Saved ${accepted.length} verified certificates!`, 'success');
+            setTimeout(() => { window.location.href = '/activity-points.html'; }, 900);
+        };
+    </script>
+</body>
+</html>

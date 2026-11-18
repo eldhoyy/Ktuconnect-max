@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>KTU Activity Points Calculator & Official Handbook Guide (2024 & 2019 Scheme) | Kerala Timetable</title>
+    <meta name="description" content="Official KTU B.Tech Activity Points Calculator and complete handbook table for 2024 Scheme (120 Points across Group I, II, III) and 2019 Scheme (100 Points).">
+    <meta name="keywords" content="ktu activity points, ktu 2024 scheme activity points, ktu activity points calculator, ktu 120 activity points list, ktu nss activity points, ktu hackathon activity points">
+    <link rel="canonical" href="https://keralatimetable.in/activity-points.html" />
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <script src="/tailwind-local.js" onerror="this.onerror=null;this.src='https://cdn.tailwindcss.com';"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background: 
+                radial-gradient(at 0% 0%, rgba(224, 231, 255, 0.6) 0px, transparent 52%),
+                radial-gradient(at 100% 0%, rgba(209, 250, 229, 0.5) 0px, transparent 52%),
+                radial-gradient(at 100% 100%, rgba(224, 231, 255, 0.5) 0px, transparent 52%),
+                radial-gradient(at 0% 100%, rgba(243, 232, 255, 0.45) 0px, transparent 52%),
+                #f8fafc;
+            min-height: 100vh;
+            letter-spacing: -0.01em;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(22px, -16px, 0) scale(1.05); }
+        }
+        .ambient-orb { animation: floatOrb 15s ease-in-out infinite; will-change: transform; }
+        .ambient-orb-delayed { animation: floatOrb 19s ease-in-out 3s infinite reverse; will-change: transform; }
+
+        .real-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.66) 100%);
+            backdrop-filter: blur(28px) saturate(190%);
+            -webkit-backdrop-filter: blur(28px) saturate(190%);
+            border: 1.5px solid rgba(15, 23, 42, 0.11);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.95), 0 14px 34px -8px rgba(31, 38, 135, 0.06);
+        }
+
+        .result-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.76) 100%);
+            backdrop-filter: blur(20px) saturate(185%);
+            -webkit-backdrop-filter: blur(20px) saturate(185%);
+            border: 1.5px solid rgba(15, 23, 42, 0.10);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.95), 0 6px 20px -4px rgba(15, 23, 42, 0.04);
+            transition: transform 0.3s cubic-bezier(0.22, 1.25, 0.36, 1), box-shadow 0.28s ease, border-color 0.22s ease, background 0.22s ease;
+        }
+        .result-glass:hover {
+            transform: translate3d(0, -3px, 0);
+            background: rgba(255, 255, 255, 0.98);
+            border-color: rgba(79, 70, 229, 0.4);
+            box-shadow: inset 0 1px 0 0 #ffffff, 0 16px 32px -6px rgba(79, 70, 229, 0.10);
+        }
+        .result-glass.added-card {
+            background: rgba(238, 242, 255, 0.95) !important;
+            border-color: rgba(79, 70, 229, 0.65) !important;
+            box-shadow: 0 12px 28px -6px rgba(79, 70, 229, 0.16), inset 0 0 0 1px rgba(79, 70, 229, 0.18) !important;
+        }
+        html.dark .result-glass.added-card {
+            background: rgba(49, 46, 129, 0.32) !important;
+            border-color: rgba(129, 140, 248, 0.6) !important;
+        }
+
+        .inner-glass {
+            background: rgba(255, 255, 255, 0.74);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1.5px solid rgba(15, 23, 42, 0.10);
+        }
+
+        .group-select-card { transition: all 0.32s cubic-bezier(0.22, 1.25, 0.36, 1); }
+        .group-select-card:hover {
+            transform: translate3d(0, -4px, 0) scale(1.01);
+            background: rgba(255, 255, 255, 0.96);
+            border-color: rgba(79, 70, 229, 0.45);
+            box-shadow: 0 18px 36px -8px rgba(79, 70, 229, 0.14);
+        }
+        .group-select-card:active { transform: scale(0.98); }
+        html.dark .group-select-card:hover {
+            background: rgba(30, 41, 59, 0.92) !important;
+            border-color: rgba(129, 140, 248, 0.55) !important;
+        }
+
+        .glass-input {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1.5px solid rgba(15, 23, 42, 0.14);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 0 4px 14px rgba(15, 23, 42, 0.03);
+            color: #0f172a;
+            transition: all 0.22s ease;
+        }
+        .glass-input:focus {
+            outline: none;
+            background: #ffffff;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.14);
+        }
+
+        @keyframes viewSwapIn {
+            from { opacity: 0; transform: translate3d(0, 14px, 0) scale(0.99); }
+            to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+        }
+        .view-swap-animate { animation: viewSwapIn 0.34s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translate3d(0, 22px, 0) scale(0.985);
+            transition: opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1), transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .scroll-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+
+        #floating-points-dock {
+            position: fixed;
+            bottom: 1.25rem;
+            left: 50%;
+            z-index: 55;
+            width: calc(100% - 1.5rem);
+            max-width: 28rem;
+            transform: translate3d(-50%, 140%, 0) scale(0.92);
+            opacity: 0;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(28px) saturate(200%);
+            -webkit-backdrop-filter: blur(28px) saturate(200%);
+            border: 1.5px solid rgba(15, 23, 42, 0.12);
+            box-shadow: 0 22px 48px -12px rgba(15, 23, 42, 0.22), 0 4px 16px -2px rgba(79, 70, 229, 0.14), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+            transition: transform 0.46s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        #floating-points-dock.dock-active {
+            transform: translate3d(-50%, 0, 0) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        html.dark #floating-points-dock {
+            background: rgba(15, 23, 42, 0.92);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
+        }
+
+        .progress-bar-fill { transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col relative text-slate-800 selection:bg-indigo-600 selection:text-white">
+
+    <!-- Ambient Liquid Glass Glow Orbs -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+        <div id="mouse-orb-1" class="ambient-orb absolute -top-20 -left-20 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-indigo-400/20 blur-[90px]"></div>
+        <div id="mouse-orb-2" class="ambient-orb-delayed absolute top-1/3 -right-24 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-emerald-400/20 blur-[95px]"></div>
+    </div>
+
+    <!-- Global Sticky Header Navigation -->
+    <div id="navigation-container" class="z-50 sticky top-0"></div>
+
+    <!-- MAIN BODY -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-7 sm:pt-10 pb-24 w-full flex-grow relative z-10">
+
+        <!-- Hero Heading -->
+        <div class="text-center mb-6 sm:mb-7 max-w-2xl mx-auto scroll-reveal is-visible">
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
+                KTU <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-emerald-600">Activity Points</span> Calculator
+            </h1>
+            <p class="text-slate-600 font-normal text-sm sm:text-base leading-relaxed">
+                Verified with the official APJAKTU Activity Points Handbooks (2024 &amp; 2019 Schemes). Select a group below and tap your achievement level to calculate your points.
+            </p>
+        </div>
+
+        <!-- ==================== MAIN INTERACTIVE STAGE ==================== -->
+        <section id="calculator-stage" class="real-glass rounded-3xl p-4 sm:p-6 md:p-7 mb-7 scroll-reveal is-visible">
+            
+            <!-- Top Row: Scheme & Student Type Switchers -->
+            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-200/70 dark:border-white/10">
+                <div class="grid grid-cols-2 gap-1.5 bg-slate-200/70 dark:bg-slate-900/80 p-1.5 rounded-2xl border border-slate-300/60 dark:border-white/10 w-full md:w-auto">
+                    <button type="button" id="scheme-btn-2024" onclick="setSchemeMode('2024')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm">
+                        2024 Scheme (120 Pts)
+                    </button>
+                    <button type="button" id="scheme-btn-2019" onclick="setSchemeMode('2019')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all text-slate-600 dark:text-slate-300 hover:text-slate-900">
+                        2019 Scheme (100 Pts)
+                    </button>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between md:justify-end gap-2">
+                    <span class="text-xs font-semibold text-slate-500 mr-1">Student Type:</span>
+                    <div class="inline-flex bg-slate-200/70 dark:bg-slate-900/80 p-1 rounded-xl border border-slate-300/60 dark:border-white/10">
+                        <button type="button" id="cat-btn-regular" onclick="setStudentCategory('regular')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm">
+                            Regular (120)
+                        </button>
+                        <button type="button" id="cat-btn-lateral" onclick="setStudentCategory('lateral')" class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-600 dark:text-slate-400">
+                            Lateral Entry (90)
+                        </button>
+                        <button type="button" id="cat-btn-pwd" onclick="setStudentCategory('pwd')" class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-600 dark:text-slate-400">
+                            PwD (60)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Progress Banner -->
+            <div id="points-summary-banner" class="inner-glass rounded-2xl p-4 sm:p-5 mb-5 scroll-mt-24 transition-all">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-500 block">Your Eligible Activity Points</span>
+                        <div class="flex items-baseline gap-1.5 mt-0.5">
+                            <span id="total-counted-pts" class="text-3xl sm:text-4xl font-extrabold text-slate-900">0</span>
+                            <span class="text-sm sm:text-base font-semibold text-slate-400">out of <span id="total-target-pts">120</span> points needed</span>
+                        </div>
+                    </div>
+                    <span id="eligibility-badge" class="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/25">
+                        120 points remaining
+                    </span>
+                </div>
+
+                <div class="w-full h-3 bg-slate-200/80 dark:bg-slate-800 rounded-full overflow-hidden mb-2">
+                    <div id="overall-progress-bar" class="progress-bar-fill h-full bg-gradient-to-r from-indigo-600 via-blue-500 to-emerald-500 rounded-full" style="width: 0%"></div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 font-medium">
+                    <span id="rule-hint-text">Rule: Earn at least 40 points in each of the 3 groups (1 credit per group = 3 credits).</span>
+                    <span id="raw-pts-label" class="font-semibold text-slate-600 dark:text-slate-300">Total Earned: 0 pts</span>
+                </div>
+            </div>
+
+            <!-- Quick Search Bar -->
+            <div class="relative mb-5">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none"></i>
+                <input type="search" id="activitySearch" oninput="handleSearchInput()" placeholder="Search any activity, exam, or code (e.g. SIH, Space Apps, GATE, IELTS, NSS, 3.16)..." class="glass-input w-full rounded-2xl pl-11 pr-10 py-3 text-sm font-medium text-slate-800 placeholder-slate-400">
+                <button type="button" id="clearActSearch" onclick="clearActivitySearch()" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-200/80 dark:bg-slate-700 text-slate-600 items-center justify-center text-xs">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- VIEW A: SELECT A GROUP SCREEN -->
+            <div id="group-picker-view" class="view-swap-animate">
+                <div class="flex items-center justify-between mb-3 px-1">
+                    <h2 class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fas fa-layer-group text-indigo-500"></i> Select a Group to View &amp; Add Activities:
+                    </h2>
+                    <span class="text-xs font-medium text-slate-400 hidden sm:inline">Tap any group card to open</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                    <!-- Group I Card -->
+                    <button type="button" onclick="openGroupView('Group I')" class="group-select-card inner-glass rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20">Group I</span>
+                                <span id="g1-status-badge" class="text-xs font-bold text-blue-600 dark:text-blue-400">0 / 40 pts</span>
+                            </div>
+                            <h3 id="g1-card-title" class="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-1">
+                                Sports, Arts, NSS &amp; Social
+                            </h3>
+                            <p id="g1-card-desc" class="text-xs text-slate-500 leading-relaxed">
+                                Sports/Games/Arts (1.1–1.3), Magazine (1.4), 4-Wheeler DL (1.5), Blood Donation &amp; THRIVE (1.6–1.10), NSS/NCC (1.11–1.19), First Aid &amp; Swimming (1.20–1.21).
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-200/60 dark:border-white/10">
+                            <div class="w-full h-2 bg-slate-200/80 dark:bg-slate-800 rounded-full overflow-hidden mb-2.5">
+                                <div id="g1-bar" class="progress-bar-fill h-full bg-blue-600 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                                <span id="g1-count-label">21 Activities</span>
+                                <span class="group-hover:translate-x-1 transition-transform flex items-center gap-1">Open Group I <i class="fas fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Group II Card -->
+                    <button type="button" onclick="openGroupView('Group II')" class="group-select-card inner-glass rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">Group II</span>
+                                <span id="g2-status-badge" class="text-xs font-bold text-purple-600 dark:text-purple-400">0 / 40 pts</span>
+                            </div>
+                            <h3 id="g2-card-title" class="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-1">
+                                Tech Fests, Internships &amp; Clubs
+                            </h3>
+                            <p id="g2-card-desc" class="text-xs text-slate-500 leading-relaxed">
+                                Tech-Fests &amp; Societies (2.1–2.4), IIT/NIT Workshops &amp; Papers (2.5–2.10), Union/CR/CGPU/IEDC/STRIDE/Clubs (2.11–2.21), FOSS (2.22), 2-Wk Internship (2.23), IELTS/GATE (2.24–2.25).
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-200/60 dark:border-white/10">
+                            <div class="w-full h-2 bg-slate-200/80 dark:bg-slate-800 rounded-full overflow-hidden mb-2.5">
+                                <div id="g2-bar" class="progress-bar-fill h-full bg-purple-600 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                                <span id="g2-count-label">25 Activities</span>
+                                <span class="group-hover:translate-x-1 transition-transform flex items-center gap-1">Open Group II <i class="fas fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Group III Card -->
+                    <button type="button" onclick="openGroupView('Group III')" class="group-select-card inner-glass rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Group III</span>
+                                <span id="g3-status-badge" class="text-xs font-bold text-emerald-600 dark:text-emerald-400">0 / 40 pts</span>
+                            </div>
+                            <h3 id="g3-card-title" class="text-base font-extrabold text-slate-900 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-1">
+                                IV, Hackathons, IPR &amp; Skilling
+                            </h3>
+                            <p id="g3-card-desc" class="text-xs text-slate-500 leading-relaxed">
+                                IV Report, Best Project &amp; 3.5-Mo Internship (3.1–3.3), LEAP/YIP/STRIDE/GDC/ICFOSS (3.4–3.8), Startups, Patents &amp; Journals (3.9–3.14), Hackathons (3.15–3.16), Skilling Courses (3.17).
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-200/60 dark:border-white/10">
+                            <div class="w-full h-2 bg-slate-200/80 dark:bg-slate-800 rounded-full overflow-hidden mb-2.5">
+                                <div id="g3-bar" class="progress-bar-fill h-full bg-emerald-600 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                                <span id="g3-count-label">17 Activities</span>
+                                <span class="group-hover:translate-x-1 transition-transform flex items-center gap-1">Open Group III <i class="fas fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- VIEW B: IN-PLACE GROUP ACTIVITIES VIEW -->
+            <div id="group-detail-view" class="hidden view-swap-animate">
+                <div class="inner-glass rounded-2xl p-3 sm:p-3.5 mb-5 flex flex-wrap items-center justify-between gap-2.5 sticky top-[4.8rem] z-30 shadow-sm">
+                    <button type="button" onclick="backToGroupPicker()" class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-slate-700 text-slate-800 dark:text-white border border-slate-200/90 dark:border-white/10 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-sm transition-all active:scale-95">
+                        <i class="fas fa-arrow-left text-indigo-600 dark:text-indigo-400 text-xs"></i>
+                        <span>Back to Select Group</span>
+                    </button>
+
+                    <div class="flex items-center gap-1.5">
+                        <button type="button" id="quick-pill-g1" onclick="openGroupView('Group I')" class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all">
+                            G1 (<span id="pill-pts-g1">0/40</span>)
+                        </button>
+                        <button type="button" id="quick-pill-g2" onclick="openGroupView('Group II')" class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all">
+                            G2 (<span id="pill-pts-g2">0/40</span>)
+                        </button>
+                        <button type="button" id="quick-pill-g3" onclick="openGroupView('Group III')" class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all">
+                            G3 (<span id="pill-pts-g3">0/40</span>)
+                        </button>
+                    </div>
+                </div>
+
+                <div id="activities-container" class="space-y-6"></div>
+            </div>
+
+            <!-- Logged Activities Drawer -->
+            <div id="my-logged-panel" class="hidden mt-6 pt-5 border-t border-slate-200/70 dark:border-white/10">
+                <div class="flex items-center justify-between mb-2.5">
+                    <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fas fa-check-circle text-emerald-500"></i> Your Selected Activities (<span id="logged-count">0</span>)
+                    </h4>
+                    <button type="button" onclick="clearAllLogged()" class="text-xs font-semibold text-rose-600 hover:underline flex items-center gap-1">
+                        <i class="fas fa-trash-alt text-[11px]"></i> Clear All
+                    </button>
+                </div>
+                <div id="logged-items-list" class="flex flex-wrap gap-2"></div>
+            </div>
+        </section>
+
+        <!-- ==================== OFFICIAL KTU GUIDELINES SUMMARY ==================== -->
+        <section class="real-glass rounded-3xl p-5 sm:p-7 mb-8 scroll-reveal">
+            <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-4 flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-sm">
+                    <i class="fas fa-scale-balanced"></i>
+                </span>
+                <span>Official KTU Handbook Guidelines (Section 2)</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="inner-glass rounded-2xl p-4">
+                    <h3 class="font-bold text-slate-900 mb-1">1. Highest Level Attained Only (Rule i)</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Participation and winning points cannot be combined for the same event. Only the <strong>highest level of achievement attained</strong> (e.g., College vs. State vs. National, or Participation vs. 1st Prize) is counted.</p>
+                </div>
+
+                <div class="inner-glass rounded-2xl p-4">
+                    <h3 class="font-bold text-slate-900 mb-1">2. Mandatory for Degree Award (Rules iv &amp; v)</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Earning the required Activity Points (<strong>3 Credits in 2024 Scheme</strong> / <strong>2 Credits in 2019 Scheme</strong>) is compulsory. Final semester results may be withheld until minimum points are achieved. Activity Credits are not included in SGPA/CGPA.</p>
+                </div>
+
+                <div class="inner-glass rounded-2xl p-4">
+                    <h3 class="font-bold text-slate-900 mb-1">3. Approved Skilling Courses (Code 3.17)</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Points are awarded at <strong>1 point per hour</strong> for courses notified by KTU (in association with K-DISC, SWAYAM/NPTEL, and IIT Bombay Spoken Tutorial). No points are awarded for unapproved courses.</p>
+                </div>
+
+                <div class="inner-glass rounded-2xl p-4">
+                    <h3 class="font-bold text-slate-900 mb-1">4. Personal Activity File &amp; SFA Verification (Rules vi–viii)</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Only activities completed <strong>during the B.Tech study period</strong> are eligible. Every student must maintain a Personal Activity Points File and submit documentary proofs to the <strong>Senior Faculty Advisor (SFA)</strong> at the end of every semester.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== SLEEK FLOATING BOTTOM TRACKER DOCK ==================== -->
+    <div id="floating-points-dock" onclick="scrollToPointsSummary()" class="rounded-full px-3.5 py-2.5 flex items-center justify-between gap-3 cursor-pointer active:scale-[0.99]" title="Tap to scroll up to main points summary">
+        <div class="flex items-center gap-3 min-w-0">
+            <span id="dock-pts-badge" class="px-3 h-8 rounded-full bg-indigo-600 text-white text-xs font-extrabold flex items-center justify-center shadow-sm shrink-0">
+                0/120
+            </span>
+            <div class="flex flex-col text-left min-w-0">
+                <span id="dock-status-title" class="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">0 of 120 Points Added</span>
+                <span id="dock-sub-breakdown" class="text-[11px] font-semibold text-slate-500 whitespace-nowrap truncate mt-0.5">G1: 0/40 • G2: 0/40 • G3: 0/40</span>
+            </div>
+        </div>
+
+        <button type="button" onclick="event.stopPropagation(); clearAllLogged();" class="px-3 py-1.5 rounded-full bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-bold flex items-center gap-1 transition-all active:scale-95 shrink-0" title="Reset Calculator">
+            <i class="fas fa-rotate-left text-[10px]"></i>
+            <span>Reset</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-6 sm:py-8 text-center relative z-10">
+        <div class="max-w-3xl mx-auto px-4">
+            <h3 class="text-slate-800 font-bold text-base sm:text-lg mb-1">Kerala Timetable</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+                Verified with the Official APJAKTU Activity Points Handbooks (2024 &amp; 2019 Schemes).
+            </p>
+        </div>
+    </footer>
+
+    <!-- Global Components Script -->
+    <script src="/components.js?v=17" onerror="this.onerror=null;this.src='components.js';"></script>
+
+    <script>
+        if (typeof loadNavigation === 'function') {
+            loadNavigation('activity', '', false);
+        }
+
+        // Compact builder: A(code, group, exclusive, category, title, note, maxPoints, proof, [[label, points], ...])
+        function A(code, group, exclusive, category, title, note, maxPoints, proof, tiers) {
+            return {
+                code, group, exclusive, category, title, note, maxPoints, proof,
+                tiers: tiers.map(t => ({ label: t[0], points: t[1] }))
+            };
+        }
+
+        const G1 = "Group I", G2 = "Group II", G3 = "Group III";
+
+        // =====================================================================
+        // 1. OFFICIAL KTU 2024 SCHEME DATASET (All 63 items from 2024 PDF)
+        // exclusive: true  -> Choose highest tier attained (non-accumulative)
+        // exclusive: false -> Accumulative up to maxPoints cap
+        // =====================================================================
+        const ACTIVITIES_2024 = [
+            // GROUP I (1.1 to 1.21)
+            A("1.1", G1, true, "Sports, Arts & Cultural Activities", "Sports / Games / Arts (Participation)", "KTU Organized/Approved Events. Participation and winning points cannot be combined for the same event.", 40, "Certificate by Hosting College / University / Dean / Union Advisor", [["L1: College", 1], ["L2: Zonal", 5], ["L3: State / Univ", 10], ["L4: National", 20], ["L5: International", 40]]),
+            A("1.2", G1, true, "Sports, Arts & Cultural Activities", "Sports / Games / Arts (Winners 1st, 2nd & 3rd) — Single Events", "KTU Organized/Approved Individual Events. Only the highest level of achievement attained is counted.", 40, "Winner Certificate from Hosting Institution / University", [["L1: College Winner", 5], ["L2: Zonal Winner", 10], ["L3: State/Univ Winner", 20], ["L4: National Winner", 40], ["L5: Int'l Winner", 40]]),
+            A("1.3", G1, true, "Sports, Arts & Cultural Activities", "Sports / Games / Arts (Winners 1st, 2nd & 3rd) — Group Events", "KTU Organized/Approved Team/Group Events (1st, 2nd, or 3rd place).", 40, "Winner Certificate from Hosting Institution / University", [["L1: College Group", 3], ["L2: Zonal Group", 5], ["L3: State/Univ Group", 15], ["L4: National Group", 30], ["L5: Int'l Group", 40]]),
+            A("1.4", G1, false, "Sports, Arts & Cultural Activities", "Publication in College Magazine", "Articles, essays, poems, technical notes, or creative writing in officially released College Magazine. Limited to max 5 points per academic year.", 20, "Copy of publication or certification from Editorial Committee / Staff Advisor", [["+1 Magazine (5 pts/yr)", 5]]),
+            A("1.5", G1, false, "Sports, Arts & Cultural Activities", "Four-Wheeler Driving License", "License MUST be obtained during the original B.Tech programme duration to be eligible.", 5, "Copy of Driving License (DL) clearly showing the issue date", [["4-Wheeler DL (Issued during course)", 5]]),
+            A("1.6", G1, false, "Community Outreach & Social Initiatives", "Community Service & Allied Activities (Two Days)", "Special volunteer service in pandemics, natural disasters (floods, droughts, epidemics), or relief camp collection (5 pts per camp).", 10, "Certificate by NSS Officer, Faculty Coordinator, Govt Dept, Local Body, or NGO", [["+1 Service Camp (2 Days)", 5]]),
+            A("1.7", G1, false, "Community Outreach & Social Initiatives", "Community Service & Allied Activities (Up to One Week)", "Special volunteer service in pandemics, natural disasters, epidemics, or relief operations up to 1 week (Combined max for 1.6 & 1.7 is 10 pts).", 10, "Certificate by NSS Officer, Faculty Coordinator, Govt Dept, Local Body, or NGO", [["Up to 1-Week Relief Service", 10]]),
+            A("1.8", G1, false, "Community Outreach & Social Initiatives", "Blood Donation", "5 points per blood donation (Maximum 10 points).", 10, "Certificate from Govt / Medical College / District Hospital or SBTC Licensed Blood Bank", [["+1 Blood Donation", 5]]),
+            A("1.9", G1, false, "Community Outreach & Social Initiatives", "THRIVE Project (Govt. of Kerala)", "Tribal Higher Education and Interactive Venture for Excellence (THRIVE) for a minimum of 5 days in a semester (10 pts/semester).", 20, "Official THRIVE Participation Certificate", [["+1 Semester (Min 5 Days)", 10]]),
+            A("1.10", G1, false, "Community Outreach & Social Initiatives", "Tree Planting Done by Students", "Geo-tagged tree plantation verified by the University NSS Cell.", 5, "Tree geo-tagging certificate issued by the University NSS Cell", [["Geo-Tagged Tree Plantation", 5]]),
+            A("1.11", G1, false, "NSS / NCC", "NSS Volunteer (Completed Two Years)", "Successfully completed two years of volunteership as per the NSS Manual (Overall NSS/NCC max cap is 40 points).", 40, "NSS Volunteership Certificate issued by the University NSS Cell", [["Completed 2 Years NSS", 30]]),
+            A("1.12", G1, false, "NSS / NCC", "University Level Leadership Camps (100 Hours Camp)", "100-hour University level leadership camp.", 40, "Certificate issued by the University NSS Cell", [["100-Hour Leadership Camp", 20]]),
+            A("1.13", G1, false, "NSS / NCC", "Winners in State Level NSS Festival / State NSS Meet", "First or Second place in State NSS festival, meet, or competitions organized by State Govt / State NSS Cell.", 40, "Certificate issued by University / State NSS Cell / NCC Directorate", [["State NSS Winner (1st / 2nd)", 15]]),
+            A("1.14", G1, false, "NSS / NCC", "Special Service Certificate or Appreciation (NSS / NCC)", "Issued by State Government, State NSS Cell, or NCC Directorate for exceptional NSS/NCC activities.", 40, "Certificate issued by State Govt / State NSS Cell / NCC Directorate", [["Special Service / Appreciation", 15]]),
+            A("1.15", G1, true, "NSS / NCC", "Recipient of State Awards / National Level Awards (NSS / NCC)", "State awards: 15 Points • National level awards: 25 Points.", 40, "Certificate issued by University / State NSS Cell / NCC Directorate", [["State Level Award", 15], ["National Level Award", 25]]),
+            A("1.16", G1, false, "NSS / NCC", "Attending Approved National Camps / NIC / NYF / Pre-RDC", "National Integration Camp (NIC), National Youth Festival (NYF), or Pre-RDC.", 40, "Certificate issued by University / State NSS Cell / NCC Directorate", [["National Camp / NIC / NYF / Pre-RDC", 15]]),
+            A("1.17", G1, false, "NSS / NCC", "10 Days Minimum Volunteer Service (50 Hours)", "In official programme of the State or special projects initiated by State Govt / State NSS / NCC Directorate.", 40, "Certificate issued by University / State NSS Cell / NCC Directorate", [["10-Day (50 Hrs) Volunteer Service", 15]]),
+            A("1.18", G1, false, "NSS / NCC", "Republic Day Camp (RDC) / Independence Day Camp (IDC) / Int'l Events", "Participation in RDC, IDC, or International events approved by State Cell/Directorate of NSS/NCC.", 40, "Certificate issued by University / State NSS Cell / NCC Directorate", [["RDC / IDC / Approved Int'l Event", 25]]),
+            A("1.19", G1, true, "NSS / NCC", "NCC Certificates", "1 Year NCC + Min Parade Attendance: 10 pts • NCC 'B' Certificate: 20 pts • NCC 'C' Certificate: 30 pts.", 40, "Certificate issued by the University / NCC Directorate", [["1 Yr NCC + Min Parade", 10], ["NCC 'B' Certificate", 20], ["NCC 'C' Certificate", 30]]),
+            A("1.20", G1, false, "Health, Safety & Essential Life Skills", "Emergency Response, First Aid, CPR & Fire Safety Training", "Minimum half-day certified training in Emergency Response, First Aid, CPR, BLS, or Fire Safety organized at college level (5 pts/programme).", 10, "Certificate by Govt Org, Fire & Rescue, Registered Hospital, or Faculty/NSS Officer", [["+1 Training Programme", 5]]),
+            A("1.21", G1, false, "Health, Safety & Essential Life Skills", "Basic Swimming Proficiency", "5 points for students who know basic swimming (Combined max for 1.20 & 1.21 is 10 points).", 10, "Certificate from Panchayat/Municipality Instructor, Sports Council Coach, Academy, or College PE Dept", [["Basic Swimming Certified", 5]]),
+
+            // GROUP II (2.1 to 2.25)
+            A("2.1", G2, true, "Technical Events, Competitions & Presentations", "Tech-Fest Participation (Organized or Approved by KTU)", "Level 1 (College): 2 pts • Level 2 (Zonal): 5 pts • Level 3 (State): 10 pts • Level 4 (National): 20 pts • Level 5 (Int'l): 30 pts.", 40, "Certificate issued by Organizing Institution & verified by SFA", [["L1: College", 2], ["L2: Zonal", 5], ["L3: State", 10], ["L4: National", 20], ["L5: International", 30]]),
+            A("2.2", G2, true, "Technical Events, Competitions & Presentations", "Tech-Fest Winners (Organized or Approved by KTU)", "Level 1 (College): 5 pts • Level 2 (Zonal): 10 pts • Level 3 (State): 20 pts • Level 4 (National): 40 pts • Level 5 (Int'l): 40 pts.", 40, "Winner Certificate issued by Organizing Institution & verified by SFA", [["L1: College Winner", 5], ["L2: Zonal Winner", 10], ["L3: State Winner", 20], ["L4: National Winner", 40], ["L5: Int'l Winner", 40]]),
+            A("2.3", G2, true, "Technical Events, Competitions & Presentations", "Professional Society Technical Competitions — Participation", "Organized by IEEE, IET, ASME, SAE, etc. (L1: 2 pts, L2: 5 pts, L3: 10 pts, L4: 15 pts, L5: 20 pts).", 40, "Certificate from Professional Society Chapter & verified by SFA", [["L1: College", 2], ["L2: Zonal", 5], ["L3: State", 10], ["L4: National", 15], ["L5: International", 20]]),
+            A("2.4", G2, true, "Technical Events, Competitions & Presentations", "Professional Society Technical Competitions — Winners (1st, 2nd & 3rd)", "Organized by IEEE, IET, ASME, SAE, etc. (L1: 3 pts, L2: 7 pts, L3: 15 pts, L4: 25 pts, L5: 35 pts).", 40, "Winner Certificate from Professional Society & verified by SFA", [["L1: College Winner", 3], ["L2: Zonal Winner", 7], ["L3: State Winner", 15], ["L4: National Winner", 25], ["L5: Int'l Winner", 35]]),
+            A("2.5", G2, false, "Technical Events, Competitions & Presentations", "Conferences, Seminars, Webinars, Workshops, STTPs at IITs / NITs / NIRF Top 100", "Conducted by IITs, IIITs, NITs, Central Universities, INI & NIRF Top 100 (Excludes workshops conducted as part of fests like Ragam). 5 pts/event.", 15, "Attendance Certificate verified by SFA", [["+1 Event (5 pts)", 5]]),
+            A("2.6", G2, false, "Technical Events, Competitions & Presentations", "Poster Presentation — Participation", "Events organized/approved by KTU or conducted by IITs, IIITs, NITs, Central Universities, INI, and NIRF Top 100 institutions (5 pts/event).", 40, "Poster Presentation Certificate verified by SFA", [["+1 Poster Presentation", 5]]),
+            A("2.7", G2, false, "Technical Events, Competitions & Presentations", "Paper Presentation — Participation (KTU / IITs / NITs / NIRF Top 100)", "Events organized by KTU or conducted by IITs, IIITs, NITs, Central Universities, INI & NIRF Top 100 (10 pts/event).", 40, "Paper Presentation Certificate verified by SFA", [["+1 Paper Presentation", 10]]),
+            A("2.8", G2, true, "Technical Events, Competitions & Presentations", "Paper Presentation — Winners (KTU / IITs / NITs / NIRF Top 100)", "First Prize: 20 Points • Second and Third Prize: 15 Points.", 40, "Winner Certificate verified by SFA", [["2nd / 3rd Prize", 15], ["1st Prize", 20]]),
+            A("2.9", G2, false, "Technical Events, Competitions & Presentations", "Paper Presentation — Participation (KTU Affiliated Institutions)", "Paper presentation at KTU affiliated colleges (5 Points / Event).", 40, "Participation Certificate verified by SFA", [["+1 Paper (KTU College)", 5]]),
+            A("2.10", G2, true, "Technical Events, Competitions & Presentations", "Paper Presentation — Winners (KTU Affiliated Institutions)", "First Prize: 10 Points • Second and Third Prize: 7 Points.", 40, "Winner Certificate from KTU Affiliated Institution", [["2nd / 3rd Prize (KTU College)", 7], ["1st Prize (KTU College)", 10]]),
+            A("2.11", G2, true, "Leadership & Management", "Membership in Student Professional Societies (Min 2 Academic Years)", "IEEE, IET, ASME, SAE, ACM, ASCE, ISA, etc. Member: 5 • Event Coordinator: 5/event • Execom: 10 • Secretary/Chair: 15.", 15, "Certificate from Faculty-in-Charge of Professional Society Chapter", [["Society Member (2 Yrs)", 5], ["Event Coordinator", 5], ["Execom Member", 10], ["Secretary / Chapter Chair", 15]]),
+            A("2.12", G2, true, "Leadership & Management", "College Union & University Union Members", "College Execom: 15 • College Office Bearer: 20 • University Union Member: 25 • University Union Office Bearer: 30.", 30, "Certificate from College Union Advisor / Dean / Principal", [["College Union Execom", 15], ["College Office Bearer", 20], ["University Union Member", 25], ["Univ Union Office Bearer", 30]]),
+            A("2.13", G2, false, "Leadership & Management", "Department Student Association Activities", "Executive Committee Member / Office Bearer: 5 pts/yr • Student Coordinator for an event: 5 pts/event.", 10, "Certificate issued by HoD", [["+1 Yr Execom / Office Bearer", 5], ["+1 Event Coordinator", 5]]),
+            A("2.14", G2, false, "Leadership & Management", "Class Representatives (CR)", "5 Points per Academic Year (1 Class Representative per class).", 10, "Certificate verified by SFA", [["+1 Academic Year CR", 5]]),
+            A("2.15", G2, false, "Leadership & Management", "Industrial Visit (IV) Coordinators (Minimum 6 Days)", "Maximum 2 Student Coordinators per class.", 5, "Certificate from Faculty Coordinator / HoD", [["IV Coordinator (Min 6 Days)", 5]]),
+            A("2.16", G2, true, "Leadership & Management", "Placement Cell (CGPU — Minimum 1 Academic Year)", "Execom Member: 5 pts (1/class) • Coordinator/Convenor: 10 pts (Max 2; at least 1 female student).", 10, "Certificate issued by Staff-in-Charge of CGPU", [["CGPU Execom Member", 5], ["CGPU Coordinator / Convenor", 10]]),
+            A("2.17", G2, false, "Leadership & Management", "IEDC Cell (Minimum 1 Academic Year)", "Execom Member / Office Bearer: 5 pts/yr • Student Coordinator for an event: 5 pts/event.", 10, "Certificate issued by Staff-in-Charge of IEDC Cell", [["+1 Yr Execom / Office Bearer", 5], ["+1 Event Coordinator", 5]]),
+            A("2.18", G2, false, "Leadership & Management", "YIP (Young Innovators Programme, K-DISC — Min 1 Academic Year)", "Student Coordinator: 5 Points per Academic Year.", 10, "Certificate issued by K-DISC or authorized YIP officials", [["+1 Yr YIP Student Coordinator", 5]]),
+            A("2.19", G2, true, "Leadership & Management", "STRIDE (Social Technology & Research for Inclusive Design Excellence, K-DISC)", "Min 1 Academic Year. Certified Volunteer: 5 • Member: 5 • Campus Leadership Core: 10 • High Impact Project Lead: L1 (10), L2 (15), L5 (20).", 20, "Certificate issued by K-DISC or authorized STRIDE officials", [["STRIDE Member / 1-Yr Volunteer", 5], ["Campus Core / Project L1", 10], ["Project Lead (L2)", 15], ["Project Lead (L5)", 20]]),
+            A("2.20", G2, false, "Leadership & Management", "College Magazine Editorial Board (Other than Magazine Editor)", "5 Points per year (Awarded to a maximum of 8 students per academic year).", 10, "Certificate from Staff-in-Charge of Editorial Committee or Union Advisor", [["+1 Yr Editorial Board Member", 5]]),
+            A("2.21", G2, false, "Leadership & Management", "Hobby Clubs under College Union", "Photography, Film, Music, Dance, Literary, Debate, Coding, Nature Club, etc. Execom/Convenor: 5 pts/academic year.", 10, "Certificate from Club Staff-in-Charge & College Union Advisor", [["+1 Yr Club Execom / Convenor", 5]]),
+            A("2.22", G2, false, "FOSS, Internships & Standardized Certifications", "ICFOSS / FOSS Club Activities (Min 1 Academic Year)", "Member (≥2 activities): 5 • Workshop (≥2 days): 5 • Hackathon: 5 • FOSS Lead/Ambassador: 10 • Validated GitHub/GitLab/Wikipedia/OSM Contribution: 10 • ICFOSS Project/Internship (≥15 days): 10.", 20, "Certificate issued/approved by ICFOSS or FOSS Club Faculty-in-Charge", [["+Club Member / Workshop / Event", 5], ["+FOSS Lead / Ambassador", 10], ["+Open-Source Contrib / 15-Day Internship", 10]]),
+            A("2.23", G2, false, "FOSS, Internships & Standardized Certifications", "Short-Term Internship / Clinical Exposure Training", "Minimum 2 Weeks or 10 Working Days.", 10, "Certificate issued by the Company / Organization / Institution", [["Completed ≥ 2 Weeks (10 Working Days)", 10]]),
+            A("2.24", G2, true, "FOSS, Internships & Standardized Certifications", "English Proficiency Certifications (TOEFL / IELTS / PTE / BEC)", "Taken during course duration. 30 pts: TOEFL ≥105 / IELTS ≥7.5 / PTE ≥76 • 25 pts: TOEFL 95–104 / IELTS 7.0 / PTE 65–75 / BEC Higher C1 • 20 pts: TOEFL 80–94 / IELTS 6.5 / PTE 58–64 / BEC Vantage B2 • 15 pts: BEC Prelim B1.", 30, "Original / Digital Scorecard from official testing authority", [["BEC Preliminary (B1)", 15], ["TOEFL 80–94 / IELTS 6.5 / PTE 58–64 / BEC B2", 20], ["TOEFL 95–104 / IELTS 7.0 / PTE 65–75 / BEC C1", 25], ["TOEFL ≥105 / IELTS ≥7.5 / PTE ≥76", 30]]),
+            A("2.25", G2, true, "FOSS, Internships & Standardized Certifications", "Aptitude Proficiency Certifications (GATE / GRE / CAT / GMAT)", "30 pts: GATE AIR Top 5000 / GRE ≥320 / CAT ≥95%ile / GMAT ≥700 • 25 pts: GATE AIR 5001–15000 / GRE 310–319 / CAT 90–94%ile / GMAT 650–699 • 20 pts: Qualified GATE / GRE 300–309 / CAT 85–89%ile / GMAT 600–649.", 30, "Official Scorecard with score, percentile & candidate details", [["Qualified GATE / GRE 300+ / CAT 85%+ / GMAT 600+", 20], ["GATE AIR 5001–15000 / GRE 310+ / CAT 90%+ / GMAT 650+", 25], ["GATE Top 5000 / GRE ≥320 / CAT ≥95% / GMAT ≥700", 30]]),
+
+            // GROUP III (3.1 to 3.17)
+            A("3.1", G3, false, "Industry Exposure, Academic Projects & Internships", "Industrial Visit / Industrial Training Report (S5 or S6)", "Report based on visits to a minimum of 4 industries relevant to your branch with observations, processes, learning outcomes & supporting photos (5 Points; combined max for 3.1–3.3 is 20 pts).", 20, "IV Report certified by accompanying Faculty Coordinators & SFA", [["Approved IV Report (Min 4 Industries)", 5]]),
+            A("3.2", G3, false, "Industry Exposure, Academic Projects & Internships", "Best Mini Project / Best Project / Best Seminar (From Each Class)", "Minimum class strength must be 30 students to grant these 5 points.", 20, "Certificate by Project/Seminar Coordinator & SFA, approved by HoD", [["Best Mini Project / Project / Seminar", 5]]),
+            A("3.3", G3, false, "Industry Exposure, Academic Projects & Internships", "Long-Term Internship (Minimum 3.5 Months)", "Minimum period of three and a half months as per KTU Long-Term Internship Guidelines.", 20, "Internship Completion Certificate mentioning start & end dates (≥3.5 months)", [["Completed ≥ 3.5 Months Internship", 15]]),
+            A("3.4", G3, true, "Industry Exposure, Academic Projects & Internships", "LEAP – IIT Madras Incubation Cell Skill Development Bootcamps", "1. LEAP Bootcamps (LPB01 & LPB02): 10 pts • 2. LEAP Courses (LP1XX/LP2XX/LP3XX): 15 pts/course • 3. LEAP Project/Prototype: 20 pts.", 30, "Official LEAP Certificate / Project Completion Letter from IITMIC", [["LEAP Bootcamp (LPB01 & LPB02)", 10], ["LEAP Course (LP1XX / 2XX / 3XX)", 15], ["LEAP Mentor Project / Prototype", 20]]),
+            A("3.5", G3, true, "Industry Exposure, Academic Projects & Internships", "YIP – Young Innovators Programme (K-DISC)", "1. Idea Submitted & Accepted: 5 pts • 2. Preliminary Winner (Shortlisted for District): 10 pts • 3. District Winner/Finalist: 20 pts • 4. State Level Winner: 35 pts.", 35, "Certificate issued by K-DISC / YIP Officials", [["Idea Accepted in YIP Portal", 5], ["Preliminary Winner (District Shortlist)", 10], ["District Level Winner / Finalist", 20], ["State Level Winner", 35]]),
+            A("3.6", G3, true, "Industry Exposure, Academic Projects & Internships", "STRIDE – Social Technology & Research for Inclusive Design Excellence", "1. Idea Accepted (Phase 1): 5 pts • 2. Top 100+ Teams (Phase 2): 10 pts • 3. Top 30+ Teams (State Finalists - Phase 3): 20 pts • 4. State Level Winners: 35 pts.", 35, "Certificate issued by K-DISC / STRIDE Officials", [["Phase 1 Completed (Idea Accepted)", 5], ["Top 100+ Teams (Phase 2)", 10], ["Top 30+ Teams (State Finalists - Phase 3)", 20], ["State Level Winners", 35]]),
+            A("3.7", G3, true, "Industry Exposure, Academic Projects & Internships", "GDC AI Workforce Internship Program", "1. AI Grading Test: 5 pts • 2. Learning Track: 15 pts • 3. Fellowship Track Coursework: 25 pts • 4. 6-Month Internship (GDC Fellow): 35 pts.", 35, "Certificate issued by AICTE / Program Executor / NHM", [["AI Grading Test Completed", 5], ["Learning Track Completed", 15], ["Fellowship Track Coursework", 25], ["6-Month Internship (GDC Fellow)", 35]]),
+            A("3.8", G3, false, "Industry Exposure, Academic Projects & Internships", "ICFOSS: Certified Working FOSS-Based Solution or Innovation", "Working FOSS-based solution or innovation certified by ICFOSS.", 25, "Certificate issued by ICFOSS", [["ICFOSS Certified Solution", 25]]),
+            A("3.9", G3, false, "Innovation, Entrepreneurship, IPR & Research", "Start-up Company (Legally Registered)", "Registered under MSME, DPIIT, ROC, Kerala Startup Mission (KSUM), or any recognized Government body.", 40, "Documentary evidence issued by competent authority", [["Legally Registered Start-up", 30]]),
+            A("3.10", G3, true, "Innovation, Entrepreneurship, IPR & Research", "Patents (Filed / Published / Granted / Licensed)", "Application filed with IPO/WIPO: 20 pts • Published in Patent Journal: 30 pts • Patent Granted/Approved: 40 pts • Patent Licensed to Industry: 40 pts.", 40, "Official Patent Application / Publication / Grant Document", [["Patent Filed (IPO/WIPO)", 20], ["Patent Published in Journal", 30], ["Patent Granted / Approved", 40], ["Patent Licensed to Industry", 40]]),
+            A("3.11", G3, true, "Innovation, Entrepreneurship, IPR & Research", "Prototype Development & Testing / Industry Adopted Technology", "Functional working model validated by Innovation Cell/Govt agency (40 pts) OR Innovative hardware/software formally adopted by a reputed industry (40 pts).", 40, "Prototype Validation Certificate OR Official Industry Adoption Letter / MoU", [["Validated Working Prototype", 40], ["Technology Adopted by Industry", 40]]),
+            A("3.12", G3, false, "Innovation, Entrepreneurship, IPR & Research", "Venture Capital / Angel Funding", "Receiving venture capital or angel investment for a student-developed product or idea.", 40, "Funding agreement, sanction letter, or investment confirmation", [["Received VC / Angel Funding", 40]]),
+            A("3.13", G3, false, "Innovation, Entrepreneurship, IPR & Research", "Societal Innovations", "Innovative solutions addressing community needs implemented through IEDC, Local Bodies, NGOs, or Govt Agencies with measurable impact.", 40, "Validation letter confirming implementation & measurable social impact", [["Validated Societal Innovation", 40]]),
+            A("3.14", G3, true, "Innovation, Entrepreneurship, IPR & Research", "Research Publication in Reputed Journals", "1. SCI / SCIE / Scopus Q1–Q2 Journals: 40 Points • 2. SCI / SCIE / Scopus Q3–Q4 Journals: 25 Points.", 40, "Published Paper Copy or Official Acceptance Letter from Editorial Office", [["SCI / SCIE / Scopus Q3–Q4 Journal", 25], ["SCI / SCIE / Scopus Q1–Q2 Journal", 40]]),
+            A("3.15", G3, true, "National & International Hackathons & Skilling", "National Level Hackathons (Winners)", "Examples: Smart India Hackathon (SIH), KAVACH Cybersecurity Hackathon, and hackathons by MoE, MHA, AICTE, or Central Govt Ministries. 1st Prize: 40 pts • 2nd Prize: 35 pts • 3rd Prize: 30 pts.", 40, "Certificate issued by the Hackathon Organizing Authority", [["3rd Prize", 30], ["2nd Prize", 35], ["1st Prize", 40]]),
+            A("3.16", G3, true, "National & International Hackathons & Skilling", "International Level Hackathons (Participation & Winners)", "Examples: NASA Space Apps Challenge, Microsoft Imagine Cup, Google Solution Challenge, IBM Call for Code, Meta Global Hackathon, IEEE YESIST12 Finals, AWS, Hack Zurich, Junction. Participation: 30 pts • 2nd/3rd Prize: 35 pts • 1st Prize: 40 pts.", 40, "Certificate issued by the Hackathon Organizing Authority", [["Participation", 30], ["2nd / 3rd Prize", 35], ["1st Prize", 40]]),
+            A("3.17", G3, false, "National & International Hackathons & Skilling", "Skilling Certificates (Approved by the University — 1 Point per Hour)", "Includes courses by KTU + K-DISC, SWAYAM / NPTEL, and IIT Bombay Spoken Tutorial approved by BoS/Academic Council. Awarded at 1 point per hour of course duration (Multiple courses allowed up to 40 pts).", 40, "Certificate indicating course duration (verified against KTU Approved List by SFA)", [["+1 Hour", 1], ["+5 Hours", 5], ["+10 Hours", 10], ["+15 Hours", 15], ["+20 Hours", 20], ["+30 Hours (NPTEL)", 30], ["+40 Hours (Max)", 40]])
+        ];
+
+        // =====================================================================
+        // 2. OFFICIAL KTU 2019 SCHEME DATASET (All 32 Items from 2019 PDF)
+        // =====================================================================
+        const ACTIVITIES_2019 = [
+            // GROUP I TAB (#1 to #7)
+            A("1", G1, true, "1. National Initiatives Participation", "NCC (Minimum Duration: 1 Year)", "Base: 60 points. For 'C' Certificate / outstanding performance supported by certification, additional marks up to 20 can be provided (Max limit: 80 points).", 80, "(a) Certificate / (b) Letter from Authorities", [["NCC (1 Year)", 60], ["NCC + C-Cert / Outstanding (Max)", 80]]),
+            A("2", G1, true, "1. National Initiatives Participation", "NSS (Minimum Duration: 1 Year)", "Base: 60 points. For C-certificate / outstanding performance supported by certification, additional marks up to 20 can be provided (Max limit: 80 points).", 80, "(a) Certificate / (b) Letter from Authorities", [["NSS (1 Year)", 60], ["NSS + Outstanding Performance (Max)", 80]]),
+            A("3", G1, false, "2. Sports & Games Participation", "Sports (Min Duration: 1 Year) — Participation & Prize Bonuses", "Participation: L1 (College) 8, L2 (Zonal) 15, L3 (State/Univ) 25, L4 (National) 40, L5 (Int'l) 60. Additional for winning: 1st (+10 L1–L3 / +20 L4–L5), 2nd (+8 / +16), 3rd (+5 / +12). Max limit: 60 pts (Enhanced to 80 pts for L4/L5 winning).", 80, "(a) Certificate", [["L1: College (8)", 8], ["L2: Zonal (15)", 15], ["L3: State/Univ (25)", 25], ["L4: National (40)", 40], ["L5: Int'l (60)", 60], ["+1st Prize (L1–L3: +10)", 10], ["+2nd Prize (L1–L3: +8)", 8], ["+3rd Prize (L1–L3: +5)", 5], ["+1st Prize (L4–L5: +20)", 20]]),
+            A("4", G1, false, "2. Sports & Games Participation", "Games (Min Duration: 1 Year) — Participation & Prize Bonuses", "Participation: L1 (College) 8, L2 (Zonal) 15, L3 (State/Univ) 25, L4 (National) 40, L5 (Int'l) 60. Additional for winning: 1st (+10 / +20), 2nd (+8 / +16), 3rd (+5 / +12). Max 60 pts (80 pts for L4/L5 winning).", 80, "(a) Certificate", [["L1: College (8)", 8], ["L2: Zonal (15)", 15], ["L3: State/Univ (25)", 25], ["L4: National (40)", 40], ["L5: Int'l (60)", 60], ["+1st Prize (L1–L3: +10)", 10], ["+2nd Prize (L1–L3: +8)", 8], ["+3rd Prize (L1–L3: +5)", 5], ["+1st Prize (L4–L5: +20)", 20]]),
+            A("5", G1, false, "3. Cultural Activities Participation", "Music (Min Duration: 1 Year) — Participation & Prize Bonuses", "Participation: L1 (College) 8, L2 (Zonal) 12, L3 (State/Univ) 20, L4 (National) 40, L5 (Int'l) 60. Additional for winning: 1st (+10 / +20), 2nd (+8 / +16), 3rd (+5 / +12). Max 60 pts (80 pts for L4/L5 winning).", 80, "(a) Certificate", [["L1: College (8)", 8], ["L2: Zonal (12)", 12], ["L3: State/Univ (20)", 20], ["L4: National (40)", 40], ["L5: Int'l (60)", 60], ["+1st Prize (+10)", 10], ["+2nd Prize (+8)", 8], ["+3rd Prize (+5)", 5]]),
+            A("6", G1, false, "3. Cultural Activities Participation", "Performing Arts (Min Duration: 1 Year)", "Participation: L1 (College) 8, L2 (Zonal) 12, L3 (State/Univ) 20, L4 (National) 40, L5 (Int'l) 60 + Winner bonuses (+10/+8/+5 or +20/+16/+12). Max 60 pts (80 pts for L4/L5 winning).", 80, "(a) Certificate", [["L1: College (8)", 8], ["L2: Zonal (12)", 12], ["L3: State/Univ (20)", 20], ["L4: National (40)", 40], ["L5: Int'l (60)", 60], ["+1st Prize (+10)", 10], ["+2nd Prize (+8)", 8], ["+3rd Prize (+5)", 5]]),
+            A("7", G1, false, "3. Cultural Activities Participation", "Literary Arts (Min Duration: 1 Year)", "Participation: L1 (College) 8, L2 (Zonal) 12, L3 (State/Univ) 20, L4 (National) 40, L5 (Int'l) 60 + Winner bonuses (+10/+8/+5 or +20/+16/+12). Max 60 pts (80 pts for L4/L5 winning).", 80, "(a) Certificate", [["L1: College (8)", 8], ["L2: Zonal (12)", 12], ["L3: State/Univ (20)", 20], ["L4: National (40)", 40], ["L5: Int'l (60)", 60], ["+1st Prize (+10)", 10], ["+2nd Prize (+8)", 8], ["+3rd Prize (+5)", 5]]),
+
+            // GROUP II TAB (#8 to #16)
+            A("8", G2, true, "4. Professional Self Initiatives", "Tech Fest, Tech Quiz", "Level I (College): 10 • Level II (Zonal): 20 • Level III (State/Univ): 30 • Level IV (National): 40 • Level V (International): 50.", 50, "(a) Certificate", [["L1: College", 10], ["L2: Zonal", 20], ["L3: State/Univ", 30], ["L4: National", 40], ["L5: International", 50]]),
+            A("9", G2, false, "4. Professional Self Initiatives", "MOOC with Final Assessment Certificate", "50 Points for completing a recognized MOOC with final assessment certificate.", 50, "(a) Certificate", [["MOOC with Final Assessment", 50]]),
+            A("10", G2, true, "4. Professional Self Initiatives", "Competitions Conducted by Professional Societies (IEEE, IET, ASME, SAE, NASA etc.)", "Level I (College): 10 • Level II (Zonal): 15 • Level III (State/Univ): 20 • Level IV (National): 30 • Level V (International): 40.", 40, "(a) Certificate", [["L1: College", 10], ["L2: Zonal", 15], ["L3: State/Univ", 20], ["L4: National", 30], ["L5: International", 40]]),
+            A("11", G2, false, "4. Professional Self Initiatives", "Attending Full-Time Conference / Seminars / Exhibitions / Workshop / STTP at IITs / NITs", "20 Points per event (Maximum 40 points).", 40, "(a) Certificate", [["+1 Event at IIT/NIT", 20]]),
+            A("12", G2, true, "4. Professional Self Initiatives", "Paper Presentation / Publication at IITs / NITs", "30 Points + Additional 10 points for certificate of recognition (Max 40 points).", 40, "(a) Certificate", [["Paper Presentation at IIT/NIT", 30], ["With Certificate of Recognition", 40]]),
+            A("13", G2, true, "4. Professional Self Initiatives", "Poster Presentation at IITs / NITs", "20 Points + Additional 10 points for certificate of recognition (Max 30 points).", 30, "(a) Certificate", [["Poster Presentation at IIT/NIT", 20], ["With Certificate of Recognition", 30]]),
+            A("14", G2, false, "4. Professional Self Initiatives", "Industrial Training / Internship (At Least for 5 Full Days)", "20 Points for completing at least 5 full days of industrial training/internship.", 20, "(a) Certificate / (b) Letter from Authorities", [["Internship / Training (≥ 5 Full Days)", 20]]),
+            A("15", G2, false, "4. Professional Self Initiatives", "Industrial / Exhibition Visits", "5 Points per visit (Maximum 10 points).", 10, "(a) Certificate / (b) Letter / (d) Documentary Evidence", [["+1 Industrial Visit", 5]]),
+            A("16", G2, false, "4. Professional Self Initiatives", "Foreign Language Skill (TOEFL / IELTS / BEC Exams etc.)", "50 Points (Maximum 50 points).", 50, "(a) Certificate", [["TOEFL / IELTS / BEC Certified", 50]]),
+
+            // GROUP III TAB (#17 to #32)
+            A("17", G3, false, "5. Entrepreneurship and Innovation", "Start-up Company – Registered Legally", "60 Points for a legally registered start-up company.", 60, "(d) Documentary Evidence", [["Registered Start-up Company", 60]]),
+            A("18", G3, false, "5. Entrepreneurship and Innovation", "Patent – Filed", "30 Points per patent filed (Maximum 60 points).", 60, "(d) Documentary Evidence", [["+1 Patent Filed", 30]]),
+            A("19", G3, false, "5. Entrepreneurship and Innovation", "Patent – Published", "35 Points for published patent (Maximum 60 points).", 60, "(d) Documentary Evidence", [["Patent Published", 35]]),
+            A("20", G3, false, "5. Entrepreneurship and Innovation", "Patent – Approved", "50 Points for approved patent (Maximum 60 points).", 60, "(d) Documentary Evidence", [["Patent Approved", 50]]),
+            A("21", G3, false, "5. Entrepreneurship and Innovation", "Patent – Licensed", "80 Points for licensed patent (Maximum 80 points).", 80, "(d) Documentary Evidence", [["Patent Licensed", 80]]),
+            A("22", G3, false, "5. Entrepreneurship and Innovation", "Prototype Developed and Tested", "60 Points for developing and testing a working prototype.", 60, "(d) Documentary Evidence", [["Prototype Developed & Tested", 60]]),
+            A("23", G3, false, "5. Entrepreneurship and Innovation", "Awards for Products Developed", "60 Points for awards received for developed products.", 60, "(d) Documentary Evidence", [["Award for Product Developed", 60]]),
+            A("24", G3, false, "5. Entrepreneurship and Innovation", "Innovative Technologies Developed and Used by Industries / Users", "60 Points.", 60, "(d) Documentary Evidence", [["Technology Used by Industry/Users", 60]]),
+            A("25", G3, false, "5. Entrepreneurship and Innovation", "Got Venture Capital Funding for Innovative Ideas / Products", "80 Points.", 80, "(d) Documentary Evidence", [["Venture Capital Funding Secured", 80]]),
+            A("26", G3, false, "5. Entrepreneurship and Innovation", "Startup Employment (Offering Jobs to ≥2 Persons ≥ Rs. 15,000/month)", "80 Points for offering jobs to two persons not less than Rs. 15,000/- per month.", 80, "(d) Documentary Evidence", [["Startup Employment (≥2 Jobs)", 80]]),
+            A("27", G3, false, "5. Entrepreneurship and Innovation", "Societal Innovations", "50 Points for verified societal innovations.", 50, "(d) Documentary Evidence", [["Societal Innovation", 50]]),
+            A("28", G3, true, "6. Leadership & Management", "Student Professional Societies (IEEE, IET, ASME, SAE, NASA etc.)", "Core Coordinator: 15 pts • Sub Coordinator: 10 pts • Volunteer: 5 pts.", 40, "(d) Documentary Evidence", [["Volunteer", 5], ["Sub Coordinator", 10], ["Core Coordinator", 15]]),
+            A("29", G3, true, "6. Leadership & Management", "College Association Chapters (Mechanical, Civil, Electrical etc.)", "Core Coordinator: 15 pts • Sub Coordinator: 10 pts • Volunteer: 5 pts.", 40, "(d) Documentary Evidence", [["Volunteer", 5], ["Sub Coordinator", 10], ["Core Coordinator", 15]]),
+            A("30", G3, true, "6. Leadership & Management", "Festival & Technical Events (College Approved)", "Core Coordinator: 15 pts • Sub Coordinator: 10 pts • Volunteer: 5 pts.", 40, "(d) Documentary Evidence", [["Volunteer", 5], ["Sub Coordinator", 10], ["Core Coordinator", 15]]),
+            A("31", G3, true, "6. Leadership & Management", "Hobby Clubs", "Core Coordinator: 15 pts • Sub Coordinator: 10 pts • Volunteer: 5 pts.", 40, "(d) Documentary Evidence", [["Volunteer", 5], ["Sub Coordinator", 10], ["Core Coordinator", 15]]),
+            A("32", G3, true, "6. Leadership & Management", "Elected Student Representatives", "Chairman: 30 pts • Secretary: 25 pts • Other Council Members: 15 pts.", 40, "(d) Documentary Evidence", [["Other Council Member", 15], ["Secretary", 25], ["Chairman", 30]])
+        ];
+
+        // =====================================================================
+        // 3. STATE & IN-PLACE VIEW CONTROLLER
+        // =====================================================================
+        const STORAGE_KEY = 'ktu_activity_points_tracker_v2';
+        let currentScheme = '2024';
+        let studentCategory = 'regular';
+        let activeGroupFilter = null;
+        let loggedActivities = [];
+        let scrollObserver = null;
+
+        function initScrollAnimations() {
+            if (scrollObserver) scrollObserver.disconnect();
+            scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+
+            document.querySelectorAll('.scroll-reveal:not(.is-visible)').forEach(el => {
+                scrollObserver.observe(el);
+            });
+        }
+
+        function loadSavedTracker() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    currentScheme = parsed.scheme || '2024';
+                    studentCategory = parsed.category || 'regular';
+                    loggedActivities = Array.isArray(parsed.items) ? parsed.items : [];
+                }
+            } catch (e) {}
+        }
+
+        function saveTracker() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                    scheme: currentScheme,
+                    category: studentCategory,
+                    items: loggedActivities
+                }));
+            } catch (e) {}
+        }
+
+        function getActiveDataset() {
+            return currentScheme === '2024' ? ACTIVITIES_2024 : ACTIVITIES_2019;
+        }
+
+        function getRequirements() {
+            if (currentScheme === '2024') {
+                if (studentCategory === 'lateral') return { total: 90, perGroup: 30 };
+                if (studentCategory === 'pwd') return { total: 60, perGroup: 20 };
+                return { total: 120, perGroup: 40 };
+            } else {
+                if (studentCategory === 'lateral') return { total: 75, perGroup: 100 };
+                if (studentCategory === 'pwd') return { total: 50, perGroup: 100 };
+                return { total: 100, perGroup: 100 };
+            }
+        }
+
+        // =====================================================================
+        // 4. IN-PLACE GROUP OPEN, BACK & DOCK SCROLL NAVIGATION
+        // =====================================================================
+        window.openGroupView = function(group) {
+            activeGroupFilter = group;
+            const searchEl = document.getElementById('activitySearch');
+            if (searchEl) searchEl.value = '';
+            document.getElementById('clearActSearch')?.classList.add('hidden');
+
+            document.getElementById('group-picker-view').classList.add('hidden');
+            document.getElementById('group-detail-view').classList.remove('hidden');
+
+            updateQuickSwitchPills();
+            renderActivities();
+        };
+
+        window.backToGroupPicker = function(scrollToStage = false) {
+            activeGroupFilter = null;
+            const searchEl = document.getElementById('activitySearch');
+            if (searchEl) searchEl.value = '';
+            document.getElementById('clearActSearch')?.classList.add('hidden');
+
+            document.getElementById('group-detail-view').classList.add('hidden');
+            document.getElementById('group-picker-view').classList.remove('hidden');
+
+            if (scrollToStage) {
+                document.getElementById('calculator-stage')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        window.scrollToPointsSummary = function() {
+            const summaryEl = document.getElementById('points-summary-banner') || document.getElementById('calculator-stage');
+            if (summaryEl) {
+                summaryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                summaryEl.classList.add('ring-2', 'ring-indigo-500/50');
+                setTimeout(() => summaryEl.classList.remove('ring-2', 'ring-indigo-500/50'), 1200);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        function updateQuickSwitchPills() {
+            const map = [
+                { group: 'Group I', id: 'quick-pill-g1' },
+                { group: 'Group II', id: 'quick-pill-g2' },
+                { group: 'Group III', id: 'quick-pill-g3' }
+            ];
+            map.forEach(item => {
+                const btn = document.getElementById(item.id);
+                if (!btn) return;
+                if (activeGroupFilter === item.group) {
+                    btn.className = "px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 text-white shadow-sm transition-all";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/80 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-white border border-slate-200/80 dark:border-white/10 transition-all";
+                }
+            });
+        }
+
+        window.handleSearchInput = function() {
+            const query = (document.getElementById('activitySearch')?.value || '').trim();
+            const clearBtn = document.getElementById('clearActSearch');
+
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+                clearBtn.classList.add('flex');
+                document.getElementById('group-picker-view').classList.add('hidden');
+                document.getElementById('group-detail-view').classList.remove('hidden');
+                updateQuickSwitchPills();
+                renderActivities();
+            } else {
+                clearBtn.classList.add('hidden');
+                clearBtn.classList.remove('flex');
+                if (activeGroupFilter) {
+                    renderActivities();
+                } else {
+                    backToGroupPicker();
+                }
+            }
+        };
+
+        // =====================================================================
+        // 5. UPDATE DASHBOARD & PROGRESS BARS
+        // =====================================================================
+        function updateDashboard() {
+            const req = getRequirements();
+            const schemeItems = loggedActivities.filter(item => item.scheme === currentScheme);
+
+            let rawG1 = 0, rawG2 = 0, rawG3 = 0;
+            schemeItems.forEach(item => {
+                if (item.group === 'Group I') rawG1 += item.points;
+                else if (item.group === 'Group II') rawG2 += item.points;
+                else if (item.group === 'Group III') rawG3 += item.points;
+            });
+
+            const cap = req.perGroup;
+            const countedG1 = currentScheme === '2024' ? Math.min(rawG1, cap) : rawG1;
+            const countedG2 = currentScheme === '2024' ? Math.min(rawG2, cap) : rawG2;
+            const countedG3 = currentScheme === '2024' ? Math.min(rawG3, cap) : rawG3;
+
+            const rawTotal = rawG1 + rawG2 + rawG3;
+            const countedTotal = currentScheme === '2024'
+                ? (countedG1 + countedG2 + countedG3)
+                : Math.min(rawTotal, req.total);
+
+            document.getElementById('total-counted-pts').innerText = countedTotal;
+            document.getElementById('total-target-pts').innerText = req.total;
+            document.getElementById('raw-pts-label').innerText = `Total Earned: ${rawTotal} pts`;
+            document.getElementById('rule-hint-text').innerText = currentScheme === '2024'
+                ? `Rule: Earn at least ${cap} points in each of the 3 groups (1 credit per group = 3 credits).`
+                : `Rule: Earn ${req.total} points total across the 6 segments (2 credits on pass/fail basis).`;
+
+            const overallPct = Math.min(100, Math.round((countedTotal / req.total) * 100));
+            document.getElementById('overall-progress-bar').style.width = `${overallPct}%`;
+
+            const badgeEl = document.getElementById('eligibility-badge');
+            const isEligible = currentScheme === '2024'
+                ? (countedG1 >= cap && countedG2 >= cap && countedG3 >= cap)
+                : (countedTotal >= req.total);
+
+            if (isEligible) {
+                badgeEl.className = "px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30";
+                badgeEl.innerHTML = `<i class="fas fa-check-circle mr-1"></i> Target Completed!`;
+            } else {
+                const remaining = Math.max(0, req.total - countedTotal);
+                badgeEl.className = "px-3 py-1.5 rounded-full text-xs font-bold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/25";
+                badgeEl.innerText = `${remaining} points remaining`;
+            }
+
+            if (currentScheme === '2024') {
+                document.getElementById('g1-card-title').innerText = 'Sports, Arts, NSS & Social';
+                document.getElementById('g1-card-desc').innerText = 'Sports/Games/Arts (1.1–1.3), Magazine (1.4), 4-Wheeler DL (1.5), Blood Donation & THRIVE (1.6–1.10), NSS/NCC (1.11–1.19), First Aid & Swimming (1.20–1.21).';
+                document.getElementById('g1-count-label').innerText = '21 Activities';
+
+                document.getElementById('g2-card-title').innerText = 'Tech Fests, Internships & Clubs';
+                document.getElementById('g2-card-desc').innerText = 'Tech-Fests & Societies (2.1–2.4), IIT/NIT Workshops & Papers (2.5–2.10), Union/CR/CGPU/IEDC/STRIDE/Clubs (2.11–2.21), FOSS (2.22), 2-Wk Internship (2.23), IELTS/GATE (2.24–2.25).';
+                document.getElementById('g2-count-label').innerText = '25 Activities';
+
+                document.getElementById('g3-card-title').innerText = 'IV, Hackathons, IPR & Skilling';
+                document.getElementById('g3-card-desc').innerText = 'IV Report, Best Project & 3.5-Mo Internship (3.1–3.3), LEAP/YIP/STRIDE/GDC/ICFOSS (3.4–3.8), Startups, Patents & Journals (3.9–3.14), Hackathons (3.15–3.16), Skilling Courses (3.17).';
+                document.getElementById('g3-count-label').innerText = '17 Activities';
+            } else {
+                document.getElementById('g1-card-title').innerText = 'National Initiatives, Sports & Arts';
+                document.getElementById('g1-card-desc').innerText = 'Segments 1, 2 & 3 (#1 to #7): NCC, NSS, Sports, Games, Music, Performing Arts, and Literary Arts.';
+                document.getElementById('g1-count-label').innerText = '7 Activities (#1–#7)';
+
+                document.getElementById('g2-card-title').innerText = 'Professional Self Initiatives';
+                document.getElementById('g2-card-desc').innerText = 'Segment 4 (#8 to #16): Tech Fest/Quiz, MOOCs, IEEE/IET/SAE Competitions, IIT/NIT Workshops/Papers/Posters, 5-Day Internship, IV, TOEFL/IELTS.';
+                document.getElementById('g2-count-label').innerText = '9 Activities (#8–#16)';
+
+                document.getElementById('g3-card-title').innerText = 'Entrepreneurship & Leadership';
+                document.getElementById('g3-card-desc').innerText = 'Segments 5 & 6 (#17 to #32): Startups, Patents (Filed/Published/Approved/Licensed), Prototypes, VC Funding, Societies, Association, Union.';
+                document.getElementById('g3-count-label').innerText = '16 Activities (#17–#32)';
+            }
+
+            const gConfig = [
+                { id: 'g1', val: countedG1, raw: rawG1 },
+                { id: 'g2', val: countedG2, raw: rawG2 },
+                { id: 'g3', val: countedG3, raw: rawG3 }
+            ];
+            gConfig.forEach(g => {
+                const target = currentScheme === '2024' ? cap : req.total;
+                const pct = Math.min(100, Math.round((g.val / target) * 100));
+                const badgeText = currentScheme === '2024'
+                    ? (g.val >= cap ? `✓ ${g.val}/${cap} pts` : `${g.val}/${cap} pts`)
+                    : `${g.raw} pts`;
+                document.getElementById(`${g.id}-status-badge`).innerText = badgeText;
+                document.getElementById(`${g.id}-bar`).style.width = `${pct}%`;
+
+                const pillSpan = document.getElementById(`pill-pts-${g.id}`);
+                if (pillSpan) pillSpan.innerText = currentScheme === '2024' ? `${g.val}/${cap}` : `${g.raw}`;
+            });
+
+            const loggedPanel = document.getElementById('my-logged-panel');
+            const loggedList = document.getElementById('logged-items-list');
+            document.getElementById('logged-count').innerText = schemeItems.length;
+
+            if (schemeItems.length > 0) {
+                loggedPanel.classList.remove('hidden');
+                loggedList.innerHTML = schemeItems.map(item => `
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-500/30 text-xs font-semibold shadow-sm">
+                        <span class="text-indigo-600 dark:text-indigo-400 font-bold">#${item.code}</span>
+                        <span class="text-slate-700 dark:text-slate-200 truncate max-w-[190px] sm:max-w-xs">${item.title}</span>
+                        <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold">+${item.points}</span>
+                        <button type="button" onclick="removeLoggedItem('${item.id}')" class="text-slate-400 hover:text-rose-500 ml-0.5" title="Remove">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `).join('');
+            } else {
+                loggedPanel.classList.add('hidden');
+            }
+
+            const dock = document.getElementById('floating-points-dock');
+            if (schemeItems.length > 0) {
+                document.getElementById('dock-pts-badge').innerText = `${countedTotal}/${req.total}`;
+                document.getElementById('dock-status-title').innerText = isEligible ? '🎉 All Activity Credits Met!' : `${countedTotal} of ${req.total} Points Added`;
+                document.getElementById('dock-sub-breakdown').innerText = currentScheme === '2024'
+                    ? `G1: ${countedG1}/${cap} • G2: ${countedG2}/${cap} • G3: ${countedG3}/${cap}`
+                    : `${schemeItems.length} Activities Added • Tap for summary`;
+                dock.classList.add('dock-active');
+                window.KTUFlow?.setBottomDockActive(true);
+            } else {
+                dock.classList.remove('dock-active');
+                window.KTUFlow?.setBottomDockActive(false);
+            }
+        }
+
+        // =====================================================================
+        // 6. RENDER ACTIVITIES IN-PLACE (Non-Accumulative vs Accumulative UI)
+        // =====================================================================
+        function renderActivities() {
+            const dataset = getActiveDataset();
+            const query = (document.getElementById('activitySearch')?.value || '').trim().toLowerCase();
+
+            const filtered = dataset.filter(item => {
+                if (query) {
+                    return item.code.toLowerCase().includes(query) ||
+                           item.title.toLowerCase().includes(query) ||
+                           item.category.toLowerCase().includes(query) ||
+                           (item.note && item.note.toLowerCase().includes(query)) ||
+                           (item.proof && item.proof.toLowerCase().includes(query));
+                }
+                return item.group === activeGroupFilter;
+            });
+
+            const container = document.getElementById('activities-container');
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="inner-glass rounded-2xl p-8 text-center">
+                        <i class="fas fa-magnifying-glass text-2xl text-slate-300 mb-2"></i>
+                        <p class="text-sm font-bold text-slate-700">No activities found for "${query}"</p>
+                        <p class="text-xs text-slate-500 mt-1">Try searching for SIH, Space Apps, GATE, IELTS, NSS, Internship, or Driving.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const grouped = {};
+            filtered.forEach(item => {
+                const key = `${item.group} — ${item.category}`;
+                if (!grouped[key]) grouped[key] = { group: item.group, category: item.category, list: [] };
+                grouped[key].list.push(item);
+            });
+
+            const schemeLogged = loggedActivities.filter(i => i.scheme === currentScheme);
+            const loggedCodesMap = {};
+            const selectedTierIdxMap = {};
+            schemeLogged.forEach(i => {
+                loggedCodesMap[i.code] = (loggedCodesMap[i.code] || 0) + i.points;
+                if (typeof i.tierIdx === 'number') selectedTierIdxMap[i.code] = i.tierIdx;
+            });
+
+            let html = '';
+            Object.values(grouped).forEach(section => {
+                let badgeColor = 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20';
+                if (section.group === 'Group II') badgeColor = 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/20';
+                if (section.group === 'Group III') badgeColor = 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20';
+
+                html += `
+                    <div class="space-y-3">
+                        <div class="scroll-reveal flex items-center gap-2.5 px-1">
+                            <span class="px-2.5 py-0.5 rounded-lg text-xs font-bold border ${badgeColor}">
+                                ${section.group}
+                            </span>
+                            <h3 class="text-sm sm:text-base font-extrabold text-slate-900">${section.category}</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                `;
+
+                section.list.forEach((act, idx) => {
+                    const earnedForCode = loggedCodesMap[act.code] || 0;
+                    const isAdded = earnedForCode > 0;
+                    const delayMs = (idx % 6) * 40;
+
+                    // Only show "Choose highest tier attained (non-accumulative)" for activities with L1/L2..., Participation/1st..., etc.
+                    const promptLabel = act.exclusive
+                        ? `<span class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 mb-1.5"><i class="fas fa-award text-[10px]"></i> Choose highest tier attained (non-accumulative):</span>`
+                        : `<span class="text-[11px] font-semibold text-slate-400 block mb-1.5">Tap to add points (Max ${act.maxPoints} pts):</span>`;
+
+                    const tiersHTML = act.tiers.map((tier, tIdx) => {
+                        const isThisTierSelected = act.exclusive && isAdded && selectedTierIdxMap[act.code] === tIdx;
+                        const btnClasses = isThisTierSelected
+                            ? "px-3 py-1.5 rounded-xl bg-indigo-600 text-white border border-indigo-600 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5 shadow-md"
+                            : "px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-600 text-slate-700 dark:text-slate-200 border border-slate-200/90 dark:border-white/10 text-xs font-semibold transition-all active:scale-95 flex items-center gap-1.5 shadow-sm group/pill";
+
+                        const badgeClasses = isThisTierSelected
+                            ? "px-1.5 py-0.5 rounded-md bg-white/20 text-white font-bold text-[11px]"
+                            : "px-1.5 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-500/20 group-hover/pill:bg-white/20 text-indigo-600 dark:text-indigo-300 group-hover/pill:text-white font-bold text-[11px]";
+
+                        return `
+                            <button type="button" onclick="addActivityTier('${act.code}', ${tIdx})" class="${btnClasses}">
+                                ${isThisTierSelected ? '<i class="fas fa-check text-[10px]"></i>' : ''}
+                                <span>${tier.label}</span>
+                                <span class="${badgeClasses}">${act.exclusive ? `${tier.points} pts` : `+${tier.points} pts`}</span>
+                            </button>
+                        `;
+                    }).join('');
+
+                    html += `
+                        <div style="transition-delay: ${delayMs}ms" class="scroll-reveal result-glass ${isAdded ? 'added-card' : ''} rounded-2xl p-4 sm:p-5 flex flex-col justify-between gap-3">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-1.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-slate-300 text-xs font-bold">
+                                            #${act.code}
+                                        </span>
+                                        ${isAdded ? `<span class="px-2.5 py-0.5 rounded-md bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold"><i class="fas fa-check mr-1"></i>${earnedForCode} pts</span>` : ''}
+                                    </div>
+                                    <span class="text-xs font-semibold text-slate-500">
+                                        Max Cap: <strong class="text-slate-800 dark:text-slate-200">${act.maxPoints} pts</strong>
+                                    </span>
+                                </div>
+
+                                <h4 class="text-sm sm:text-base font-bold text-slate-900 leading-snug mb-1.5">${act.title}</h4>
+                                ${act.note ? `<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-2 bg-slate-100/70 dark:bg-slate-800/60 px-2.5 py-1.5 rounded-lg border border-slate-200/60 dark:border-white/5">${act.note}</p>` : ''}
+                                <p class="text-[11px] text-slate-500 flex items-start gap-1.5">
+                                    <i class="far fa-file-lines text-indigo-500 mt-0.5 shrink-0"></i>
+                                    <span><strong>Proof:</strong> ${act.proof}</span>
+                                </p>
+                            </div>
+
+                            <div class="pt-2.5 border-t border-slate-200/60 dark:border-white/10">
+                                ${promptLabel}
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${tiersHTML}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div></div>`;
+            });
+
+            container.innerHTML = html;
+            requestAnimationFrame(() => initScrollAnimations());
+        }
+
+        // =====================================================================
+        // 7. INTERACTIVE ACTIONS (Non-Accumulative Replacement vs Accumulative)
+        // =====================================================================
+        window.addActivityTier = function(code, tierIdx) {
+            const dataset = getActiveDataset();
+            const act = dataset.find(a => a.code === code);
+            if (!act || !act.tiers[tierIdx]) return;
+            const tier = act.tiers[tierIdx];
+
+            if (act.exclusive) {
+                // Non-accumulative: tapping the already-selected tier deselects it;
+                // tapping a different tier replaces the previous tier for this activity code
+                const existingIdx = loggedActivities.findIndex(i => i.scheme === currentScheme && i.code === act.code);
+                if (existingIdx !== -1 && loggedActivities[existingIdx].tierIdx === tierIdx) {
+                    loggedActivities.splice(existingIdx, 1);
+                    saveTracker();
+                    updateDashboard();
+                    renderActivities();
+                    window.KTUFlow?.capsule('amber', `Removed #${act.code} (${tier.label})`);
+                    return;
+                }
+
+                // Remove any previous tier for this code and set the newly chosen highest tier
+                loggedActivities = loggedActivities.filter(i => !(i.scheme === currentScheme && i.code === act.code));
+                const pts = Math.min(tier.points, act.maxPoints);
+                loggedActivities.push({
+                    id: `${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+                    code: act.code,
+                    tierIdx: tierIdx,
+                    title: `${act.title} (${tier.label})`,
+                    group: act.group,
+                    points: pts,
+                    scheme: currentScheme
+                });
+
+                saveTracker();
+                updateDashboard();
+                renderActivities();
+                window.KTUFlow?.capsule('success', `Selected ${tier.label}: ${pts} pts (#${act.code})`);
+                return;
+            }
+
+            // Accumulative (e.g. Skilling hours, Blood donation, Magazine per year, Workshops per event)
+            const existingForCode = loggedActivities
+                .filter(i => i.scheme === currentScheme && i.code === act.code)
+                .reduce((sum, i) => sum + i.points, 0);
+
+            if (existingForCode >= act.maxPoints) {
+                window.KTUFlow?.capsule('amber', `Max limit (${act.maxPoints} pts) already reached for #${act.code}`);
+                return;
+            }
+
+            const pointsToAdd = Math.min(tier.points, act.maxPoints - existingForCode);
+            loggedActivities.push({
+                id: `${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+                code: act.code,
+                tierIdx: tierIdx,
+                title: `${act.title} (${tier.label})`,
+                group: act.group,
+                points: pointsToAdd,
+                scheme: currentScheme
+            });
+
+            saveTracker();
+            updateDashboard();
+            renderActivities();
+            window.KTUFlow?.capsule('success', `Added +${pointsToAdd} pts (#${act.code} • ${act.group})`);
+        };
+
+        window.removeLoggedItem = function(id) {
+            loggedActivities = loggedActivities.filter(item => item.id !== id);
+            saveTracker();
+            updateDashboard();
+            if (activeGroupFilter || document.getElementById('activitySearch')?.value) {
+                renderActivities();
+            }
+            window.KTUFlow?.capsule('amber', 'Activity removed');
+        };
+
+        window.clearAllLogged = function() {
+            loggedActivities = loggedActivities.filter(item => item.scheme !== currentScheme);
+            saveTracker();
+            updateDashboard();
+            if (activeGroupFilter || document.getElementById('activitySearch')?.value) {
+                renderActivities();
+            }
+            window.KTUFlow?.capsule('amber', 'Calculator reset');
+        };
+
+        window.setSchemeMode = function(scheme) {
+            currentScheme = scheme;
+            const btn24 = document.getElementById('scheme-btn-2024');
+            const btn19 = document.getElementById('scheme-btn-2019');
+
+            if (scheme === '2024') {
+                btn24.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm";
+                btn19.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all text-slate-600 dark:text-slate-300 hover:text-slate-900";
+            } else {
+                btn19.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm";
+                btn24.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all text-slate-600 dark:text-slate-300 hover:text-slate-900";
+            }
+
+            updateCategoryButtonLabels();
+            saveTracker();
+            updateDashboard();
+            if (activeGroupFilter || document.getElementById('activitySearch')?.value) {
+                renderActivities();
+            }
+        };
+
+        function updateCategoryButtonLabels() {
+            const is24 = currentScheme === '2024';
+            document.getElementById('cat-btn-regular').innerText = is24 ? 'Regular (120)' : 'Regular (100)';
+            document.getElementById('cat-btn-lateral').innerText = is24 ? 'Lateral Entry (90)' : 'Lateral Entry (75)';
+            document.getElementById('cat-btn-pwd').innerText = is24 ? 'PwD (60)' : 'PwD (50)';
+        }
+
+        window.setStudentCategory = function(cat) {
+            studentCategory = cat;
+            ['regular', 'lateral', 'pwd'].forEach(c => {
+                const btn = document.getElementById(`cat-btn-${c}`);
+                if (c === cat) {
+                    btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-600 dark:text-slate-400";
+                }
+            });
+            saveTracker();
+            updateDashboard();
+        };
+
+        window.clearActivitySearch = function() {
+            const el = document.getElementById('activitySearch');
+            if (el) el.value = '';
+            handleSearchInput();
+            el?.focus();
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadSavedTracker();
+            setSchemeMode(currentScheme);
+            setStudentCategory(studentCategory);
+            initScrollAnimations();
+        });
+    </script>
+</body>
+</html>
