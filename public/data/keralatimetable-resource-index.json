@@ -1,0 +1,2922 @@
+{
+  "source_repository": "https://github.com/KeralaTimetable/keralatimetable.github.io",
+  "source_commit": "9612b2a4238dfd31f0f136d9b56d552a0cb528dd",
+  "generated_from": "GitHub recursive tree",
+  "resource_count": 364,
+  "total_size_bytes": 107243019,
+  "notice": "This is a source-linked index. Binary files are linked to the pinned upstream source and are not copied into this repository by this manifest.",
+  "resources": [
+    {
+      "path": ".github/workflows/bot.yml",
+      "name": "bot.yml",
+      "category": "other",
+      "size_bytes": 2255,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/bot.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/bot.yml"
+    },
+    {
+      "path": ".github/workflows/build-syllabus.yml",
+      "name": "build-syllabus.yml",
+      "category": "other",
+      "size_bytes": 1699,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/build-syllabus.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/build-syllabus.yml"
+    },
+    {
+      "path": ".github/workflows/harvest.yml",
+      "name": "harvest.yml",
+      "category": "other",
+      "size_bytes": 764,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/harvest.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/harvest.yml"
+    },
+    {
+      "path": ".github/workflows/hf-sync.yml",
+      "name": "hf-sync.yml",
+      "category": "other",
+      "size_bytes": 1982,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/hf-sync.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/hf-sync.yml"
+    },
+    {
+      "path": ".github/workflows/hf_run.yml",
+      "name": "hf_run.yml",
+      "category": "other",
+      "size_bytes": 881,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/hf_run.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/hf_run.yml"
+    },
+    {
+      "path": ".github/workflows/test-push.yml",
+      "name": "test-push.yml",
+      "category": "other",
+      "size_bytes": 631,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/test-push.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/test-push.yml"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "name": "verify.yml",
+      "category": "other",
+      "size_bytes": 821,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/verify.yml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/.github/workflows/verify.yml"
+    },
+    {
+      "path": "404.html",
+      "name": "404.html",
+      "category": "website-tools",
+      "size_bytes": 6610,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/404.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/404.html"
+    },
+    {
+      "path": "AKTU_BTech_2019_QuestionPapers.json",
+      "name": "AKTU_BTech_2019_QuestionPapers.json",
+      "category": "question-papers-tools",
+      "size_bytes": 1955634,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/AKTU_BTech_2019_QuestionPapers.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/AKTU_BTech_2019_QuestionPapers.json"
+    },
+    {
+      "path": "C.html",
+      "name": "C.html",
+      "category": "website-tools",
+      "size_bytes": 54516,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/C.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/C.html"
+    },
+    {
+      "path": "CNAME",
+      "name": "CNAME",
+      "category": "other",
+      "size_bytes": 45,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/CNAME",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/CNAME"
+    },
+    {
+      "path": "Dockerfile",
+      "name": "Dockerfile",
+      "category": "other",
+      "size_bytes": 414,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/Dockerfile",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/Dockerfile"
+    },
+    {
+      "path": "Extra1.html",
+      "name": "Extra1.html",
+      "category": "website-tools",
+      "size_bytes": 20813,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/Extra1.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/Extra1.html"
+    },
+    {
+      "path": "KTU/AI-DS/S5/notes/PBADT504.html",
+      "name": "PBADT504.html",
+      "category": "notes",
+      "size_bytes": 16921,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html"
+    },
+    {
+      "path": "KTU/AI-DS/S5/notes/PCADT502.html",
+      "name": "PCADT502.html",
+      "category": "notes",
+      "size_bytes": 15338,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PCADT502.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PCADT502.html"
+    },
+    {
+      "path": "KTU/AI-DS/S5/notes/PECST521.html",
+      "name": "PECST521.html",
+      "category": "notes",
+      "size_bytes": 15727,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PECST521.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PECST521.html"
+    },
+    {
+      "path": "KTU/AI-DS/S5/notes/index.html",
+      "name": "index.html",
+      "category": "notes",
+      "size_bytes": 13148,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/index.html"
+    },
+    {
+      "path": "KTU/AI-DS/notes.html",
+      "name": "notes.html",
+      "category": "website-tools",
+      "size_bytes": 12971,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/notes.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/notes.html"
+    },
+    {
+      "path": "KTU/CC/S5/notes/PCCST501.html",
+      "name": "PCCST501.html",
+      "category": "notes",
+      "size_bytes": 30145,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html"
+    },
+    {
+      "path": "KTU/CC/S5/notes/PCCST502.html",
+      "name": "PCCST502.html",
+      "category": "notes",
+      "size_bytes": 31766,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html"
+    },
+    {
+      "path": "KTU/CC/S5/notes/PCCST503.html",
+      "name": "PCCST503.html",
+      "category": "notes",
+      "size_bytes": 15468,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST503.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST503.html"
+    },
+    {
+      "path": "KTU/CSE/S1/notes/electrical-electronics.html",
+      "name": "electrical-electronics.html",
+      "category": "notes",
+      "size_bytes": 15354,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html"
+    },
+    {
+      "path": "KTU/CSE/S1/notes/index.html",
+      "name": "index.html",
+      "category": "notes",
+      "size_bytes": 12250,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/index.html"
+    },
+    {
+      "path": "KTU/CSE/S1/notes/maths.html",
+      "name": "maths.html",
+      "category": "notes",
+      "size_bytes": 14035,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html"
+    },
+    {
+      "path": "KTU/CSE/S1/notes/physics.html",
+      "name": "physics.html",
+      "category": "notes",
+      "size_bytes": 13935,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/physics.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/physics.html"
+    },
+    {
+      "path": "KTU/CSE/S1/notes/python.html",
+      "name": "python.html",
+      "category": "notes",
+      "size_bytes": 13940,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/python.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/python.html"
+    },
+    {
+      "path": "KTU/CSE/S2/notes/index.html",
+      "name": "index.html",
+      "category": "notes",
+      "size_bytes": 14481,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S2/notes/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S2/notes/index.html"
+    },
+    {
+      "path": "KTU/CSE/S3/notes/PBCST304.html",
+      "name": "PBCST304.html",
+      "category": "notes",
+      "size_bytes": 15699,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/PBCST304.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/PBCST304.html"
+    },
+    {
+      "path": "KTU/CSE/S3/notes/UCHUT346.html",
+      "name": "UCHUT346.html",
+      "category": "notes",
+      "size_bytes": 16006,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/UCHUT346.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/UCHUT346.html"
+    },
+    {
+      "path": "KTU/CSE/S3/notes/gamat301.html",
+      "name": "gamat301.html",
+      "category": "notes",
+      "size_bytes": 15311,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/gamat301.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/gamat301.html"
+    },
+    {
+      "path": "KTU/CSE/S3/notes/index.html",
+      "name": "index.html",
+      "category": "notes",
+      "size_bytes": 17965,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S3/notes/index.html"
+    },
+    {
+      "path": "KTU/CSE/S5/notes/index.html",
+      "name": "index.html",
+      "category": "notes",
+      "size_bytes": 11591,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S5/notes/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S5/notes/index.html"
+    },
+    {
+      "path": "KTU/CSE/notes.html",
+      "name": "notes.html",
+      "category": "website-tools",
+      "size_bytes": 14327,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/notes.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/notes.html"
+    },
+    {
+      "path": "README.md",
+      "name": "README.md",
+      "category": "other",
+      "size_bytes": 1,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/README.md",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/README.md"
+    },
+    {
+      "path": "about.html",
+      "name": "about.html",
+      "category": "website-tools",
+      "size_bytes": 28179,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/about.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/about.html"
+    },
+    {
+      "path": "academy.html",
+      "name": "academy.html",
+      "category": "website-tools",
+      "size_bytes": 33417,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/academy.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/academy.html"
+    },
+    {
+      "path": "activity-points-ai.html",
+      "name": "activity-points-ai.html",
+      "category": "activity-points",
+      "size_bytes": 63831,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/activity-points-ai.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/activity-points-ai.html"
+    },
+    {
+      "path": "activitypoints.html",
+      "name": "activitypoints.html",
+      "category": "activity-points",
+      "size_bytes": 96512,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/activitypoints.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/activitypoints.html"
+    },
+    {
+      "path": "admin-application.html",
+      "name": "admin-application.html",
+      "category": "website-tools",
+      "size_bytes": 25889,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/admin-application.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/admin-application.html"
+    },
+    {
+      "path": "assets/k-logo-darktheme.png",
+      "name": "k-logo-darktheme.png",
+      "category": "other",
+      "size_bytes": 899717,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/k-logo-darktheme.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/k-logo-darktheme.png"
+    },
+    {
+      "path": "assets/tanziesdesign-logo.jpg",
+      "name": "tanziesdesign-logo.jpg",
+      "category": "other",
+      "size_bytes": 59426,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/tanziesdesign-logo.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/tanziesdesign-logo.jpg"
+    },
+    {
+      "path": "assets/tanziesdesign-logo.png",
+      "name": "tanziesdesign-logo.png",
+      "category": "other",
+      "size_bytes": 84081,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/tanziesdesign-logo.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/tanziesdesign-logo.png"
+    },
+    {
+      "path": "assets/vortex.png",
+      "name": "vortex.png",
+      "category": "other",
+      "size_bytes": 395398,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/vortex.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/assets/vortex.png"
+    },
+    {
+      "path": "blog/blog-posts.json",
+      "name": "blog-posts.json",
+      "category": "catalogue-data",
+      "size_bytes": 1407,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/blog-posts.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/blog-posts.json"
+    },
+    {
+      "path": "blog/index.html",
+      "name": "index.html",
+      "category": "website-tools",
+      "size_bytes": 10318,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/index.html"
+    },
+    {
+      "path": "blog/ktu-btech-attendance-rules.html",
+      "name": "ktu-btech-attendance-rules.html",
+      "category": "website-tools",
+      "size_bytes": 11142,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-btech-attendance-rules.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-btech-attendance-rules.html"
+    },
+    {
+      "path": "blog/ktu-btech-honours-rules.html",
+      "name": "ktu-btech-honours-rules.html",
+      "category": "website-tools",
+      "size_bytes": 12249,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-btech-honours-rules.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-btech-honours-rules.html"
+    },
+    {
+      "path": "blog/ktu-grading-system.html",
+      "name": "ktu-grading-system.html",
+      "category": "website-tools",
+      "size_bytes": 14821,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-grading-system.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-grading-system.html"
+    },
+    {
+      "path": "blog/ktu-s1-python-ucest105-guide.html",
+      "name": "ktu-s1-python-ucest105-guide.html",
+      "category": "website-tools",
+      "size_bytes": 24774,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-s1-python-ucest105-guide.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/ktu-s1-python-ucest105-guide.html"
+    },
+    {
+      "path": "blog/sslc-result-2026.html",
+      "name": "sslc-result-2026.html",
+      "category": "website-tools",
+      "size_bytes": 12643,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/sslc-result-2026.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/blog/sslc-result-2026.html"
+    },
+    {
+      "path": "build_syllabus.py",
+      "name": "build_syllabus.py",
+      "category": "automation-tools",
+      "size_bytes": 17751,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/build_syllabus.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/build_syllabus.py"
+    },
+    {
+      "path": "calendar.html",
+      "name": "calendar.html",
+      "category": "website-tools",
+      "size_bytes": 17564,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/calendar.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/calendar.html"
+    },
+    {
+      "path": "cleaner.html",
+      "name": "cleaner.html",
+      "category": "pdf-tools",
+      "size_bytes": 6924,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/cleaner.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/cleaner.html"
+    },
+    {
+      "path": "components.js",
+      "name": "components.js",
+      "category": "other",
+      "size_bytes": 85504,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/components.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/components.js"
+    },
+    {
+      "path": "contact-us.html",
+      "name": "contact-us.html",
+      "category": "website-tools",
+      "size_bytes": 21498,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/contact-us.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/contact-us.html"
+    },
+    {
+      "path": "digital-edge-101-mock-exam.html",
+      "name": "digital-edge-101-mock-exam.html",
+      "category": "website-tools",
+      "size_bytes": 49437,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/digital-edge-101-mock-exam.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/digital-edge-101-mock-exam.html"
+    },
+    {
+      "path": "doubts.html",
+      "name": "doubts.html",
+      "category": "website-tools",
+      "size_bytes": 39807,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/doubts.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/doubts.html"
+    },
+    {
+      "path": "downloads/2026-01-07_2ndsemMArchMPlan.pdf",
+      "name": "2026-01-07_2ndsemMArchMPlan.pdf",
+      "category": "documents",
+      "size_bytes": 222853,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMArchMPlan.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMArchMPlan.pdf"
+    },
+    {
+      "path": "downloads/2026-01-07_2ndsemMBARev.pdf",
+      "name": "2026-01-07_2ndsemMBARev.pdf",
+      "category": "documents",
+      "size_bytes": 222282,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMBARev.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMBARev.pdf"
+    },
+    {
+      "path": "downloads/2026-01-07_2ndsemMTech.pdf",
+      "name": "2026-01-07_2ndsemMTech.pdf",
+      "category": "documents",
+      "size_bytes": 179934,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMTech.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_2ndsemMTech.pdf"
+    },
+    {
+      "path": "downloads/2026-01-07_IntMCAS2S4S6S8S10.pdf",
+      "name": "2026-01-07_IntMCAS2S4S6S8S10.pdf",
+      "category": "documents",
+      "size_bytes": 294611,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_IntMCAS2S4S6S8S10.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_IntMCAS2S4S6S8S10.pdf"
+    },
+    {
+      "path": "downloads/2026-01-07_MergedAll.pdf",
+      "name": "2026-01-07_MergedAll.pdf",
+      "category": "documents",
+      "size_bytes": 734801,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_MergedAll.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-01-07_MergedAll.pdf"
+    },
+    {
+      "path": "downloads/2026-02-10_1.B.ArchAcademicCalender_S4_S6_S8_S10_Dec25_-June26.pdf",
+      "name": "2026-02-10_1.B.ArchAcademicCalender_S4_S6_S8_S10_Dec25_-June26.pdf",
+      "category": "documents",
+      "size_bytes": 347442,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_1.B.ArchAcademicCalender_S4_S6_S8_S10_Dec25_-June26.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_1.B.ArchAcademicCalender_S4_S6_S8_S10_Dec25_-June26.pdf"
+    },
+    {
+      "path": "downloads/2026-02-10_1.B.TechAcademicCalender_EvenSem_Dec25-June26.pdf",
+      "name": "2026-02-10_1.B.TechAcademicCalender_EvenSem_Dec25-June26.pdf",
+      "category": "documents",
+      "size_bytes": 349337,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_1.B.TechAcademicCalender_EvenSem_Dec25-June26.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_1.B.TechAcademicCalender_EvenSem_Dec25-June26.pdf"
+    },
+    {
+      "path": "downloads/2026-02-10_2.B.ArchAcademicCalender_S2_JAN26_-June26.pdf",
+      "name": "2026-02-10_2.B.ArchAcademicCalender_S2_JAN26_-June26.pdf",
+      "category": "documents",
+      "size_bytes": 223616,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_2.B.ArchAcademicCalender_S2_JAN26_-June26.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_2.B.ArchAcademicCalender_S2_JAN26_-June26.pdf"
+    },
+    {
+      "path": "downloads/2026-02-10_2.B.TechAcademicCalender_S2_Jan26-June26.pdf",
+      "name": "2026-02-10_2.B.TechAcademicCalender_S2_Jan26-June26.pdf",
+      "category": "documents",
+      "size_bytes": 283739,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_2.B.TechAcademicCalender_S2_Jan26-June26.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-02-10_2.B.TechAcademicCalender_S2_Jan26-June26.pdf"
+    },
+    {
+      "path": "downloads/2026-03-07_1.MTECHAcademicCalender_S4.pdf",
+      "name": "2026-03-07_1.MTECHAcademicCalender_S4.pdf",
+      "category": "documents",
+      "size_bytes": 353515,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-03-07_1.MTECHAcademicCalender_S4.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-03-07_1.MTECHAcademicCalender_S4.pdf"
+    },
+    {
+      "path": "downloads/2026-07-03_1536-2026-KTU.pdf",
+      "name": "2026-07-03_1536-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 459712,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-07-03_1536-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-07-03_1536-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/2026-07-27_1738-2026-KTU.pdf",
+      "name": "2026-07-27_1738-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 2557631,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-07-27_1738-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-07-27_1738-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/2026-08-03_1809-2026-KTU.pdf",
+      "name": "2026-08-03_1809-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 146595,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-03_1809-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-03_1809-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/2026-08-03_1810-2026-KTU.pdf",
+      "name": "2026-08-03_1810-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 366288,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-03_1810-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-03_1810-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/2026-08-07_1835-2026-KTU(4).pdf",
+      "name": "2026-08-07_1835-2026-KTU(4).pdf",
+      "category": "documents",
+      "size_bytes": 786900,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-07_1835-2026-KTU(4).pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-07_1835-2026-KTU(4).pdf"
+    },
+    {
+      "path": "downloads/2026-08-11_1848-2026-KTUM.TECHS1.pdf",
+      "name": "2026-08-11_1848-2026-KTUM.TECHS1.pdf",
+      "category": "documents",
+      "size_bytes": 223960,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-11_1848-2026-KTUM.TECHS1.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-11_1848-2026-KTUM.TECHS1.pdf"
+    },
+    {
+      "path": "downloads/2026-08-17_1870-2026-KTU.pdf",
+      "name": "2026-08-17_1870-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 315711,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-17_1870-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-08-17_1870-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/2026-09-10_2003-2026-KTU.pdf",
+      "name": "2026-09-10_2003-2026-KTU.pdf",
+      "category": "documents",
+      "size_bytes": 982367,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-09-10_2003-2026-KTU.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/2026-09-10_2003-2026-KTU.pdf"
+    },
+    {
+      "path": "downloads/KTU_Academic_Calendar_AY_2026-27_All_Programs.pdf",
+      "name": "KTU_Academic_Calendar_AY_2026-27_All_Programs.pdf",
+      "category": "documents",
+      "size_bytes": 2557629,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/KTU_Academic_Calendar_AY_2026-27_All_Programs.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads/KTU_Academic_Calendar_AY_2026-27_All_Programs.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-14_MBAS1(S,FE)ExamMay2026(2020SCH)APPROVED.pdf",
+      "name": "2026-05-14_MBAS1(S,FE)ExamMay2026(2020SCH)APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 589109,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-14_MBAS1(S,FE)ExamMay2026(2020SCH)APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-14_MBAS1(S,FE)ExamMay2026(2020SCH)APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-14_RevisedTimeTableofB.TechS4(2019SCHEME)APPROVED.pdf",
+      "name": "2026-05-14_RevisedTimeTableofB.TechS4(2019SCHEME)APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 765135,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-14_RevisedTimeTableofB.TechS4(2019SCHEME)APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-14_RevisedTimeTableofB.TechS4(2019SCHEME)APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-15_B.TechS1(S)May2026(2024sch)approved.pdf",
+      "name": "2026-05-15_B.TechS1(S)May2026(2024sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 659163,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS1(S)May2026(2024sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS1(S)May2026(2024sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-15_B.TechS2Challengeapril2026approved.pdf",
+      "name": "2026-05-15_B.TechS2Challengeapril2026approved.pdf",
+      "category": "timetable",
+      "size_bytes": 165257,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS2Challengeapril2026approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS2Challengeapril2026approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-15_B.TechS3(S)May2026(2024sch)approved.pdf",
+      "name": "2026-05-15_B.TechS3(S)May2026(2024sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 638408,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS3(S)May2026(2024sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-15_B.TechS3(S)May2026(2024sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-16_BHMCTS1-S5andS7(S,FE)(2018sch)approved.pdf",
+      "name": "2026-05-16_BHMCTS1-S5andS7(S,FE)(2018sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 607689,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-16_BHMCTS1-S5andS7(S,FE)(2018sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-16_BHMCTS1-S5andS7(S,FE)(2018sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-23_M.PlanningS1(S,FE)May2026APPROVED.pdf",
+      "name": "2026-05-23_M.PlanningS1(S,FE)May2026APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 586684,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_M.PlanningS1(S,FE)May2026APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_M.PlanningS1(S,FE)May2026APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-23_M.TechS1(S,FE)(2022sch)approved.pdf",
+      "name": "2026-05-23_M.TechS1(S,FE)(2022sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 614526,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_M.TechS1(S,FE)(2022sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_M.TechS1(S,FE)(2022sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-23_MCATwoYearS2(R,S)MAY2026APPROVED.pdf",
+      "name": "2026-05-23_MCATwoYearS2(R,S)MAY2026APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 586346,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_MCATwoYearS2(R,S)MAY2026APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_MCATwoYearS2(R,S)MAY2026APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-23_Reschedulingofexaminationof28.05.2026duetoEID-NotificationAPPROVED.pdf",
+      "name": "2026-05-23_Reschedulingofexaminationof28.05.2026duetoEID-NotificationAPPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 177910,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_Reschedulingofexaminationof28.05.2026duetoEID-NotificationAPPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-23_Reschedulingofexaminationof28.05.2026duetoEID-NotificationAPPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_B.TechS4HonoursAprilapproved.pdf",
+      "name": "2026-05-26_B.TechS4HonoursAprilapproved.pdf",
+      "category": "timetable",
+      "size_bytes": 601570,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS4HonoursAprilapproved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS4HonoursAprilapproved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_B.TechS4MinorAprilapproved.pdf",
+      "name": "2026-05-26_B.TechS4MinorAprilapproved.pdf",
+      "category": "timetable",
+      "size_bytes": 600350,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS4MinorAprilapproved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS4MinorAprilapproved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_B.TechS6HonoursExamination,April2026.pdf",
+      "name": "2026-05-26_B.TechS6HonoursExamination,April2026.pdf",
+      "category": "timetable",
+      "size_bytes": 594452,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS6HonoursExamination,April2026.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS6HonoursExamination,April2026.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_B.TechS6MinorAprilapproved.pdf",
+      "name": "2026-05-26_B.TechS6MinorAprilapproved.pdf",
+      "category": "timetable",
+      "size_bytes": 593695,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS6MinorAprilapproved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_B.TechS6MinorAprilapproved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_RevisedMCA2YearS2(R,S)approved.pdf",
+      "name": "2026-05-26_RevisedMCA2YearS2(R,S)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 584874,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_RevisedMCA2YearS2(R,S)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_RevisedMCA2YearS2(R,S)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-26_RevisedTimeTableofB.TechS4(PT)APPROVED.pdf",
+      "name": "2026-05-26_RevisedTimeTableofB.TechS4(PT)APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 591773,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_RevisedTimeTableofB.TechS4(PT)APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-26_RevisedTimeTableofB.TechS4(PT)APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-29_B.TechS3(PT)(S,FE)JUNEAPPROVED.pdf",
+      "name": "2026-05-29_B.TechS3(PT)(S,FE)JUNEAPPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 591532,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-29_B.TechS3(PT)(S,FE)JUNEAPPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-29_B.TechS3(PT)(S,FE)JUNEAPPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-29_B.TechS5(S,FE)June(2019sch)approved.pdf",
+      "name": "2026-05-29_B.TechS5(S,FE)June(2019sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 609796,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-29_B.TechS5(S,FE)June(2019sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-29_B.TechS5(S,FE)June(2019sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-30_M.Arch,M.PlanningS3(2016sch)approved.pdf",
+      "name": "2026-05-30_M.Arch,M.PlanningS3(2016sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 594660,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-30_M.Arch,M.PlanningS3(2016sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-30_M.Arch,M.PlanningS3(2016sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-05-30_MBAS3June2026(2020sch)approved.pdf",
+      "name": "2026-05-30_MBAS3June2026(2020sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 689099,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-30_MBAS3June2026(2020sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-05-30_MBAS3June2026(2020sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-02_B.TechS4Challengeapril2026(2024sch)approved.pdf",
+      "name": "2026-06-02_B.TechS4Challengeapril2026(2024sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 166408,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-02_B.TechS4Challengeapril2026(2024sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-02_B.TechS4Challengeapril2026(2024sch)approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-05_M.ArchS2(S,FE)June2026(2016approved.pdf",
+      "name": "2026-06-05_M.ArchS2(S,FE)June2026(2016approved.pdf",
+      "category": "timetable",
+      "size_bytes": 164870,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-05_M.ArchS2(S,FE)June2026(2016approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-05_M.ArchS2(S,FE)June2026(2016approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-08_KTU-EX-II#1-4990-2024MCA2YearSlotApostponement.pdf",
+      "name": "2026-06-08_KTU-EX-II#1-4990-2024MCA2YearSlotApostponement.pdf",
+      "category": "timetable",
+      "size_bytes": 165510,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-08_KTU-EX-II#1-4990-2024MCA2YearSlotApostponement.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-08_KTU-EX-II#1-4990-2024MCA2YearSlotApostponement.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-08_MCA2YearS1(S,FE)june2026approved.pdf",
+      "name": "2026-06-08_MCA2YearS1(S,FE)june2026approved.pdf",
+      "category": "timetable",
+      "size_bytes": 578893,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-08_MCA2YearS1(S,FE)june2026approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-08_MCA2YearS1(S,FE)june2026approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-10_ReschedulingofExaminationsof08.06.2026,Monday-ReviseddatesNotificationapproved.pdf",
+      "name": "2026-06-10_ReschedulingofExaminationsof08.06.2026,Monday-ReviseddatesNotificationapproved.pdf",
+      "category": "timetable",
+      "size_bytes": 183287,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_ReschedulingofExaminationsof08.06.2026,Monday-ReviseddatesNotificationapproved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_ReschedulingofExaminationsof08.06.2026,Monday-ReviseddatesNotificationapproved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-10_RevisedscheduleofSlotAcourse20MCA101-MathematicalFoundationsforcomputingnotificationapproved.pdf",
+      "name": "2026-06-10_RevisedscheduleofSlotAcourse20MCA101-MathematicalFoundationsforcomputingnotificationapproved.pdf",
+      "category": "timetable",
+      "size_bytes": 164357,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_RevisedscheduleofSlotAcourse20MCA101-MathematicalFoundationsforcomputingnotificationapproved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_RevisedscheduleofSlotAcourse20MCA101-MathematicalFoundationsforcomputingnotificationapproved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-10_powerelectroniccircuit.pdf",
+      "name": "2026-06-10_powerelectroniccircuit.pdf",
+      "category": "timetable",
+      "size_bytes": 163475,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_powerelectroniccircuit.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-10_powerelectroniccircuit.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-11_MCA2YearS3(S,FE)Exam2026approved.pdf",
+      "name": "2026-06-11_MCA2YearS3(S,FE)Exam2026approved.pdf",
+      "category": "timetable",
+      "size_bytes": 583476,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-11_MCA2YearS3(S,FE)Exam2026approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-11_MCA2YearS3(S,FE)Exam2026approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-23_RevisedCalendar-PGjuly2026(2015sch).pdf",
+      "name": "2026-06-23_RevisedCalendar-PGjuly2026(2015sch).pdf",
+      "category": "timetable",
+      "size_bytes": 1085893,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-23_RevisedCalendar-PGjuly2026(2015sch).pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-23_RevisedCalendar-PGjuly2026(2015sch).pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-25_MBASpecial(T1,T2,T3T5)January2026approved.pdf",
+      "name": "2026-06-25_MBASpecial(T1,T2,T3T5)January2026approved.pdf",
+      "category": "timetable",
+      "size_bytes": 591923,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-25_MBASpecial(T1,T2,T3T5)January2026approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-25_MBASpecial(T1,T2,T3T5)January2026approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-25_MCAIntegratedS1(S,FE)July2026approved.pdf",
+      "name": "2026-06-25_MCAIntegratedS1(S,FE)July2026approved.pdf",
+      "category": "timetable",
+      "size_bytes": 578879,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-25_MCAIntegratedS1(S,FE)July2026approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-25_MCAIntegratedS1(S,FE)July2026approved.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA2ndyeardirect.pdf",
+      "name": "2026-06-29_KTU-EX-II#1-4990-2024MCA2ndyeardirect.pdf",
+      "category": "timetable",
+      "size_bytes": 583815,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA2ndyeardirect.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA2ndyeardirect.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA3year(1).pdf",
+      "name": "2026-06-29_KTU-EX-II#1-4990-2024MCA3year(1).pdf",
+      "category": "timetable",
+      "size_bytes": 593921,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA3year(1).pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-EX-II#1-4990-2024MCA3year(1).pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-06-29_KTU-SOEX-II-4033-2017MCAIntegratedoldschemeapril2026.pdf",
+      "name": "2026-06-29_KTU-SOEX-II-4033-2017MCAIntegratedoldschemeapril2026.pdf",
+      "category": "timetable",
+      "size_bytes": 609959,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-SOEX-II-4033-2017MCAIntegratedoldschemeapril2026.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-06-29_KTU-SOEX-II-4033-2017MCAIntegratedoldschemeapril2026.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-07-07_MCAIntegratedS3,S5,S7,S9JULY2026(2026SCH)APPROVED.pdf",
+      "name": "2026-07-07_MCAIntegratedS3,S5,S7,S9JULY2026(2026SCH)APPROVED.pdf",
+      "category": "timetable",
+      "size_bytes": 598339,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-07_MCAIntegratedS3,S5,S7,S9JULY2026(2026SCH)APPROVED.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-07_MCAIntegratedS3,S5,S7,S9JULY2026(2026SCH)APPROVED.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-07-10_B.TechS2(PT)(S,FE)ExamMay2026(2019)hut200rescheduling.pdf",
+      "name": "2026-07-10_B.TechS2(PT)(S,FE)ExamMay2026(2019)hut200rescheduling.pdf",
+      "category": "timetable",
+      "size_bytes": 176336,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-10_B.TechS2(PT)(S,FE)ExamMay2026(2019)hut200rescheduling.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-10_B.TechS2(PT)(S,FE)ExamMay2026(2019)hut200rescheduling.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-07-13_KTU-SOEX-II-4033-2017M.Tech.pdf",
+      "name": "2026-07-13_KTU-SOEX-II-4033-2017M.Tech.pdf",
+      "category": "timetable",
+      "size_bytes": 599554,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-13_KTU-SOEX-II-4033-2017M.Tech.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-13_KTU-SOEX-II-4033-2017M.Tech.pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-07-14_RevisedMCAIntegratedS7(S,FE)July2026(2020sch).pdf",
+      "name": "2026-07-14_RevisedMCAIntegratedS7(S,FE)July2026(2020sch).pdf",
+      "category": "timetable",
+      "size_bytes": 581829,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-14_RevisedMCAIntegratedS7(S,FE)July2026(2020sch).pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-07-14_RevisedMCAIntegratedS7(S,FE)July2026(2020sch).pdf"
+    },
+    {
+      "path": "downloads_timetable/2026-09-17_B.TechS8(S,FE)ExamSeptember2026(2019sch)approved.pdf",
+      "name": "2026-09-17_B.TechS8(S,FE)ExamSeptember2026(2019sch)approved.pdf",
+      "category": "timetable",
+      "size_bytes": 786088,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-09-17_B.TechS8(S,FE)ExamSeptember2026(2019sch)approved.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/downloads_timetable/2026-09-17_B.TechS8(S,FE)ExamSeptember2026(2019sch)approved.pdf"
+    },
+    {
+      "path": "favicon.png",
+      "name": "favicon.png",
+      "category": "other",
+      "size_bytes": 503132,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/favicon.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/favicon.png"
+    },
+    {
+      "path": "fetch_notices.py",
+      "name": "fetch_notices.py",
+      "category": "notices",
+      "size_bytes": 2065,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/fetch_notices.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/fetch_notices.py"
+    },
+    {
+      "path": "firebase-messaging-sw.js",
+      "name": "firebase-messaging-sw.js",
+      "category": "other",
+      "size_bytes": 1153,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/firebase-messaging-sw.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/firebase-messaging-sw.js"
+    },
+    {
+      "path": "generate_sitemap.py",
+      "name": "generate_sitemap.py",
+      "category": "automation-tools",
+      "size_bytes": 2808,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/generate_sitemap.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/generate_sitemap.py"
+    },
+    {
+      "path": "groups.html",
+      "name": "groups.html",
+      "category": "website-tools",
+      "size_bytes": 10680,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/groups.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/groups.html"
+    },
+    {
+      "path": "hf_sync.py",
+      "name": "hf_sync.py",
+      "category": "automation-tools",
+      "size_bytes": 4474,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/hf_sync.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/hf_sync.py"
+    },
+    {
+      "path": "images/...",
+      "name": "...",
+      "category": "other",
+      "size_bytes": 1,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/...",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/..."
+    },
+    {
+      "path": "images/Adi.png",
+      "name": "Adi.png",
+      "category": "other",
+      "size_bytes": 1904431,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/Adi.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/Adi.png"
+    },
+    {
+      "path": "images/ai-lifecycle.jpg",
+      "name": "ai-lifecycle.jpg",
+      "category": "other",
+      "size_bytes": 27302,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/ai-lifecycle.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/ai-lifecycle.jpg"
+    },
+    {
+      "path": "images/chatgpt-logo.jpg",
+      "name": "chatgpt-logo.jpg",
+      "category": "other",
+      "size_bytes": 37851,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/chatgpt-logo.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/chatgpt-logo.jpg"
+    },
+    {
+      "path": "images/feedforward-nn.jpg",
+      "name": "feedforward-nn.jpg",
+      "category": "other",
+      "size_bytes": 94553,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/feedforward-nn.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/feedforward-nn.jpg"
+    },
+    {
+      "path": "images/gemini-logo-1.jpg",
+      "name": "gemini-logo-1.jpg",
+      "category": "other",
+      "size_bytes": 24726,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/gemini-logo-1.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/gemini-logo-1.jpg"
+    },
+    {
+      "path": "images/gemini-logo-2.jpg",
+      "name": "gemini-logo-2.jpg",
+      "category": "other",
+      "size_bytes": 24726,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/gemini-logo-2.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/gemini-logo-2.jpg"
+    },
+    {
+      "path": "images/model-training.jpg",
+      "name": "model-training.jpg",
+      "category": "other",
+      "size_bytes": 35846,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/model-training.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/model-training.jpg"
+    },
+    {
+      "path": "images/pie-chart.jpg",
+      "name": "pie-chart.jpg",
+      "category": "other",
+      "size_bytes": 20558,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/pie-chart.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/pie-chart.jpg"
+    },
+    {
+      "path": "images/python-logo.jpg",
+      "name": "python-logo.jpg",
+      "category": "other",
+      "size_bytes": 7911,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/python-logo.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/python-logo.jpg"
+    },
+    {
+      "path": "images/pytorch-logo.jpg",
+      "name": "pytorch-logo.jpg",
+      "category": "other",
+      "size_bytes": 17393,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/pytorch-logo.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/pytorch-logo.jpg"
+    },
+    {
+      "path": "images/supervised.jpg",
+      "name": "supervised.jpg",
+      "category": "other",
+      "size_bytes": 57572,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/supervised.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/supervised.jpg"
+    },
+    {
+      "path": "images/unsupervised.jpg",
+      "name": "unsupervised.jpg",
+      "category": "other",
+      "size_bytes": 42184,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/unsupervised.jpg",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/images/unsupervised.jpg"
+    },
+    {
+      "path": "index.html",
+      "name": "index.html",
+      "category": "website-tools",
+      "size_bytes": 67852,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/index.html"
+    },
+    {
+      "path": "k.png",
+      "name": "k.png",
+      "category": "other",
+      "size_bytes": 30441,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/k.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/k.png"
+    },
+    {
+      "path": "keralattlogo.png",
+      "name": "keralattlogo.png",
+      "category": "other",
+      "size_bytes": 56499,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/keralattlogo.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/keralattlogo.png"
+    },
+    {
+      "path": "ktu_index.db",
+      "name": "ktu_index.db",
+      "category": "other",
+      "size_bytes": 1310720,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_index.db",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_index.db"
+    },
+    {
+      "path": "ktu_repo.py",
+      "name": "ktu_repo.py",
+      "category": "question-papers-tools",
+      "size_bytes": 9609,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_repo.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_repo.py"
+    },
+    {
+      "path": "ktu_subjects_no_lab.json",
+      "name": "ktu_subjects_no_lab.json",
+      "category": "catalogue-data",
+      "size_bytes": 165977,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_subjects_no_lab.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_subjects_no_lab.json"
+    },
+    {
+      "path": "ktu_syllabus_raw.json",
+      "name": "ktu_syllabus_raw.json",
+      "category": "syllabus",
+      "size_bytes": 594362,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_syllabus_raw.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ktu_syllabus_raw.json"
+    },
+    {
+      "path": "login.html",
+      "name": "login.html",
+      "category": "website-tools",
+      "size_bytes": 11945,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/login.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/login.html"
+    },
+    {
+      "path": "nnn.html",
+      "name": "nnn.html",
+      "category": "website-tools",
+      "size_bytes": 80274,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/nnn.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/nnn.html"
+    },
+    {
+      "path": "notes-pccst205.html",
+      "name": "notes-pccst205.html",
+      "category": "website-tools",
+      "size_bytes": 13092,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes-pccst205.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes-pccst205.html"
+    },
+    {
+      "path": "notes-ucest206.html",
+      "name": "notes-ucest206.html",
+      "category": "website-tools",
+      "size_bytes": 14237,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes-ucest206.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes-ucest206.html"
+    },
+    {
+      "path": "notes.html",
+      "name": "notes.html",
+      "category": "website-tools",
+      "size_bytes": 25650,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notes.html"
+    },
+    {
+      "path": "notices-data.js",
+      "name": "notices-data.js",
+      "category": "notices",
+      "size_bytes": 732,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notices-data.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notices-data.js"
+    },
+    {
+      "path": "notices.json",
+      "name": "notices.json",
+      "category": "notices",
+      "size_bytes": 13068,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notices.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notices.json"
+    },
+    {
+      "path": "notification.html",
+      "name": "notification.html",
+      "category": "website-tools",
+      "size_bytes": 5730,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notification.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/notification.html"
+    },
+    {
+      "path": "pdfs/S 6_OEEVT613.pdf",
+      "name": "S 6_OEEVT613.pdf",
+      "category": "documents",
+      "size_bytes": 407344,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S 6_OEEVT613.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S 6_OEEVT613.pdf"
+    },
+    {
+      "path": "pdfs/S3_GAEST305.pdf",
+      "name": "S3_GAEST305.pdf",
+      "category": "documents",
+      "size_bytes": 354082,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GAEST305.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GAEST305.pdf"
+    },
+    {
+      "path": "pdfs/S3_GAMAT301.pdf",
+      "name": "S3_GAMAT301.pdf",
+      "category": "documents",
+      "size_bytes": 160582,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GAMAT301.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GAMAT301.pdf"
+    },
+    {
+      "path": "pdfs/S3_GNEST305.pdf",
+      "name": "S3_GNEST305.pdf",
+      "category": "documents",
+      "size_bytes": 1697435,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GNEST305.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GNEST305.pdf"
+    },
+    {
+      "path": "pdfs/S3_GYMAT301.pdf",
+      "name": "S3_GYMAT301.pdf",
+      "category": "documents",
+      "size_bytes": 355655,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GYMAT301.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_GYMAT301.pdf"
+    },
+    {
+      "path": "pdfs/S3_PBCST304.pdf",
+      "name": "S3_PBCST304.pdf",
+      "category": "documents",
+      "size_bytes": 184967,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PBCST304.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PBCST304.pdf"
+    },
+    {
+      "path": "pdfs/S3_PBECT304.pdf",
+      "name": "S3_PBECT304.pdf",
+      "category": "documents",
+      "size_bytes": 604939,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PBECT304.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PBECT304.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCCSL307.pdf",
+      "name": "S3_PCCSL307.pdf",
+      "category": "documents",
+      "size_bytes": 165426,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCSL307.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCSL307.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCCSL308.pdf",
+      "name": "S3_PCCSL308.pdf",
+      "category": "documents",
+      "size_bytes": 243404,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCSL308.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCSL308.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCCST302.pdf",
+      "name": "S3_PCCST302.pdf",
+      "category": "documents",
+      "size_bytes": 161674,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCST302.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCST302.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCCST303.pdf",
+      "name": "S3_PCCST303.pdf",
+      "category": "documents",
+      "size_bytes": 142885,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCST303.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCCST303.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCECL307.pdf",
+      "name": "S3_PCECL307.pdf",
+      "category": "documents",
+      "size_bytes": 594874,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECL307.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECL307.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCECL308.pdf",
+      "name": "S3_PCECL308.pdf",
+      "category": "documents",
+      "size_bytes": 626059,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECL308.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECL308.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCECT302.pdf",
+      "name": "S3_PCECT302.pdf",
+      "category": "documents",
+      "size_bytes": 398397,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECT302.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECT302.pdf"
+    },
+    {
+      "path": "pdfs/S3_PCECT303.pdf",
+      "name": "S3_PCECT303.pdf",
+      "category": "documents",
+      "size_bytes": 431980,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECT303.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S3_PCECT303.pdf"
+    },
+    {
+      "path": "pdfs/S4_GAMAT401.pdf",
+      "name": "S4_GAMAT401.pdf",
+      "category": "documents",
+      "size_bytes": 412001,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_GAMAT401.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_GAMAT401.pdf"
+    },
+    {
+      "path": "pdfs/S4_PBCST404.pdf",
+      "name": "S4_PBCST404.pdf",
+      "category": "documents",
+      "size_bytes": 145126,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PBCST404.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PBCST404.pdf"
+    },
+    {
+      "path": "pdfs/S4_PBECT404.pdf",
+      "name": "S4_PBECT404.pdf",
+      "category": "documents",
+      "size_bytes": 2671104,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PBECT404.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PBECT404.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCCSL407.pdf",
+      "name": "S4_PCCSL407.pdf",
+      "category": "documents",
+      "size_bytes": 181530,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCSL407.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCSL407.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCCSL408.pdf",
+      "name": "S4_PCCSL408.pdf",
+      "category": "documents",
+      "size_bytes": 199433,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCSL408.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCSL408.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCCST402.pdf",
+      "name": "S4_PCCST402.pdf",
+      "category": "documents",
+      "size_bytes": 18641,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCST402.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCST402.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCCST403.pdf",
+      "name": "S4_PCCST403.pdf",
+      "category": "documents",
+      "size_bytes": 9462056,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCST403.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCCST403.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCECT403.pdf",
+      "name": "S4_PCECT403.pdf",
+      "category": "documents",
+      "size_bytes": 388749,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCECT403.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCECT403.pdf"
+    },
+    {
+      "path": "pdfs/S4_PCEVT402.pdf",
+      "name": "S4_PCEVT402.pdf",
+      "category": "documents",
+      "size_bytes": 414117,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCEVT402.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PCEVT402.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST411.pdf",
+      "name": "S4_PECST411.pdf",
+      "category": "documents",
+      "size_bytes": 169241,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST411.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST411.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST412.pdf",
+      "name": "S4_PECST412.pdf",
+      "category": "documents",
+      "size_bytes": 143696,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST412.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST412.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST413.pdf",
+      "name": "S4_PECST413.pdf",
+      "category": "documents",
+      "size_bytes": 151299,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST413.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST413.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST414.pdf",
+      "name": "S4_PECST414.pdf",
+      "category": "documents",
+      "size_bytes": 158906,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST414.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST414.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST415.pdf",
+      "name": "S4_PECST415.pdf",
+      "category": "documents",
+      "size_bytes": 168984,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST415.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST415.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST416.pdf",
+      "name": "S4_PECST416.pdf",
+      "category": "documents",
+      "size_bytes": 165389,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST416.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST416.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST417.pdf",
+      "name": "S4_PECST417.pdf",
+      "category": "documents",
+      "size_bytes": 162474,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST417.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST417.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST418.pdf",
+      "name": "S4_PECST418.pdf",
+      "category": "documents",
+      "size_bytes": 142587,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST418.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST418.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST419.pdf",
+      "name": "S4_PECST419.pdf",
+      "category": "documents",
+      "size_bytes": 142295,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST419.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST419.pdf"
+    },
+    {
+      "path": "pdfs/S4_PECST495.pdf",
+      "name": "S4_PECST495.pdf",
+      "category": "documents",
+      "size_bytes": 328999,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST495.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PECST495.pdf"
+    },
+    {
+      "path": "pdfs/S4_PEEVT412.pdf",
+      "name": "S4_PEEVT412.pdf",
+      "category": "documents",
+      "size_bytes": 430750,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT412.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT412.pdf"
+    },
+    {
+      "path": "pdfs/S4_PEEVT413.pdf",
+      "name": "S4_PEEVT413.pdf",
+      "category": "documents",
+      "size_bytes": 517419,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT413.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT413.pdf"
+    },
+    {
+      "path": "pdfs/S4_PEEVT414.pdf",
+      "name": "S4_PEEVT414.pdf",
+      "category": "documents",
+      "size_bytes": 2716153,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT414.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S4_PEEVT414.pdf"
+    },
+    {
+      "path": "pdfs/S5_PBCST504.pdf",
+      "name": "S5_PBCST504.pdf",
+      "category": "documents",
+      "size_bytes": 149637,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PBCST504.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PBCST504.pdf"
+    },
+    {
+      "path": "pdfs/S5_PBEVT504.pdf",
+      "name": "S5_PBEVT504.pdf",
+      "category": "documents",
+      "size_bytes": 707529,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PBEVT504.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PBEVT504.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCCAL507.pdf",
+      "name": "S5_PCCAL507.pdf",
+      "category": "documents",
+      "size_bytes": 110300,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCAL507.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCAL507.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCCSL507.pdf",
+      "name": "S5_PCCSL507.pdf",
+      "category": "documents",
+      "size_bytes": 398623,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCSL507.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCSL507.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCCST501.pdf",
+      "name": "S5_PCCST501.pdf",
+      "category": "documents",
+      "size_bytes": 246323,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST501.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST501.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCCST502.pdf",
+      "name": "S5_PCCST502.pdf",
+      "category": "documents",
+      "size_bytes": 137068,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST502.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST502.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCCST503.pdf",
+      "name": "S5_PCCST503.pdf",
+      "category": "documents",
+      "size_bytes": 163296,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST503.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCCST503.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCEVT501.pdf",
+      "name": "S5_PCEVT501.pdf",
+      "category": "documents",
+      "size_bytes": 415886,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT501.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT501.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCEVT502.pdf",
+      "name": "S5_PCEVT502.pdf",
+      "category": "documents",
+      "size_bytes": 335309,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT502.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT502.pdf"
+    },
+    {
+      "path": "pdfs/S5_PCEVT503.pdf",
+      "name": "S5_PCEVT503.pdf",
+      "category": "documents",
+      "size_bytes": 416226,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT503.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PCEVT503.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST521.pdf",
+      "name": "S5_PECST521.pdf",
+      "category": "documents",
+      "size_bytes": 139691,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST521.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST521.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST522.pdf",
+      "name": "S5_PECST522.pdf",
+      "category": "documents",
+      "size_bytes": 162011,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST522.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST522.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST523.pdf",
+      "name": "S5_PECST523.pdf",
+      "category": "documents",
+      "size_bytes": 140969,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST523.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST523.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST524.pdf",
+      "name": "S5_PECST524.pdf",
+      "category": "documents",
+      "size_bytes": 175045,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST524.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST524.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST525.pdf",
+      "name": "S5_PECST525.pdf",
+      "category": "documents",
+      "size_bytes": 162861,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST525.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST525.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST526.pdf",
+      "name": "S5_PECST526.pdf",
+      "category": "documents",
+      "size_bytes": 166771,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST526.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST526.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST527.pdf",
+      "name": "S5_PECST527.pdf",
+      "category": "documents",
+      "size_bytes": 142373,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST527.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST527.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST528.pdf",
+      "name": "S5_PECST528.pdf",
+      "category": "documents",
+      "size_bytes": 165287,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST528.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST528.pdf"
+    },
+    {
+      "path": "pdfs/S5_PECST595.pdf",
+      "name": "S5_PECST595.pdf",
+      "category": "documents",
+      "size_bytes": 174098,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST595.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PECST595.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT 521.pdf",
+      "name": "S5_PEEVT 521.pdf",
+      "category": "documents",
+      "size_bytes": 415512,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 521.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 521.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT 522.pdf",
+      "name": "S5_PEEVT 522.pdf",
+      "category": "documents",
+      "size_bytes": 412736,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 522.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 522.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT 527.pdf",
+      "name": "S5_PEEVT 527.pdf",
+      "category": "documents",
+      "size_bytes": 415611,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 527.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT 527.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT523.pdf",
+      "name": "S5_PEEVT523.pdf",
+      "category": "documents",
+      "size_bytes": 419697,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT523.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT523.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT524.pdf",
+      "name": "S5_PEEVT524.pdf",
+      "category": "documents",
+      "size_bytes": 416316,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT524.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT524.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT525.pdf",
+      "name": "S5_PEEVT525.pdf",
+      "category": "documents",
+      "size_bytes": 2187993,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT525.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT525.pdf"
+    },
+    {
+      "path": "pdfs/S5_PEEVT526.pdf",
+      "name": "S5_PEEVT526.pdf",
+      "category": "documents",
+      "size_bytes": 505242,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT526.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S5_PEEVT526.pdf"
+    },
+    {
+      "path": "pdfs/S6_OECST611.pdf",
+      "name": "S6_OECST611.pdf",
+      "category": "documents",
+      "size_bytes": 134993,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST611.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST611.pdf"
+    },
+    {
+      "path": "pdfs/S6_OECST612.pdf",
+      "name": "S6_OECST612.pdf",
+      "category": "documents",
+      "size_bytes": 161421,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST612.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST612.pdf"
+    },
+    {
+      "path": "pdfs/S6_OECST613.pdf",
+      "name": "S6_OECST613.pdf",
+      "category": "documents",
+      "size_bytes": 159421,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST613.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST613.pdf"
+    },
+    {
+      "path": "pdfs/S6_OECST614.pdf",
+      "name": "S6_OECST614.pdf",
+      "category": "documents",
+      "size_bytes": 140444,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST614.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST614.pdf"
+    },
+    {
+      "path": "pdfs/S6_OECST615.pdf",
+      "name": "S6_OECST615.pdf",
+      "category": "documents",
+      "size_bytes": 165718,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST615.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OECST615.pdf"
+    },
+    {
+      "path": "pdfs/S6_OEEVT611.pdf",
+      "name": "S6_OEEVT611.pdf",
+      "category": "documents",
+      "size_bytes": 429779,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT611.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT611.pdf"
+    },
+    {
+      "path": "pdfs/S6_OEEVT612.pdf",
+      "name": "S6_OEEVT612.pdf",
+      "category": "documents",
+      "size_bytes": 410926,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT612.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT612.pdf"
+    },
+    {
+      "path": "pdfs/S6_OEEVT614.pdf",
+      "name": "S6_OEEVT614.pdf",
+      "category": "documents",
+      "size_bytes": 855378,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT614.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_OEEVT614.pdf"
+    },
+    {
+      "path": "pdfs/S6_PBCST604.pdf",
+      "name": "S6_PBCST604.pdf",
+      "category": "documents",
+      "size_bytes": 149326,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PBCST604.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PBCST604.pdf"
+    },
+    {
+      "path": "pdfs/S6_PBEVT604.pdf",
+      "name": "S6_PBEVT604.pdf",
+      "category": "documents",
+      "size_bytes": 772022,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PBEVT604.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PBEVT604.pdf"
+    },
+    {
+      "path": "pdfs/S6_PCCSL607.pdf",
+      "name": "S6_PCCSL607.pdf",
+      "category": "documents",
+      "size_bytes": 213940,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCSL607.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCSL607.pdf"
+    },
+    {
+      "path": "pdfs/S6_PCCST601.pdf",
+      "name": "S6_PCCST601.pdf",
+      "category": "documents",
+      "size_bytes": 162220,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCST601.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCST601.pdf"
+    },
+    {
+      "path": "pdfs/S6_PCCST602.pdf",
+      "name": "S6_PCCST602.pdf",
+      "category": "documents",
+      "size_bytes": 140932,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCST602.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCCST602.pdf"
+    },
+    {
+      "path": "pdfs/S6_PCEVL607.pdf",
+      "name": "S6_PCEVL607.pdf",
+      "category": "documents",
+      "size_bytes": 734472,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCEVL607.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCEVL607.pdf"
+    },
+    {
+      "path": "pdfs/S6_PCEVT602.pdf",
+      "name": "S6_PCEVT602.pdf",
+      "category": "documents",
+      "size_bytes": 431872,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCEVT602.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PCEVT602.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST631.pdf",
+      "name": "S6_PECST631.pdf",
+      "category": "documents",
+      "size_bytes": 142665,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST631.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST631.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST632.pdf",
+      "name": "S6_PECST632.pdf",
+      "category": "documents",
+      "size_bytes": 138485,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST632.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST632.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST633.pdf",
+      "name": "S6_PECST633.pdf",
+      "category": "documents",
+      "size_bytes": 161511,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST633.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST633.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST634.pdf",
+      "name": "S6_PECST634.pdf",
+      "category": "documents",
+      "size_bytes": 141290,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST634.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST634.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST635.pdf",
+      "name": "S6_PECST635.pdf",
+      "category": "documents",
+      "size_bytes": 162872,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST635.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST635.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST636.pdf",
+      "name": "S6_PECST636.pdf",
+      "category": "documents",
+      "size_bytes": 140423,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST636.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST636.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST637.pdf",
+      "name": "S6_PECST637.pdf",
+      "category": "documents",
+      "size_bytes": 160902,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST637.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST637.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST638.pdf",
+      "name": "S6_PECST638.pdf",
+      "category": "documents",
+      "size_bytes": 159517,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST638.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST638.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST639.pdf",
+      "name": "S6_PECST639.pdf",
+      "category": "documents",
+      "size_bytes": 140673,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST639.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST639.pdf"
+    },
+    {
+      "path": "pdfs/S6_PECST695.pdf",
+      "name": "S6_PECST695.pdf",
+      "category": "documents",
+      "size_bytes": 176324,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST695.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PECST695.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 631.pdf",
+      "name": "S6_PEEVT 631.pdf",
+      "category": "documents",
+      "size_bytes": 427303,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 631.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 631.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 632.pdf",
+      "name": "S6_PEEVT 632.pdf",
+      "category": "documents",
+      "size_bytes": 341018,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 632.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 632.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 633.pdf",
+      "name": "S6_PEEVT 633.pdf",
+      "category": "documents",
+      "size_bytes": 412927,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 633.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 633.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 634.pdf",
+      "name": "S6_PEEVT 634.pdf",
+      "category": "documents",
+      "size_bytes": 341550,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 634.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 634.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 636.pdf",
+      "name": "S6_PEEVT 636.pdf",
+      "category": "documents",
+      "size_bytes": 409196,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 636.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 636.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT 637.pdf",
+      "name": "S6_PEEVT 637.pdf",
+      "category": "documents",
+      "size_bytes": 410109,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 637.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT 637.pdf"
+    },
+    {
+      "path": "pdfs/S6_PEEVT635.pdf",
+      "name": "S6_PEEVT635.pdf",
+      "category": "documents",
+      "size_bytes": 691454,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT635.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S6_PEEVT635.pdf"
+    },
+    {
+      "path": "pdfs/S7_OECST721.pdf",
+      "name": "S7_OECST721.pdf",
+      "category": "documents",
+      "size_bytes": 154706,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST721.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST721.pdf"
+    },
+    {
+      "path": "pdfs/S7_OECST722.pdf",
+      "name": "S7_OECST722.pdf",
+      "category": "documents",
+      "size_bytes": 164606,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST722.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST722.pdf"
+    },
+    {
+      "path": "pdfs/S7_OECST723.pdf",
+      "name": "S7_OECST723.pdf",
+      "category": "documents",
+      "size_bytes": 170201,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST723.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST723.pdf"
+    },
+    {
+      "path": "pdfs/S7_OECST724.pdf",
+      "name": "S7_OECST724.pdf",
+      "category": "documents",
+      "size_bytes": 165804,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST724.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST724.pdf"
+    },
+    {
+      "path": "pdfs/S7_OECST725.pdf",
+      "name": "S7_OECST725.pdf",
+      "category": "documents",
+      "size_bytes": 169077,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST725.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OECST725.pdf"
+    },
+    {
+      "path": "pdfs/S7_OEECT723.pdf",
+      "name": "S7_OEECT723.pdf",
+      "category": "documents",
+      "size_bytes": 472050,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEECT723.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEECT723.pdf"
+    },
+    {
+      "path": "pdfs/S7_OEEVT 721.pdf",
+      "name": "S7_OEEVT 721.pdf",
+      "category": "documents",
+      "size_bytes": 432466,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEEVT 721.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEEVT 721.pdf"
+    },
+    {
+      "path": "pdfs/S7_OEEVT722.pdf",
+      "name": "S7_OEEVT722.pdf",
+      "category": "documents",
+      "size_bytes": 427767,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEEVT722.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_OEEVT722.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST741.pdf",
+      "name": "S7_PECST741.pdf",
+      "category": "documents",
+      "size_bytes": 152723,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST741.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST741.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST742.pdf",
+      "name": "S7_PECST742.pdf",
+      "category": "documents",
+      "size_bytes": 143149,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST742.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST742.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST743.pdf",
+      "name": "S7_PECST743.pdf",
+      "category": "documents",
+      "size_bytes": 157415,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST743.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST743.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST744.pdf",
+      "name": "S7_PECST744.pdf",
+      "category": "documents",
+      "size_bytes": 138516,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST744.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST744.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST745.pdf",
+      "name": "S7_PECST745.pdf",
+      "category": "documents",
+      "size_bytes": 157823,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST745.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST745.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST746.pdf",
+      "name": "S7_PECST746.pdf",
+      "category": "documents",
+      "size_bytes": 139587,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST746.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST746.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST747.pdf",
+      "name": "S7_PECST747.pdf",
+      "category": "documents",
+      "size_bytes": 141331,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST747.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST747.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST748.pdf",
+      "name": "S7_PECST748.pdf",
+      "category": "documents",
+      "size_bytes": 137973,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST748.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST748.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST749.pdf",
+      "name": "S7_PECST749.pdf",
+      "category": "documents",
+      "size_bytes": 157920,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST749.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST749.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST751.pdf",
+      "name": "S7_PECST751.pdf",
+      "category": "documents",
+      "size_bytes": 142148,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST751.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST751.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST752.pdf",
+      "name": "S7_PECST752.pdf",
+      "category": "documents",
+      "size_bytes": 140659,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST752.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST752.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST753.pdf",
+      "name": "S7_PECST753.pdf",
+      "category": "documents",
+      "size_bytes": 153845,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST753.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST753.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST754.pdf",
+      "name": "S7_PECST754.pdf",
+      "category": "documents",
+      "size_bytes": 158587,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST754.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST754.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST755.pdf",
+      "name": "S7_PECST755.pdf",
+      "category": "documents",
+      "size_bytes": 160426,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST755.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST755.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST757.pdf",
+      "name": "S7_PECST757.pdf",
+      "category": "documents",
+      "size_bytes": 132019,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST757.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST757.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST758.pdf",
+      "name": "S7_PECST758.pdf",
+      "category": "documents",
+      "size_bytes": 142022,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST758.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST758.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST759.pdf",
+      "name": "S7_PECST759.pdf",
+      "category": "documents",
+      "size_bytes": 142299,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST759.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST759.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST785.pdf",
+      "name": "S7_PECST785.pdf",
+      "category": "documents",
+      "size_bytes": 168336,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST785.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST785.pdf"
+    },
+    {
+      "path": "pdfs/S7_PECST795.pdf",
+      "name": "S7_PECST795.pdf",
+      "category": "documents",
+      "size_bytes": 169332,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST795.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PECST795.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEECT 752.pdf",
+      "name": "S7_PEECT 752.pdf",
+      "category": "documents",
+      "size_bytes": 429070,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEECT 752.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEECT 752.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 744.pdf",
+      "name": "S7_PEEVT 744.pdf",
+      "category": "documents",
+      "size_bytes": 940796,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 744.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 744.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 745.pdf",
+      "name": "S7_PEEVT 745.pdf",
+      "category": "documents",
+      "size_bytes": 1164763,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 745.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 745.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 747.pdf",
+      "name": "S7_PEEVT 747.pdf",
+      "category": "documents",
+      "size_bytes": 510151,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 747.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 747.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 755.pdf",
+      "name": "S7_PEEVT 755.pdf",
+      "category": "documents",
+      "size_bytes": 911924,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 755.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 755.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 756.pdf",
+      "name": "S7_PEEVT 756.pdf",
+      "category": "documents",
+      "size_bytes": 427261,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 756.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 756.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT 757.pdf",
+      "name": "S7_PEEVT 757.pdf",
+      "category": "documents",
+      "size_bytes": 840058,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 757.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT 757.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT741.pdf",
+      "name": "S7_PEEVT741.pdf",
+      "category": "documents",
+      "size_bytes": 405420,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT741.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT741.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT742.pdf",
+      "name": "S7_PEEVT742.pdf",
+      "category": "documents",
+      "size_bytes": 725716,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT742.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT742.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT753.pdf",
+      "name": "S7_PEEVT753.pdf",
+      "category": "documents",
+      "size_bytes": 346320,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT753.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT753.pdf"
+    },
+    {
+      "path": "pdfs/S7_PEEVT754.pdf",
+      "name": "S7_PEEVT754.pdf",
+      "category": "documents",
+      "size_bytes": 512464,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT754.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S7_PEEVT754.pdf"
+    },
+    {
+      "path": "pdfs/S8_OECST831.pdf",
+      "name": "S8_OECST831.pdf",
+      "category": "documents",
+      "size_bytes": 144608,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST831.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST831.pdf"
+    },
+    {
+      "path": "pdfs/S8_OECST832.pdf",
+      "name": "S8_OECST832.pdf",
+      "category": "documents",
+      "size_bytes": 142495,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST832.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST832.pdf"
+    },
+    {
+      "path": "pdfs/S8_OECST833.pdf",
+      "name": "S8_OECST833.pdf",
+      "category": "documents",
+      "size_bytes": 142723,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST833.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST833.pdf"
+    },
+    {
+      "path": "pdfs/S8_OECST834.pdf",
+      "name": "S8_OECST834.pdf",
+      "category": "documents",
+      "size_bytes": 159229,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST834.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST834.pdf"
+    },
+    {
+      "path": "pdfs/S8_OECST835.pdf",
+      "name": "S8_OECST835.pdf",
+      "category": "documents",
+      "size_bytes": 131021,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST835.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OECST835.pdf"
+    },
+    {
+      "path": "pdfs/S8_OEEVT 831.pdf",
+      "name": "S8_OEEVT 831.pdf",
+      "category": "documents",
+      "size_bytes": 432459,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 831.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 831.pdf"
+    },
+    {
+      "path": "pdfs/S8_OEEVT 832.pdf",
+      "name": "S8_OEEVT 832.pdf",
+      "category": "documents",
+      "size_bytes": 343804,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 832.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 832.pdf"
+    },
+    {
+      "path": "pdfs/S8_OEEVT 834.pdf",
+      "name": "S8_OEEVT 834.pdf",
+      "category": "documents",
+      "size_bytes": 429058,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 834.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT 834.pdf"
+    },
+    {
+      "path": "pdfs/S8_OEEVT833.pdf",
+      "name": "S8_OEEVT833.pdf",
+      "category": "documents",
+      "size_bytes": 433918,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT833.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_OEEVT833.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST861.pdf",
+      "name": "S8_PECST861.pdf",
+      "category": "documents",
+      "size_bytes": 136184,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST861.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST861.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST862.pdf",
+      "name": "S8_PECST862.pdf",
+      "category": "documents",
+      "size_bytes": 140054,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST862.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST862.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST863.pdf",
+      "name": "S8_PECST863.pdf",
+      "category": "documents",
+      "size_bytes": 138776,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST863.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST863.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST864.pdf",
+      "name": "S8_PECST864.pdf",
+      "category": "documents",
+      "size_bytes": 142324,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST864.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST864.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST865.pdf",
+      "name": "S8_PECST865.pdf",
+      "category": "documents",
+      "size_bytes": 168078,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST865.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST865.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST866.pdf",
+      "name": "S8_PECST866.pdf",
+      "category": "documents",
+      "size_bytes": 159526,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST866.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST866.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST867.pdf",
+      "name": "S8_PECST867.pdf",
+      "category": "documents",
+      "size_bytes": 159727,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST867.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST867.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST868.pdf",
+      "name": "S8_PECST868.pdf",
+      "category": "documents",
+      "size_bytes": 162964,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST868.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST868.pdf"
+    },
+    {
+      "path": "pdfs/S8_PECST869.pdf",
+      "name": "S8_PECST869.pdf",
+      "category": "documents",
+      "size_bytes": 139077,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST869.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PECST869.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 861.pdf",
+      "name": "S8_PEEVT 861.pdf",
+      "category": "documents",
+      "size_bytes": 499530,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 861.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 861.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 862.pdf",
+      "name": "S8_PEEVT 862.pdf",
+      "category": "documents",
+      "size_bytes": 411009,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 862.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 862.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 863.pdf",
+      "name": "S8_PEEVT 863.pdf",
+      "category": "documents",
+      "size_bytes": 344007,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 863.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 863.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 864.pdf",
+      "name": "S8_PEEVT 864.pdf",
+      "category": "documents",
+      "size_bytes": 343395,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 864.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 864.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 865.pdf",
+      "name": "S8_PEEVT 865.pdf",
+      "category": "documents",
+      "size_bytes": 508610,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 865.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 865.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 866.pdf",
+      "name": "S8_PEEVT 866.pdf",
+      "category": "documents",
+      "size_bytes": 412273,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 866.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 866.pdf"
+    },
+    {
+      "path": "pdfs/S8_PEEVT 867.pdf",
+      "name": "S8_PEEVT 867.pdf",
+      "category": "documents",
+      "size_bytes": 388251,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 867.pdf",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pdfs/S8_PEEVT 867.pdf"
+    },
+    {
+      "path": "ping-server.py",
+      "name": "ping-server.py",
+      "category": "automation-tools",
+      "size_bytes": 5333,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ping-server.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/ping-server.py"
+    },
+    {
+      "path": "poll-config.js",
+      "name": "poll-config.js",
+      "category": "other",
+      "size_bytes": 1073,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/poll-config.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/poll-config.js"
+    },
+    {
+      "path": "polls.html",
+      "name": "polls.html",
+      "category": "website-tools",
+      "size_bytes": 26019,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/polls.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/polls.html"
+    },
+    {
+      "path": "privacy.html",
+      "name": "privacy.html",
+      "category": "website-tools",
+      "size_bytes": 19780,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/privacy.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/privacy.html"
+    },
+    {
+      "path": "pyq.html",
+      "name": "pyq.html",
+      "category": "question-papers-tools",
+      "size_bytes": 114026,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pyq.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/pyq.html"
+    },
+    {
+      "path": "questions.js",
+      "name": "questions.js",
+      "category": "other",
+      "size_bytes": 79618,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/questions.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/questions.js"
+    },
+    {
+      "path": "quiz/live.html",
+      "name": "live.html",
+      "category": "website-tools",
+      "size_bytes": 56987,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/quiz/live.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/quiz/live.html"
+    },
+    {
+      "path": "quiz/questions.js",
+      "name": "questions.js",
+      "category": "other",
+      "size_bytes": 6186,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/quiz/questions.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/quiz/questions.js"
+    },
+    {
+      "path": "report.html",
+      "name": "report.html",
+      "category": "website-tools",
+      "size_bytes": 15097,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/report.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/report.html"
+    },
+    {
+      "path": "requirements.txt",
+      "name": "requirements.txt",
+      "category": "other",
+      "size_bytes": 118,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/requirements.txt",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/requirements.txt"
+    },
+    {
+      "path": "robots.txt",
+      "name": "robots.txt",
+      "category": "other",
+      "size_bytes": 76,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/robots.txt",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/robots.txt"
+    },
+    {
+      "path": "scrape_syllabus.py",
+      "name": "scrape_syllabus.py",
+      "category": "automation-tools",
+      "size_bytes": 12376,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/scrape_syllabus.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/scrape_syllabus.py"
+    },
+    {
+      "path": "scraper.py",
+      "name": "scraper.py",
+      "category": "automation-tools",
+      "size_bytes": 4554,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/scraper.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/scraper.py"
+    },
+    {
+      "path": "server.py",
+      "name": "server.py",
+      "category": "automation-tools",
+      "size_bytes": 12659,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/server.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/server.py"
+    },
+    {
+      "path": "sitemap.xml",
+      "name": "sitemap.xml",
+      "category": "other",
+      "size_bytes": 15590,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/sitemap.xml",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/sitemap.xml"
+    },
+    {
+      "path": "social-preview.png",
+      "name": "social-preview.png",
+      "category": "other",
+      "size_bytes": 355515,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/social-preview.png",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/social-preview.png"
+    },
+    {
+      "path": "split_syllabus.py",
+      "name": "split_syllabus.py",
+      "category": "automation-tools",
+      "size_bytes": 5165,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/split_syllabus.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/split_syllabus.py"
+    },
+    {
+      "path": "status-history.json",
+      "name": "status-history.json",
+      "category": "catalogue-data",
+      "size_bytes": 5880,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/status-history.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/status-history.json"
+    },
+    {
+      "path": "status.html",
+      "name": "status.html",
+      "category": "website-tools",
+      "size_bytes": 25316,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/status.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/status.html"
+    },
+    {
+      "path": "subject.html",
+      "name": "subject.html",
+      "category": "website-tools",
+      "size_bytes": 12185,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/subject.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/subject.html"
+    },
+    {
+      "path": "syllabus-pccst205.html",
+      "name": "syllabus-pccst205.html",
+      "category": "website-tools",
+      "size_bytes": 17664,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus-pccst205.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus-pccst205.html"
+    },
+    {
+      "path": "syllabus/artificial-intelligence/index.html",
+      "name": "index.html",
+      "category": "syllabus",
+      "size_bytes": 6982,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/index.html"
+    },
+    {
+      "path": "syllabus/artificial-intelligence/s4.html",
+      "name": "s4.html",
+      "category": "syllabus",
+      "size_bytes": 10043,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/s4.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/s4.html"
+    },
+    {
+      "path": "syllabus/artificial-intelligence/s5.html",
+      "name": "s5.html",
+      "category": "syllabus",
+      "size_bytes": 9989,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/s5.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/artificial-intelligence/s5.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/index.html",
+      "name": "index.html",
+      "category": "syllabus",
+      "size_bytes": 13285,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/index.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s3.html",
+      "name": "s3.html",
+      "category": "syllabus",
+      "size_bytes": 17758,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s3.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s3.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s4.html",
+      "name": "s4.html",
+      "category": "syllabus",
+      "size_bytes": 35045,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s4.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s4.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s5.html",
+      "name": "s5.html",
+      "category": "syllabus",
+      "size_bytes": 30973,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s5.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s5.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s6.html",
+      "name": "s6.html",
+      "category": "syllabus",
+      "size_bytes": 40423,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s6.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s6.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s7.html",
+      "name": "s7.html",
+      "category": "syllabus",
+      "size_bytes": 51764,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s7.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s7.html"
+    },
+    {
+      "path": "syllabus/computer-science-and-engineering/s8.html",
+      "name": "s8.html",
+      "category": "syllabus",
+      "size_bytes": 30956,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s8.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/computer-science-and-engineering/s8.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/index.html",
+      "name": "index.html",
+      "category": "syllabus",
+      "size_bytes": 14831,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/index.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s-6.html",
+      "name": "s-6.html",
+      "category": "syllabus",
+      "size_bytes": 6168,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s-6.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s-6.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s3.html",
+      "name": "s3.html",
+      "category": "syllabus",
+      "size_bytes": 17474,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s3.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s3.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s4.html",
+      "name": "s4.html",
+      "category": "syllabus",
+      "size_bytes": 17423,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s4.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s4.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s5.html",
+      "name": "s5.html",
+      "category": "syllabus",
+      "size_bytes": 24894,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s5.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s5.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s6.html",
+      "name": "s6.html",
+      "category": "syllabus",
+      "size_bytes": 28662,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s6.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s6.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s7.html",
+      "name": "s7.html",
+      "category": "syllabus",
+      "size_bytes": 30572,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s7.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s7.html"
+    },
+    {
+      "path": "syllabus/electronics-engineering-vlsi-design-and-technology/s8.html",
+      "name": "s8.html",
+      "category": "syllabus",
+      "size_bytes": 24897,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s8.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/electronics-engineering-vlsi-design-and-technology/s8.html"
+    },
+    {
+      "path": "syllabus/index.html",
+      "name": "index.html",
+      "category": "syllabus",
+      "size_bytes": 8479,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/index.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus/index.html"
+    },
+    {
+      "path": "syllabus_database.csv",
+      "name": "syllabus_database.csv",
+      "category": "other",
+      "size_bytes": 15112,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus_database.csv",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus_database.csv"
+    },
+    {
+      "path": "syllabus_flat.json",
+      "name": "syllabus_flat.json",
+      "category": "syllabus",
+      "size_bytes": 54554,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus_flat.json",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/syllabus_flat.json"
+    },
+    {
+      "path": "tailwind-local.js",
+      "name": "tailwind-local.js",
+      "category": "other",
+      "size_bytes": 407279,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/tailwind-local.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/tailwind-local.js"
+    },
+    {
+      "path": "terms.html",
+      "name": "terms.html",
+      "category": "website-tools",
+      "size_bytes": 18125,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/terms.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/terms.html"
+    },
+    {
+      "path": "test_push.py",
+      "name": "test_push.py",
+      "category": "automation-tools",
+      "size_bytes": 2071,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/test_push.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/test_push.py"
+    },
+    {
+      "path": "timetable-config.js",
+      "name": "timetable-config.js",
+      "category": "other",
+      "size_bytes": 1728,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable-config.js",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable-config.js"
+    },
+    {
+      "path": "timetable.html",
+      "name": "timetable.html",
+      "category": "website-tools",
+      "size_bytes": 54497,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable.html"
+    },
+    {
+      "path": "timetable_pages/btech-s3-regular-supply-november-2026-2024-scheme.html",
+      "name": "btech-s3-regular-supply-november-2026-2024-scheme.html",
+      "category": "website-tools",
+      "size_bytes": 27778,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s3-regular-supply-november-2026-2024-scheme.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s3-regular-supply-november-2026-2024-scheme.html"
+    },
+    {
+      "path": "timetable_pages/btech-s5-regular-november-2026-2024-scheme.html",
+      "name": "btech-s5-regular-november-2026-2024-scheme.html",
+      "category": "website-tools",
+      "size_bytes": 27726,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s5-regular-november-2026-2024-scheme.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s5-regular-november-2026-2024-scheme.html"
+    },
+    {
+      "path": "timetable_pages/btech-s7-regular-supply-november-2026-2019-scheme.html",
+      "name": "btech-s7-regular-supply-november-2026-2019-scheme.html",
+      "category": "website-tools",
+      "size_bytes": 27828,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s7-regular-supply-november-2026-2019-scheme.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetable_pages/btech-s7-regular-supply-november-2026-2019-scheme.html"
+    },
+    {
+      "path": "timetables.py",
+      "name": "timetables.py",
+      "category": "automation-tools",
+      "size_bytes": 73882,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetables.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/timetables.py"
+    },
+    {
+      "path": "trend-radar.html",
+      "name": "trend-radar.html",
+      "category": "website-tools",
+      "size_bytes": 39478,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/trend-radar.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/trend-radar.html"
+    },
+    {
+      "path": "updates.html",
+      "name": "updates.html",
+      "category": "website-tools",
+      "size_bytes": 50441,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/updates.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/updates.html"
+    },
+    {
+      "path": "verify_subject.py",
+      "name": "verify_subject.py",
+      "category": "automation-tools",
+      "size_bytes": 3680,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/verify_subject.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/verify_subject.py"
+    },
+    {
+      "path": "vortex.html",
+      "name": "vortex.html",
+      "category": "website-tools",
+      "size_bytes": 16561,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/vortex.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/vortex.html"
+    },
+    {
+      "path": "watermark-tool.html",
+      "name": "watermark-tool.html",
+      "category": "pdf-tools",
+      "size_bytes": 36730,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/watermark-tool.html",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/watermark-tool.html"
+    },
+    {
+      "path": "watermark.py",
+      "name": "watermark.py",
+      "category": "pdf-tools",
+      "size_bytes": 16689,
+      "source_url": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/watermark.py",
+      "download_url": "https://raw.githubusercontent.com/KeralaTimetable/keralatimetable.github.io/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/watermark.py"
+    }
+  ]
+}
