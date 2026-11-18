@@ -1,0 +1,214 @@
+{
+  "source_commit": "9612b2a4238dfd31f0f136d9b56d552a0cb528dd",
+  "generated_from": "note HTML download links",
+  "count": 23,
+  "resources": [
+    {
+      "title": "Introduction to Big Data & HDFS",
+      "module": "",
+      "course_code": "PBADT504",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1qzCxbzVGz5LNITYIuEQw_MugYvlQ2BWs/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html"
+    },
+    {
+      "title": "Data Processing with MapReduce",
+      "module": "",
+      "course_code": "PBADT504",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/16JzwfD2KtG16H9Df04yWcJtvnbnxZB4G/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html"
+    },
+    {
+      "title": "HBase & Mining Data Streams",
+      "module": "",
+      "course_code": "PBADT504",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1gVqIabhQdv73VbrBqffOHBSU-dutqai2/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html"
+    },
+    {
+      "title": "Apache Hive, Pig, and Spark",
+      "module": "",
+      "course_code": "PBADT504",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/187Gz6k8PrjYid6MH4PgeqfiLQvlCr_CH/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PBADT504.html"
+    },
+    {
+      "title": "Introduction to Robotics & Robot Anatomy",
+      "module": "",
+      "course_code": "PCADT502",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1IuNqWd22dC67c-O1Mecns-tfCbAUDz1O/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PCADT502.html"
+    },
+    {
+      "title": "Project Scheduling and Feasibility Study",
+      "module": "",
+      "course_code": "PECST521",
+      "branch": "AI-DS",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1Y6_OO81Oe5jqBuc9OfPHS7oFJlZifkmb/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/AI-DS/S5/notes/PECST521.html"
+    },
+    {
+      "title": "PCCST501",
+      "module": "Module 1",
+      "course_code": "PCCST501",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1hk2gcSTfhwcFS3LeSEQs9Y5o_aiFCZZc/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html"
+    },
+    {
+      "title": "PCCST501",
+      "module": "Module 2",
+      "course_code": "PCCST501",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1ToF4HqKPfVYBKzQa_zTx8loGsYNAdOGX/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html"
+    },
+    {
+      "title": "PCCST501",
+      "module": "Module 3",
+      "course_code": "PCCST501",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1phJD1nkxWmeDNO2FqSrDjIhICGaUBR04/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html"
+    },
+    {
+      "title": "PCCST501",
+      "module": "Module 4",
+      "course_code": "PCCST501",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1Y3szfxbwX3L7qzxfVnp0n_fvtRoJtrNj/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST501.html"
+    },
+    {
+      "title": "PCCST502",
+      "module": "Module 1",
+      "course_code": "PCCST502",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1kOI8HtTpRcZyTAdb4OsdmUK861iIm0Wk/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html"
+    },
+    {
+      "title": "PCCST502",
+      "module": "Module 2",
+      "course_code": "PCCST502",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/16vjHQOtqIFoipiNPKPLlNF84JLR0K8YC/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html"
+    },
+    {
+      "title": "PCCST502",
+      "module": "Module 3",
+      "course_code": "PCCST502",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1ClrkFuGs4tbXN79Yuicc2gQOgIxIJjgt/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html"
+    },
+    {
+      "title": "PCCST502",
+      "module": "Module 4",
+      "course_code": "PCCST502",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1sX5NcypIyfq-O3pImjgcn4bRI14_-qEa/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST502.html"
+    },
+    {
+      "title": "Introduction to Machine Learning & Regression",
+      "module": "",
+      "course_code": "PCCST503",
+      "branch": "CC",
+      "semester": "S5",
+      "resource_url": "https://drive.google.com/file/d/1ZlIJVRQTKGeA3MA5v9BvZp60cBYrKM51/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CC/S5/notes/PCCST503.html"
+    },
+    {
+      "title": "Elementary Concepts of DC Electric & Magnetic Circuits",
+      "module": "",
+      "course_code": "ELECTRICAL-ELECTRONICS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/13s_x2oGaLeCNsqiFwDXXhG5s3AUDUbPe/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html"
+    },
+    {
+      "title": "Electromagnetic Induction & AC Fundamentals",
+      "module": "",
+      "course_code": "ELECTRICAL-ELECTRONICS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1kn0JQTw9sDZchdOxyZR0iGhCgSQoj6wg/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html"
+    },
+    {
+      "title": "Introduction to Electronic Devices",
+      "module": "",
+      "course_code": "ELECTRICAL-ELECTRONICS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1QQtos86cZQ4Xt3e10Q1Q7C3QLvZIUcmu/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html"
+    },
+    {
+      "title": "Modern Electronics and its Applications",
+      "module": "",
+      "course_code": "ELECTRICAL-ELECTRONICS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1qjdtI1md0iQYv1J9kkp9pRMFCjbfQESv/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/electrical-electronics.html"
+    },
+    {
+      "title": "Limits, Continuity & Differentiability",
+      "module": "",
+      "course_code": "MATHS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/10UltiNd1y26CXnXR5u0tWhy0PRSun4eR/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html"
+    },
+    {
+      "title": "Partial Derivatives",
+      "module": "",
+      "course_code": "MATHS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1pTnpRnTitt4fLfUTd2AXL7MtvVIzYUbk/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html"
+    },
+    {
+      "title": "Partial Derivatives of Function of 3 Variables",
+      "module": "",
+      "course_code": "MATHS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1VP3ylDw68XZYCWsaw-IYmu4i152EHqMj/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html"
+    },
+    {
+      "title": "Optimization (LPP)",
+      "module": "",
+      "course_code": "MATHS",
+      "branch": "CSE",
+      "semester": "S1",
+      "resource_url": "https://drive.google.com/file/d/1qf89CXT7EXCtHJtHM8RUP-LzdvlM3G7C/view?usp=drivesdk",
+      "source_page": "https://github.com/KeralaTimetable/keralatimetable.github.io/blob/9612b2a4238dfd31f0f136d9b56d552a0cb528dd/KTU/CSE/S1/notes/maths.html"
+    }
+  ]
+}
