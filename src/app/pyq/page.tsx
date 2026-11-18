@@ -1,3 +1,3 @@
-import { ComingSoonPage } from "@/components/coming-soon-page";
-export const metadata = { title: "Previous question papers" };
-export default function PyqPage() { return <ComingSoonPage title="Previous question papers" description="A source-aware library of past examination papers, organised around KTU subjects. This library is scheduled for Stage 3." stage="STAGE 3"/>; }
+import { ResourceCatalog } from "@/components/resource-catalog";
+export const metadata = { title: "KTU Previous Question Papers" };
+export default function PyqPage() { return <ResourceCatalog initialCategory="question-papers-tools" />; }
