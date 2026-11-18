@@ -1,0 +1,3 @@
+[submodule "integrations/keralatimetable-source"]
+ path = integrations/keralatimetable-source
+ url = https://github.com/KeralaTimetable/keralatimetable.github.io.git
